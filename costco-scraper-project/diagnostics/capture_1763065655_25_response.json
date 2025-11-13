@@ -1,0 +1,42 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=PostAuthPathsQuery&variables=%7B%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22e3594db3eed5ded3e0f2f0a6d8f94eef31a62738ce1beed5f8d55898d2aadf8e%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "12f58944-5f27-45ab-be91-228a817a4abd",
+    "content-encoding": "gzip",
+    "etag": "W/\"53fceb08db853e4538fe22f53cd11077\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=51, requestId;desc=\"12f58944-5f27-45ab-be91-228a817a4abd\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "EeaIaa8o0xAtHAnJkVb1AU9nWzu1468qIZiN80BwpkXxAZjplbkcFg==",
+    "date": "Thu, 13 Nov 2025 20:26:08 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.051007",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"authConfiguration\": {\"postAuthPaths\": {\"login\": \"/store\", \"signup\": \"/store\", \"__typename\": \"UsersPostAuthPaths\"}, \"__typename\": \"UsersAuthConfiguration\"}}}",
+  "body_parsed": {
+    "data": {
+      "authConfiguration": {
+        "postAuthPaths": {
+          "login": "/store",
+          "signup": "/store",
+          "__typename": "UsersPostAuthPaths"
+        },
+        "__typename": "UsersAuthConfiguration"
+      }
+    }
+  }
+}

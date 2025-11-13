@@ -1,0 +1,93 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=GetRatingsReviewsLayout&variables=%7B%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22643a34f9f41826094fcf90139e552b86b85901138e9bd9b16fb1858a8f0a292c%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "b7cee862-57b0-4b2c-aa07-da77fc06227f",
+    "content-encoding": "gzip",
+    "etag": "W/\"8d3015e4af2cef0783702c53b9a64f42\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=36, requestId;desc=\"b7cee862-57b0-4b2c-aa07-da77fc06227f\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "gdyBnKBEXAjZkNEJ0sNq3E-aciL-Xhh4rPBHe-sYWIahw-IUQzqFpA==",
+    "date": "Thu, 13 Nov 2025 20:26:34 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.036906",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"viewLayout\": {\"productRatings\": {\"ratingsSummary\": {\"sectionTitleString\": \"Customer Reviews\", \"ratingsValueString\": \"Average rating: {rating}\", \"ratingsAmountString\": \"({amount})\", \"ratingsSummaryAriaLabelString\": \"Average rating: {rating} out of 5 stars, based on {amount} reviews\", \"ratingAriaLabelString\": \"{percent} percent of reviews have {stars} stars\", \"__typename\": \"ProductRatingsRatingsSummarySection\"}, \"__typename\": \"ProductRatingLayout\"}, \"productReviews\": {\"create\": null, \"header\": {\"sectionTitleString\": \"Reviews\", \"__typename\": \"ProductReviewsHeaderSection\"}, \"review\": {\"noReviewsString\": \"No reviews for this product yet.\", \"showEmptyReviewsVariant\": \"false\", \"seeMoreString\": \"See more\", \"__typename\": \"ProductReviewsReviewSection\"}, \"sort\": {\"sortTitleString\": \"Sort reviews by\", \"mostRelevantLabelString\": \"Most Relevant\", \"mostRecentLabelString\": \"Most Recent\", \"highestRatedLabelString\": \"Highest Rated\", \"lowestRatedLabelString\": \"Lowest Rated\", \"sortTrackingEvent\": {\"name\": \"store.item_details_sort_reviews\", \"__typename\": \"Tracking\"}, \"__typename\": \"ProductReviewsSortSection\"}, \"viewMore\": {\"viewAllTitleString\": \"See all reviews ({amount})\", \"viewMoreTitleString\": \"See more reviews ({amount})\", \"__typename\": \"ProductReviewsViewMoreSection\"}, \"__typename\": \"ProductReviewLayout\"}, \"__typename\": \"ViewLayouts\"}}, \"extensions\": {\"cacheControl\": {\"version\": 1, \"hints\": [{\"maxAge\": 3600, \"scope\": \"PRIVATE\", \"path\": [\"viewLayout\"]}]}}}",
+  "body_parsed": {
+    "data": {
+      "viewLayout": {
+        "productRatings": {
+          "ratingsSummary": {
+            "sectionTitleString": "Customer Reviews",
+            "ratingsValueString": "Average rating: {rating}",
+            "ratingsAmountString": "({amount})",
+            "ratingsSummaryAriaLabelString": "Average rating: {rating} out of 5 stars, based on {amount} reviews",
+            "ratingAriaLabelString": "{percent} percent of reviews have {stars} stars",
+            "__typename": "ProductRatingsRatingsSummarySection"
+          },
+          "__typename": "ProductRatingLayout"
+        },
+        "productReviews": {
+          "create": null,
+          "header": {
+            "sectionTitleString": "Reviews",
+            "__typename": "ProductReviewsHeaderSection"
+          },
+          "review": {
+            "noReviewsString": "No reviews for this product yet.",
+            "showEmptyReviewsVariant": "false",
+            "seeMoreString": "See more",
+            "__typename": "ProductReviewsReviewSection"
+          },
+          "sort": {
+            "sortTitleString": "Sort reviews by",
+            "mostRelevantLabelString": "Most Relevant",
+            "mostRecentLabelString": "Most Recent",
+            "highestRatedLabelString": "Highest Rated",
+            "lowestRatedLabelString": "Lowest Rated",
+            "sortTrackingEvent": {
+              "name": "store.item_details_sort_reviews",
+              "__typename": "Tracking"
+            },
+            "__typename": "ProductReviewsSortSection"
+          },
+          "viewMore": {
+            "viewAllTitleString": "See all reviews ({amount})",
+            "viewMoreTitleString": "See more reviews ({amount})",
+            "__typename": "ProductReviewsViewMoreSection"
+          },
+          "__typename": "ProductReviewLayout"
+        },
+        "__typename": "ViewLayouts"
+      }
+    },
+    "extensions": {
+      "cacheControl": {
+        "version": 1,
+        "hints": [
+          {
+            "maxAge": 3600,
+            "scope": "PRIVATE",
+            "path": [
+              "viewLayout"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

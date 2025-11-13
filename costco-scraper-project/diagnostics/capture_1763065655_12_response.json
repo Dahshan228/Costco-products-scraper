@@ -1,0 +1,70 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=LocaleBasedNudgeVariantQuery&variables=%7B%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%223f37908d4222d8154665c806f06ae6f2e4dc216bc28145b009cfe3f1e899674f%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "1838143a-6cc2-40ab-9fbf-4a974c91a2d7",
+    "content-encoding": "gzip",
+    "etag": "W/\"df88489b3661edc1201b0b3384c549b1\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=16, requestId;desc=\"1838143a-6cc2-40ab-9fbf-4a974c91a2d7\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "WYBpdaroYcxudw8PtOhYm0jQOK_bF-B05gfvrV_gVQMUtnwGkRlFVw==",
+    "date": "Thu, 13 Nov 2025 20:25:59 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.016618",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"viewLayout\": {\"storeApp\": {\"platformExperiments\": {\"fraudLocaleBasedDomainNudgeVariant\": \"disabled\", \"__typename\": \"StoreAppPlatformExperimentsSection\"}, \"__typename\": \"StoreAppLayout\"}, \"domainBasedNudge\": {\"nudge\": {\"caCountryNameString\": \"Canada\", \"caSiteNameString\": \"Canadian\", \"usCountryNameString\": \"the United States\", \"usSiteNameString\": \"United States\", \"messageTemplateString\": \"Hey! Looks like you are in %{country_name}. Click the button below to navigate to our %{site_name} site.\", \"actionLabelTemplateString\": \"Proceed to %{domain}\", \"__typename\": \"DomainBasedNudgeNudgeSection\"}, \"__typename\": \"DomainBasedNudgeLayout\"}, \"__typename\": \"ViewLayouts\"}}, \"extensions\": {\"cacheControl\": {\"version\": 1, \"hints\": [{\"maxAge\": 3600, \"scope\": \"PRIVATE\", \"path\": [\"viewLayout\"]}]}}}",
+  "body_parsed": {
+    "data": {
+      "viewLayout": {
+        "storeApp": {
+          "platformExperiments": {
+            "fraudLocaleBasedDomainNudgeVariant": "disabled",
+            "__typename": "StoreAppPlatformExperimentsSection"
+          },
+          "__typename": "StoreAppLayout"
+        },
+        "domainBasedNudge": {
+          "nudge": {
+            "caCountryNameString": "Canada",
+            "caSiteNameString": "Canadian",
+            "usCountryNameString": "the United States",
+            "usSiteNameString": "United States",
+            "messageTemplateString": "Hey! Looks like you are in %{country_name}. Click the button below to navigate to our %{site_name} site.",
+            "actionLabelTemplateString": "Proceed to %{domain}",
+            "__typename": "DomainBasedNudgeNudgeSection"
+          },
+          "__typename": "DomainBasedNudgeLayout"
+        },
+        "__typename": "ViewLayouts"
+      }
+    },
+    "extensions": {
+      "cacheControl": {
+        "version": 1,
+        "hints": [
+          {
+            "maxAge": 3600,
+            "scope": "PRIVATE",
+            "path": [
+              "viewLayout"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

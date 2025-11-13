@@ -1,0 +1,69 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=ParWeightTotalEstimate&variables=%7B%22retailerInventorySessionToken%22%3A%22v1.8b68605.18522876812429916-60181-04187x18797-1-5-1091-1-0%22%2C%22itemIds%22%3A%5B%22items_1091-17641990%22%5D%2C%22itemQty%22%3A1%2C%22zoneId%22%3A%2282%22%2C%22postalCode%22%3A%2260181%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%2261eac93089db99cd4a7117c8c3ea782695d1a5309bb69d72421a83857bcef06c%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "766ca23d-fe43-4f91-a42d-c3b6b19f3c79",
+    "content-encoding": "gzip",
+    "etag": "W/\"2a3b5e6317300f1ce623887bf344ac30\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=100, requestId;desc=\"766ca23d-fe43-4f91-a42d-c3b6b19f3c79\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "gdGvKKk33fKudH-tBYQBfdz3ZUx51838ISjuRtwaMO7itDrLVVivqg==",
+    "date": "Thu, 13 Nov 2025 20:26:56 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.099951",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"itemPrices\": [{\"viewSection\": {\"itemDetails\": {\"priceEstimateVariant\": \"hide\", \"__typename\": \"ItemsResponseBackedItemPriceItemDetailsSection\"}, \"__typename\": \"ItemsResponseBackedItemPriceSection\"}, \"parWeightTotalEstimate\": {\"viewSection\": {\"priceEstimateString\": null, \"__typename\": \"ItemsResponseBackedParWeightTotalEstimateSection\"}, \"__typename\": \"ItemsParWeightTotalEstimate\"}, \"__typename\": \"ItemsItemPrice\"}]}, \"extensions\": {\"cacheControl\": {\"version\": 1, \"hints\": [{\"maxAge\": 1, \"scope\": \"PRIVATE\", \"path\": [\"itemPrices\", 0, \"parWeightTotalEstimate\"]}]}}}",
+  "body_parsed": {
+    "data": {
+      "itemPrices": [
+        {
+          "viewSection": {
+            "itemDetails": {
+              "priceEstimateVariant": "hide",
+              "__typename": "ItemsResponseBackedItemPriceItemDetailsSection"
+            },
+            "__typename": "ItemsResponseBackedItemPriceSection"
+          },
+          "parWeightTotalEstimate": {
+            "viewSection": {
+              "priceEstimateString": null,
+              "__typename": "ItemsResponseBackedParWeightTotalEstimateSection"
+            },
+            "__typename": "ItemsParWeightTotalEstimate"
+          },
+          "__typename": "ItemsItemPrice"
+        }
+      ]
+    },
+    "extensions": {
+      "cacheControl": {
+        "version": 1,
+        "hints": [
+          {
+            "maxAge": 1,
+            "scope": "PRIVATE",
+            "path": [
+              "itemPrices",
+              0,
+              "parWeightTotalEstimate"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

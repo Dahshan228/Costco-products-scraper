@@ -1,0 +1,63 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=LandingAppTrackingProperties&variables=%7B%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22bb6d108f50f961bad24792b0f5bf8506d5f7b88942d2abd4fa644eed2607356b%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "39199a63-1b99-4474-94c8-246dce7b7217",
+    "content-encoding": "gzip",
+    "etag": "W/\"b3f93b59265436872b4345cfcddfefe4\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=14, requestId;desc=\"39199a63-1b99-4474-94c8-246dce7b7217\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "date": "Thu, 13 Nov 2025 20:25:59 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.014401",
+    "x-amz-cf-id": "v37WH0X8yqpn7oib4Yx8W_7_HoBuSHaf1E1CaB6P5_0G2JlxPFZVlw==",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 9adb5fb0964c24a746b3df7108fcc444.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"viewLayout\": {\"id\": \"viewLayout\", \"landingApp\": {\"id\": \"landing_app:9820b2a7\", \"trackingProperties\": {\"api_version\": \"4\", \"country_id\": \"840\", \"product_flow\": \"signup\", \"whitelabel_id\": \"1210\", \"user_id\": null}, \"__typename\": \"LandingAppLayout\"}, \"__typename\": \"ViewLayouts\"}}, \"extensions\": {\"cacheControl\": {\"version\": 1, \"hints\": [{\"maxAge\": 3600, \"scope\": \"PRIVATE\", \"path\": [\"viewLayout\"]}]}}}",
+  "body_parsed": {
+    "data": {
+      "viewLayout": {
+        "id": "viewLayout",
+        "landingApp": {
+          "id": "landing_app:9820b2a7",
+          "trackingProperties": {
+            "api_version": "4",
+            "country_id": "840",
+            "product_flow": "signup",
+            "whitelabel_id": "1210",
+            "user_id": null
+          },
+          "__typename": "LandingAppLayout"
+        },
+        "__typename": "ViewLayouts"
+      }
+    },
+    "extensions": {
+      "cacheControl": {
+        "version": 1,
+        "hints": [
+          {
+            "maxAge": 3600,
+            "scope": "PRIVATE",
+            "path": [
+              "viewLayout"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

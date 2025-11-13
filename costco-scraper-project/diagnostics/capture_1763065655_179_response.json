@@ -1,0 +1,45 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=LandingRetailerMetas&variables=%7B%22retailerSlug%22%3A%22costco%22%2C%22retailerId%22%3A%225%22%2C%22zoneId%22%3A%2282%22%2C%22pageType%22%3A%22default%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%2258efd7a26bed2e032e5837b671a3b399614a2a50f4b283a955e8adc8a16834e0%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "266ce8c2-5ff3-4171-a4db-aea40b9920e2",
+    "content-encoding": "gzip",
+    "etag": "W/\"62e73a89fa5cd415e45a31b9ffcc23bc\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=61, requestId;desc=\"266ce8c2-5ff3-4171-a4db-aea40b9920e2\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "-JNjvrrCwAMclLdsXwSpRJPLc-Zkww0HgtA_MpGc6sGFMm4LRFOF5A==",
+    "date": "Thu, 13 Nov 2025 20:26:34 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.060997",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"landingRetailerMetas\": {\"id\": \"48d4c8b4\", \"viewSection\": {\"id\": \"landing_retailers_response_backed:85e172cb:metas:41dc6eb9\", \"titleString\": \"Costco Delivery or Pickup\", \"descriptionString\": \"Costco same-day delivery or curbside pickup <b>in as fast as 1 hour</b> with Costco Same-Day. Your first delivery or pickup order is free! Start shopping online now with Costco Same-Day to get Costco products on-demand.\", \"thumbnailImage\": null, \"__typename\": \"LandingRetailersResponseBackedMetasSection\"}, \"__typename\": \"LandingRetailerMetas\"}}}",
+  "body_parsed": {
+    "data": {
+      "landingRetailerMetas": {
+        "id": "48d4c8b4",
+        "viewSection": {
+          "id": "landing_retailers_response_backed:85e172cb:metas:41dc6eb9",
+          "titleString": "Costco Delivery or Pickup",
+          "descriptionString": "Costco same-day delivery or curbside pickup <b>in as fast as 1 hour</b> with Costco Same-Day. Your first delivery or pickup order is free! Start shopping online now with Costco Same-Day to get Costco products on-demand.",
+          "thumbnailImage": null,
+          "__typename": "LandingRetailersResponseBackedMetasSection"
+        },
+        "__typename": "LandingRetailerMetas"
+      }
+    }
+  }
+}

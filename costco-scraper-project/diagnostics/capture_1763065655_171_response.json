@@ -1,0 +1,61 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=ShowUniversalReplacementsVariant&variables=%7B%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22ecb5f48ac0464c0f4407fadda773f0f8a4962e69dbba6a0ac90acf3e250b0191%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "28e52294-af0e-49bb-9487-f431516f324a",
+    "content-encoding": "gzip",
+    "etag": "W/\"262e34a556b7f85ec006467e4352393b\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=33, requestId;desc=\"28e52294-af0e-49bb-9487-f431516f324a\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "BTrtLD70nRCz7Z1A4iwgF85GO6OFEnoL780pAw7_q-bmYWGQWcAZWw==",
+    "date": "Thu, 13 Nov 2025 20:26:34 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.033402",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"viewLayout\": {\"id\": \"viewLayout\", \"appGlobal\": {\"id\": \"app_global:87c48f4a\", \"globalFeatureFlags\": {\"id\": \"app_global:87c48f4a:global_feature_flags\", \"universalReplacementsVariant\": \"variant\", \"__typename\": \"AppGlobalGlobalFeatureFlagsSection\"}, \"__typename\": \"AppGlobalLayout\"}, \"__typename\": \"ViewLayouts\"}}, \"extensions\": {\"cacheControl\": {\"version\": 1, \"hints\": [{\"maxAge\": 3600, \"scope\": \"PRIVATE\", \"path\": [\"viewLayout\"]}]}}}",
+  "body_parsed": {
+    "data": {
+      "viewLayout": {
+        "id": "viewLayout",
+        "appGlobal": {
+          "id": "app_global:87c48f4a",
+          "globalFeatureFlags": {
+            "id": "app_global:87c48f4a:global_feature_flags",
+            "universalReplacementsVariant": "variant",
+            "__typename": "AppGlobalGlobalFeatureFlagsSection"
+          },
+          "__typename": "AppGlobalLayout"
+        },
+        "__typename": "ViewLayouts"
+      }
+    },
+    "extensions": {
+      "cacheControl": {
+        "version": 1,
+        "hints": [
+          {
+            "maxAge": 3600,
+            "scope": "PRIVATE",
+            "path": [
+              "viewLayout"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

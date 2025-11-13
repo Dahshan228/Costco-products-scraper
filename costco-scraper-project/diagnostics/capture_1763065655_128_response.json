@@ -1,0 +1,125 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=OrderSatisfactionViewLayout&variables=%7B%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%220dd435ad4fa5351893efa3495310a54ed56ca221ee7978b4400f8de9ab73617f%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "06c33e2e-9187-40aa-b846-12979d8eab36",
+    "content-encoding": "gzip",
+    "etag": "W/\"e08315430084ca8c3293709cabfebce3\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=35, requestId;desc=\"06c33e2e-9187-40aa-b846-12979d8eab36\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "i3_OvUo6RDSPjo2YDCZr6e4p-BIR_NUP0qICsx6qDNo-2iwapPkdNA==",
+    "date": "Thu, 13 Nov 2025 20:26:13 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.034966",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"viewLayout\": {\"orderSatisfaction\": {\"actions\": {\"cancelPopupTrackingEventName\": \"ratings.cancel_popup\", \"clickShopperRatingTrackingEventName\": \"ratings.click_shopper_rating\", \"flowCompleteTrackingEventName\": \"ratings.flow_complete\", \"flowStartTrackingEventName\": \"ratings.flow_start\", \"viewRateExperienceTrackingEventName\": \"ratings.view_rate_experience\", \"__typename\": \"OrderSatisfactionActionsSection\"}, \"deliveryInfo\": {\"editableTitleString\": \"How did we do?\", \"uneditableTitleString\": \"Your rating\", \"__typename\": \"OrderSatisfactionDeliveryInfoSection\"}, \"highlights\": {\"titleString\": \"Awesome! Any highlights?\", \"subtitleString\": \"Shoppers love knowing what went well.\", \"thankYouTitleString\": \"Add a thank-you note\", \"thankYouPlaceholderString\": \"Thank-you note for your shoppers\", \"buttonSkipString\": \"Skip\", \"buttonContinueString\": \"Continue\", \"addCommentShopperTrackingEventName\": \"ratings.add_comment_shopper\", \"submitCommentShopperTrackingEventName\": \"ratings.submit_comment_shopper\", \"clickComplimentTrackingEventName\": \"ratings.click_compliment\", \"__typename\": \"OrderSatisfactionHighlightsSection\"}, \"replacementRating\": {\"titleString\": \"How were your replacements?\", \"subtitleString\": \"Your input helps us pick the right items.\", \"orderedSubtitleString\": \"Original item\", \"replacedSubtitleString\": \"Replacement\", \"buttonSkipString\": \"Skip\", \"buttonContinueString\": \"Submit\", \"clickReplacementThumbTrackingEventName\": \"ratings.click_replacement_thumb\", \"skipReplacementRatingClickTrackingEventName\": \"ratings.skip_replacement_rating_click\", \"submitReplacementRatingTrackingEventName\": \"ratings.submit_replacement_rating\", \"viewReplacedItemsTrackingEventName\": \"ratings.view_replaced_items\", \"likeReplacementString\": \"Like replacement\", \"dislikeReplacementString\": \"Dislike replacement\", \"__typename\": \"OrderSatisfactionReplacementRatingSection\"}, \"getHelp\": {\"titleString\": \"We're here to help\", \"subtitleString\": \"Whatever went wrong, we want to fix it.\", \"buttonSkipString\": \"Skip\", \"buttonContinueString\": \"Get help\", \"__typename\": \"OrderSatisfactionGetHelpSection\"}, \"feedbackModal\": {\"ctaString\": \"Submit\", \"extraTipHeadingString\": \"Add extra tip\", \"extraTipOtherString\": \"Other\", \"highlightsEditCustomNoteString\": \"Add custom note\", \"highlightsHeadingString\": \"Share any highlights\", \"replacementHeadingString\": \"How were these replacements?\", \"starHeaderString\": \"How was your order?\", \"likeReplacementAriaString\": \"Like replacement\", \"nextReplacementAriaString\": \"View next replacement\", \"previousReplacementAriaString\": \"View previous replacement\", \"highlightCustomNoteString\": \"Custom note\", \"extraTipCustomAmountString\": \"Custom amount\", \"dislikeReplacementAriaString\": \"Dislike replacement\", \"replacementThumbsUpString\": \"Replacement saved for next time\", \"replacementThumbsDownString\": \"Replacement won\\u2019t be made again\", \"__typename\": \"OrderSatisfactionFeedbackModalSection\"}, \"toast\": {\"successToastString\": \"Thanks! Your feedback makes our community better \\ud83d\\ude4c\", \"thumbsUpToastString\": \"We\\u2019ll save this replacement for next time\", \"thumbsDownToastString\": \"We won\\u2019t make that replacement next time\", \"__typename\": \"OrderSatisfactionToastSection\"}, \"__typename\": \"OrderSatisfactionLayout\"}, \"__typename\": \"ViewLayouts\"}}, \"extensions\": {\"cacheControl\": {\"version\": 1, \"hints\": [{\"maxAge\": 3600, \"scope\": \"PRIVATE\", \"path\": [\"viewLayout\"]}]}}}",
+  "body_parsed": {
+    "data": {
+      "viewLayout": {
+        "orderSatisfaction": {
+          "actions": {
+            "cancelPopupTrackingEventName": "ratings.cancel_popup",
+            "clickShopperRatingTrackingEventName": "ratings.click_shopper_rating",
+            "flowCompleteTrackingEventName": "ratings.flow_complete",
+            "flowStartTrackingEventName": "ratings.flow_start",
+            "viewRateExperienceTrackingEventName": "ratings.view_rate_experience",
+            "__typename": "OrderSatisfactionActionsSection"
+          },
+          "deliveryInfo": {
+            "editableTitleString": "How did we do?",
+            "uneditableTitleString": "Your rating",
+            "__typename": "OrderSatisfactionDeliveryInfoSection"
+          },
+          "highlights": {
+            "titleString": "Awesome! Any highlights?",
+            "subtitleString": "Shoppers love knowing what went well.",
+            "thankYouTitleString": "Add a thank-you note",
+            "thankYouPlaceholderString": "Thank-you note for your shoppers",
+            "buttonSkipString": "Skip",
+            "buttonContinueString": "Continue",
+            "addCommentShopperTrackingEventName": "ratings.add_comment_shopper",
+            "submitCommentShopperTrackingEventName": "ratings.submit_comment_shopper",
+            "clickComplimentTrackingEventName": "ratings.click_compliment",
+            "__typename": "OrderSatisfactionHighlightsSection"
+          },
+          "replacementRating": {
+            "titleString": "How were your replacements?",
+            "subtitleString": "Your input helps us pick the right items.",
+            "orderedSubtitleString": "Original item",
+            "replacedSubtitleString": "Replacement",
+            "buttonSkipString": "Skip",
+            "buttonContinueString": "Submit",
+            "clickReplacementThumbTrackingEventName": "ratings.click_replacement_thumb",
+            "skipReplacementRatingClickTrackingEventName": "ratings.skip_replacement_rating_click",
+            "submitReplacementRatingTrackingEventName": "ratings.submit_replacement_rating",
+            "viewReplacedItemsTrackingEventName": "ratings.view_replaced_items",
+            "likeReplacementString": "Like replacement",
+            "dislikeReplacementString": "Dislike replacement",
+            "__typename": "OrderSatisfactionReplacementRatingSection"
+          },
+          "getHelp": {
+            "titleString": "We're here to help",
+            "subtitleString": "Whatever went wrong, we want to fix it.",
+            "buttonSkipString": "Skip",
+            "buttonContinueString": "Get help",
+            "__typename": "OrderSatisfactionGetHelpSection"
+          },
+          "feedbackModal": {
+            "ctaString": "Submit",
+            "extraTipHeadingString": "Add extra tip",
+            "extraTipOtherString": "Other",
+            "highlightsEditCustomNoteString": "Add custom note",
+            "highlightsHeadingString": "Share any highlights",
+            "replacementHeadingString": "How were these replacements?",
+            "starHeaderString": "How was your order?",
+            "likeReplacementAriaString": "Like replacement",
+            "nextReplacementAriaString": "View next replacement",
+            "previousReplacementAriaString": "View previous replacement",
+            "highlightCustomNoteString": "Custom note",
+            "extraTipCustomAmountString": "Custom amount",
+            "dislikeReplacementAriaString": "Dislike replacement",
+            "replacementThumbsUpString": "Replacement saved for next time",
+            "replacementThumbsDownString": "Replacement won’t be made again",
+            "__typename": "OrderSatisfactionFeedbackModalSection"
+          },
+          "toast": {
+            "successToastString": "Thanks! Your feedback makes our community better 🙌",
+            "thumbsUpToastString": "We’ll save this replacement for next time",
+            "thumbsDownToastString": "We won’t make that replacement next time",
+            "__typename": "OrderSatisfactionToastSection"
+          },
+          "__typename": "OrderSatisfactionLayout"
+        },
+        "__typename": "ViewLayouts"
+      }
+    },
+    "extensions": {
+      "cacheControl": {
+        "version": 1,
+        "hints": [
+          {
+            "maxAge": 3600,
+            "scope": "PRIVATE",
+            "path": [
+              "viewLayout"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

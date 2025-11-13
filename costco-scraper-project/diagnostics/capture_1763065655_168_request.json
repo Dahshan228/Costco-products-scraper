@@ -1,0 +1,18 @@
+{
+  "type": "request",
+  "url": "https://sameday.costco.com/graphql?operationName=GetProductRatings&variables=%7B%22id%22%3A%222577194%22%2C%22retailerId%22%3A%225%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22e0ce69452493f19ece52d62a48a60693831b6ded4fd599633d01ab1d4f88f0b6%22%7D%7D",
+  "method": "GET",
+  "headers": {
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://sameday.costco.com/store/costco/products/2577194-ferrero-rocher-chocolates-fine-hazelnut-21-2-oz",
+    "sec-ch-ua": "\"Chromium\";v=\"141\", \"Not?A_Brand\";v=\"8\"",
+    "sec-ch-ua-mobile": "?0",
+    "x-page-view-id": "29d0022e-0ca3-542f-b449-203f5bd280b7",
+    "x-client-user-id": "18522876812429916",
+    "x-client-identifier": "web",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "accept": "*/*",
+    "content-type": "application/json"
+  },
+  "post_data": ""
+}

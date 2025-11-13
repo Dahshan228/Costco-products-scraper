@@ -1,0 +1,132 @@
+[
+  {
+    "name": "akaas_AS01",
+    "value": "2147483647~rv=62~id=ed45bfa271d9f3ca70d3db1cd19dbd78",
+    "domain": "www.costco.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "bm_ss",
+    "value": "ab8e18ef4e",
+    "domain": ".costco.com",
+    "path": "/",
+    "expires": 1763079940.16846,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_abck",
+    "value": "CBF80125458002C3CA86CCDB724DD7B6~-1~YAAQVbA7Fwg6mDeaAQAAAvWJfw4dzXn1epGm5+y3fMJP3Iexj3honO4f8EnMm0leFVkxqrKhKkf7tMEiBCIaSV8Z4ABnyVOFZQxBQBA1LQoqLpXBAaFbmiVR6OkbAc7w6gn9CFlDJDyUydPmlzAQ4gOmHJUh99rEfHiaQo9eGB/og4pyDQEdKTuWKBDCUEiKSKpj5vxpR+xnoBfY0ApYBCbaQhSn3x0MZEZvflD+XfTctEA0pCVDDW2mUIo55mEhHfNL9oHubJeVWb8Fs+HvpnzXbN7ZL+0AfvgsXwRtOHjDE7ndsXqvQpqASUReTe6uTffRUK5xnrOMAmiazc5zFNWLouoXLsy0cPHYwcutXzsPBwNMPywcyrCD1Ha0gOmmbr0B+3b+hQdlZwTgqgRQPIDPLtnDzRPU0mc3hCxhfhU5BgrIoNEL2l7itYIhFpR1cqGq6dfaKbk=~-1~-1~-1~-1~-1",
+    "domain": ".costco.com",
+    "path": "/",
+    "expires": 1794612340.168475,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "ak_bmsc",
+    "value": "DBFC4D5C68CC041BE6F45C9F254B27BE~000000000000000000000000000000~YAAQVbA7Fwk6mDeaAQAAAvWJfx1h7D4JV/BhwkV3wHOkHE9urMLaAMMbpTIEOWBz3c/jaH7F9MVo6S48bk8BSNg3IVcrNIR3DXvEMDS0FBsovZcdDjdnDf1/ilENOnGTyPCf8WYMZogFp/KUDJ+/WcrpVDK9BMDFyPKEIwXmLsJ6iTHagPKYG3+EMBuDIUBIICPHm9LXi94wQmXbwOnXTgqJSGUmmx1AsQ4rstiOBaPcYBjHgkzGanWXx+jAQ1w2tV1j5QS3Q0K3m61F8inkbjaa0DMuAM30GvgBYxj82Rw1nGHVNLW5EbkG/4lsIkFyCPL1loLbBIUs6x5zEcr0nKcDtdbHpeplfKHUerQlMruQbewI9zm/yYYis6cKTAoa",
+    "domain": ".costco.com",
+    "path": "/",
+    "expires": 1763083540.168491,
+    "httpOnly": true,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "bm_s",
+    "value": "YAAQVbA7Fwo6mDeaAQAAAvWJfwTGOWWreaYXSCV3pHmT/i1/9rxsUwPQgl1gKOCkc6D+7Hk6+U1M93x/k4s997RISqTza9qmAukLW/0Ewe9vYUKChIGPqVE3lzsmOGACrHiBParP1ibgutmRTLUkGe7RTvoyzwTl87T3ylXOmTTZJdQxgxU9aIu/sRiVccCj0sCFtpr5cQvXUd5tK7pXIb5+Ok9zK662gAiFb2OAbT11jggNkiR43l2EA0ZUcROwXpMBonogodHxsYlOX9ZX8Rh73KJDE9RKgvcaDU4gTfIFyN+D9j/2bj/BHl0XaIuEASrni5Nray8/eSSBftfFyw139PDkjXAarqCiwTNb5gU1YuZBgi9+O2er0Sgl8SixbzblSsubp3T/1KWDOf6Bard6GIhK5qW5Ia3+jlRLfxMbE75NmxYLlQctSgQRXXB7p9yCGQeQ2XYHaJxp8ePJuwxgdEnVjAiGCi+1IBXlf0HriK8ypG2LchEFiv+HPTs6kfs8qHCoCqPPPBmDKm5qVAmQ8kdNlWwzI0HSHOLJ/Rqrr5XM8tw=",
+    "domain": ".costco.com",
+    "path": "/",
+    "expires": 1765754740.168506,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "bm_sc",
+    "value": "1~1~274680496~YAAQVbA7Fws6mDeaAQAAAvWJfwYCp5a8J7iBOzDMGnUQzq0ZG2TWiNQcF96kxf9N9g7XTknDp7gPzM4gQ2L1KE6jxxur76Iu9Nrv6s/ZcvWntKbQpPe/Ak2b05DMaDrDkUcUcZq14bHMl25Tv6QQzwU3JFyCYEFy51enmkPhXDsAAbc9ld+dxE3MB8egtp7+Dt0yCHjNt/tvymCoZPFo4W7HFISwT02PuDvuJaQ1V2t4KsKJOPreGvQ68qkdgHxCjPjLPGUGHg1zu8DW9iy3TpRDv4ufbAHoS3Q4YeiPASuIoTYOFj2lu9FaWWTnYEdahh4YT4DCd00Jkqs4HG2t6m3/jIF1xn3r7Z9dyrfrTu9xhwazBBH/jmeOdo5MQHWF28MwU6Vj4sD/5qrUDfE5z4SSSegrqg3Y9wTY5SGsQENP",
+    "domain": ".costco.com",
+    "path": "/",
+    "expires": 1763077000.16852,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "bm_so",
+    "value": "C945F13A3AFFD7CC0D183DDD578183DB3C47A79A74E52ED62F63AB98DB6E7E10~YAAQVbA7Fww6mDeaAQAAAvWJfwWMiurfMOzUQPJBU4HqOwPa/pHIrwVvvGsD1XiDnlDilsw9b/1RTs0aeh0FcNTfEHuAckkp7wWDqxFBdv7yHzwrYajcLfhrD4c0+YooNRv8BmNCPhEr489Y6tJ3CyTU47pGyVaEo4rWaQiWSpTP79Jp9ohGIOGA5N/u8qL/o3v1R6e+pLr29uJgX4y3v7pflTt4QeRtmRgAcFML8oDsZrLvQeg/yRxUtMW5A7k/t2MlueVYneS8RLqLTkHUbKFx664sgve0SlNlzdL9Me8aI53Kdu77zr5+qmP1AOE/o0UE5kVwHTk8pR8HPSFtoEicQ3bfmk3KWzVJ6wumVdua1yAn0mVWMHGlq2PA5+8wzyXudukTGvN4NhvifJkHvXG2plV4zC9MKP3EJW8bq3IiOjIJcIYdNc+ZVdVc6yQH4/uhuQidZ/wuVfJUTQ==",
+    "domain": ".costco.com",
+    "path": "/",
+    "expires": 1763162740.168532,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "bm_sz",
+    "value": "F131714D5F548FD358EE8B97631F88F1~YAAQVbA7Fw06mDeaAQAAAvWJfx3hiaRua3R+zMnE8J4x1Skj67OTB7iQ7p2oFxJELyQGozauO84o1+Gfh28fRhMAnl446ONe90HrRUDImdGjvS6JYBm0F/SSJhKYbZMru8MwauVomTVRCviPbXikBAujueX/pNGWOLWF6fAcqlc4dof4RNtYaf4oug73K3oCYwg4RYd9ygJrtm7gQhDSjgyjWKEKgplIpSBbbt91VJmhTZiSKgPVKUtIfI5OebHmvZV8xSo7AKsGAMX/RVhI4obOjX4q7xAC/pLqBB5w1OCIDhMseSSDfPDVOFAZvoETgGUIjMHgUBRqn5NFzOq7Qy8+gPXW3/jSyNT1wK0U/IRX4iGrtQ0RKdNhFo6YlVSoXDt6tMk7HvFvtduW~3293751~3291192",
+    "domain": ".costco.com",
+    "path": "/",
+    "expires": 1763090740.168551,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "client-zip-short",
+    "value": "60601",
+    "domain": "www.costco.com",
+    "path": "/",
+    "expires": 1763077240.275576,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "C_LOC",
+    "value": "IL",
+    "domain": "www.costco.com",
+    "path": "/",
+    "expires": 1763077240.275649,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "BCO",
+    "value": "pm3",
+    "domain": ".costco.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "akavpau_zezxapz5yf",
+    "value": "1763076639~id=ff6794af779a04354d5cce53603577a6",
+    "domain": ".www.costco.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "bm_lso",
+    "value": "C945F13A3AFFD7CC0D183DDD578183DB3C47A79A74E52ED62F63AB98DB6E7E10~YAAQVbA7Fww6mDeaAQAAAvWJfwWMiurfMOzUQPJBU4HqOwPa/pHIrwVvvGsD1XiDnlDilsw9b/1RTs0aeh0FcNTfEHuAckkp7wWDqxFBdv7yHzwrYajcLfhrD4c0+YooNRv8BmNCPhEr489Y6tJ3CyTU47pGyVaEo4rWaQiWSpTP79Jp9ohGIOGA5N/u8qL/o3v1R6e+pLr29uJgX4y3v7pflTt4QeRtmRgAcFML8oDsZrLvQeg/yRxUtMW5A7k/t2MlueVYneS8RLqLTkHUbKFx664sgve0SlNlzdL9Me8aI53Kdu77zr5+qmP1AOE/o0UE5kVwHTk8pR8HPSFtoEicQ3bfmk3KWzVJ6wumVdua1yAn0mVWMHGlq2PA5+8wzyXudukTGvN4NhvifJkHvXG2plV4zC9MKP3EJW8bq3IiOjIJcIYdNc+ZVdVc6yQH4/uhuQidZ/wuVfJUTQ==^1763076340386",
+    "domain": ".www.costco.com",
+    "path": "/",
+    "expires": 1765668340,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  }
+]

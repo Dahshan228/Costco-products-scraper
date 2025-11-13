@@ -1,0 +1,19 @@
+{
+  "type": "request",
+  "url": "https://sameday.costco.com/graphql?operationName=Items&variables=%7B%22ids%22%3A%5B%22items_1091-27844738%22%2C%22items_1091-28174237%22%2C%22items_1091-29054758%22%2C%22items_1091-29162983%22%2C%22items_1091-29328488%22%2C%22items_1091-29670582%22%2C%22items_1091-29790510%22%2C%22items_1091-29954809%22%2C%22items_1091-18034471%22%2C%22items_1091-75992965%22%5D%2C%22shopId%22%3A%226481%22%2C%22zoneId%22%3A%2282%22%2C%22postalCode%22%3A%2260181%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%228e814b738f12564460af5db399c598e09807f9c34cd3f959763f81be058d9c24%22%7D%7D",
+  "method": "GET",
+  "headers": {
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://sameday.costco.com/store/costco/storefront",
+    "sec-ch-ua": "\"Chromium\";v=\"141\", \"Not?A_Brand\";v=\"8\"",
+    "sec-ch-ua-mobile": "?0",
+    "x-page-view-id": "dc208c50-b678-5064-87c9-0f9a943f57c5",
+    "x-client-user-id": "18522876812429916",
+    "x-ic-view-layer": "true",
+    "x-client-identifier": "web",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "accept": "*/*",
+    "content-type": "application/json"
+  },
+  "post_data": ""
+}

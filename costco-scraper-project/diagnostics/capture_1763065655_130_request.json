@@ -1,0 +1,18 @@
+{
+  "type": "request",
+  "url": "https://sameday.costco.com/graphql?operationName=SlotCampaignPlacement&variables=%7B%22slotId%22%3A%2214901275508008796%22%2C%22adsEnabled%22%3Afalse%2C%22shopId%22%3A%226481%22%2C%22postalCode%22%3A%2260181%22%2C%22zoneId%22%3A%2282%22%2C%22first%22%3A100%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%2282c8e27a697bf435f95612447a81d6e33090f257ff3cb67d2eb27defd1be7731%22%7D%7D",
+  "method": "GET",
+  "headers": {
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://sameday.costco.com/store/costco/storefront",
+    "sec-ch-ua": "\"Chromium\";v=\"141\", \"Not?A_Brand\";v=\"8\"",
+    "sec-ch-ua-mobile": "?0",
+    "x-page-view-id": "dc208c50-b678-5064-87c9-0f9a943f57c5",
+    "x-client-user-id": "18522876812429916",
+    "x-client-identifier": "web",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "accept": "*/*",
+    "content-type": "application/json"
+  },
+  "post_data": ""
+}

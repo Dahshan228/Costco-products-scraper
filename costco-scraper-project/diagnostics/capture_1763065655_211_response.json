@@ -1,0 +1,86 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=SearchFacets&variables=%7B%22retailerInventorySessionToken%22%3A%22v1.8b68605.18522876812429916-60181-04187x18797-1-5-1091-1-0%22%2C%22query%22%3A%22annies%20cinnamon%20rolls%20organic%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%224fff08bcb43fbf616c43bd03b679b998c1544a37fa06e11486c5010bac17bc49%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "c90e7c8a-5cb7-4549-a912-d69c2c657f70",
+    "content-encoding": "gzip",
+    "etag": "W/\"2c3d13e0d9e25905325915eb83ccd430\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=32, requestId;desc=\"c90e7c8a-5cb7-4549-a912-d69c2c657f70\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "yvfP2Wby2jzxVr8Y0cPOtjMg49x1kVHrB-t5ovPZIZ1ya2NwyFkLTQ==",
+    "date": "Thu, 13 Nov 2025 20:26:42 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.032918",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"searchFacets\": [], \"viewLayout\": {\"searchResults\": {\"filters\": {\"filtersString\": \"Filters\", \"seeMoreString\": \"See More\", \"applyString\": \"Apply\", \"cancelString\": \"Cancel\", \"resetString\": \"Reset\", \"__typename\": \"SearchResultsFiltersSection\"}, \"sort\": {\"sortByString\": \"Sort by\", \"bestMatchLabelString\": \"Best match\", \"priceAscLabelString\": \"Price: lowest first\", \"priceDescLabelString\": \"Price: highest first\", \"unitPriceAscLabelString\": \"Unit price: low first\", \"unitPriceDescLabelString\": \"Unit price: high first\", \"defaultSortVariant\": \"bestMatch\", \"__typename\": \"SearchResultsSortSection\"}, \"trackingProperties\": {\"page_view_id\": \"e8b8f41e-aea6-4a4a-9e67-014c5897db42\", \"source_type\": \"search\", \"api_version\": \"4\", \"page_size\": \"40\"}, \"__typename\": \"SearchResultLayout\"}, \"__typename\": \"ViewLayouts\"}}, \"extensions\": {\"cacheControl\": {\"version\": 1, \"hints\": [{\"maxAge\": 600, \"scope\": \"PRIVATE\", \"path\": [\"searchFacets\"]}, {\"maxAge\": 3600, \"scope\": \"PRIVATE\", \"path\": [\"viewLayout\"]}]}}}",
+  "body_parsed": {
+    "data": {
+      "searchFacets": [],
+      "viewLayout": {
+        "searchResults": {
+          "filters": {
+            "filtersString": "Filters",
+            "seeMoreString": "See More",
+            "applyString": "Apply",
+            "cancelString": "Cancel",
+            "resetString": "Reset",
+            "__typename": "SearchResultsFiltersSection"
+          },
+          "sort": {
+            "sortByString": "Sort by",
+            "bestMatchLabelString": "Best match",
+            "priceAscLabelString": "Price: lowest first",
+            "priceDescLabelString": "Price: highest first",
+            "unitPriceAscLabelString": "Unit price: low first",
+            "unitPriceDescLabelString": "Unit price: high first",
+            "defaultSortVariant": "bestMatch",
+            "__typename": "SearchResultsSortSection"
+          },
+          "trackingProperties": {
+            "page_view_id": "e8b8f41e-aea6-4a4a-9e67-014c5897db42",
+            "source_type": "search",
+            "api_version": "4",
+            "page_size": "40"
+          },
+          "__typename": "SearchResultLayout"
+        },
+        "__typename": "ViewLayouts"
+      }
+    },
+    "extensions": {
+      "cacheControl": {
+        "version": 1,
+        "hints": [
+          {
+            "maxAge": 600,
+            "scope": "PRIVATE",
+            "path": [
+              "searchFacets"
+            ]
+          },
+          {
+            "maxAge": 3600,
+            "scope": "PRIVATE",
+            "path": [
+              "viewLayout"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

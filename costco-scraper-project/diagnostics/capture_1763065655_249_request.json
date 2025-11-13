@@ -1,0 +1,18 @@
+{
+  "type": "request",
+  "url": "https://sameday.costco.com/graphql?operationName=LandingProductMeta&variables=%7B%22productId%22%3A%2217641990-annie-s-organic-cinnamon-rolls-ready-to-bake-cinnamon-rolls-with-icing-52-500-oz%22%2C%22retailerSlug%22%3A%22costco%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%220adb678fd5eae17020624e19c376b2e2eb18235b3d6c164ed458952cc2f8260c%22%7D%7D",
+  "method": "GET",
+  "headers": {
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://sameday.costco.com/store/costco/products/17641990-annie-s-organic-cinnamon-rolls-ready-to-bake-cinnamon-rolls-with-icing-52-500-oz",
+    "sec-ch-ua": "\"Chromium\";v=\"141\", \"Not?A_Brand\";v=\"8\"",
+    "sec-ch-ua-mobile": "?0",
+    "x-page-view-id": "2b300b36-60e7-589a-a8cb-3c3c1803b215",
+    "x-client-user-id": "18522876812429916",
+    "x-client-identifier": "web",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "accept": "*/*",
+    "content-type": "application/json"
+  },
+  "post_data": ""
+}

@@ -1,0 +1,47 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=GeolocationFromIp&variables=%7B%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22c6172e49ede2ba281e14f794bb9ea7c27bb28fb68af985c975e20ee1b501ec09%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "c3eef234-94b2-4fe2-a577-903be4ace907",
+    "content-encoding": "gzip",
+    "etag": "W/\"36ab513fe519295181ef31a075bb2e64\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=31, requestId;desc=\"c3eef234-94b2-4fe2-a577-903be4ace907\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "Yu-T6XH3PPifA2hCv_Q7Whowvbp75Qc6qxIyh448Jb26SqYOrCdcew==",
+    "date": "Thu, 13 Nov 2025 20:25:59 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.031349",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"geolocation\": {\"city\": \"Elmhurst\", \"coordinates\": {\"latitude\": 41.8957, \"longitude\": -87.9435, \"__typename\": \"SharedGpsCoordinates\"}, \"isoCode\": \"US\", \"postalCode\": \"60126\", \"region\": \"Chicago\", \"state\": \"IL\", \"__typename\": \"UsersGeolocation\"}}}",
+  "body_parsed": {
+    "data": {
+      "geolocation": {
+        "city": "Elmhurst",
+        "coordinates": {
+          "latitude": 41.8957,
+          "longitude": -87.9435,
+          "__typename": "SharedGpsCoordinates"
+        },
+        "isoCode": "US",
+        "postalCode": "60126",
+        "region": "Chicago",
+        "state": "IL",
+        "__typename": "UsersGeolocation"
+      }
+    }
+  }
+}

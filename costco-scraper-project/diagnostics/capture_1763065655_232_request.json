@@ -1,0 +1,20 @@
+{
+  "type": "request",
+  "url": "https://sameday.costco.com/graphql?operationName=Items&variables=%7B%22ids%22%3A%5B%22items_1091-2718162%22%2C%22items_1091-76538811%22%2C%22items_1091-62906523%22%2C%22items_1091-25815731%22%2C%22items_1091-25239702%22%5D%2C%22shopId%22%3A%226481%22%2C%22zoneId%22%3A%2282%22%2C%22postalCode%22%3A%2260181%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%228e814b738f12564460af5db399c598e09807f9c34cd3f959763f81be058d9c24%22%7D%7D",
+  "method": "GET",
+  "headers": {
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://sameday.costco.com/store/costco/s?k=annies+cinnamon+rolls+organic",
+    "sec-ch-ua": "\"Chromium\";v=\"141\", \"Not?A_Brand\";v=\"8\"",
+    "sec-ch-ua-mobile": "?0",
+    "x-page-view-id": "2a08333b-3944-550d-b8fc-d5a6cfe271a8",
+    "x-client-user-id": "18522876812429916",
+    "x-ic-view-layer": "true",
+    "x-client-identifier": "web",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "accept": "*/*",
+    "x-ic-qp": "737c77c8-45a9-5bbc-aa50-19a5a0fc21fa,c6ccb749-ff4b-52ec-9dbc-0b7e0de791fa",
+    "content-type": "application/json"
+  },
+  "post_data": ""
+}

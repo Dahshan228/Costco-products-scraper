@@ -1,0 +1,40 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=TreatmentTrackerPlacement&variables=%7B%22surface%22%3A%22storefront%22%2C%22postalCode%22%3A%2260181%22%2C%22shopId%22%3A%226481%22%2C%22shopIds%22%3A%5B%226481%22%5D%2C%22cartId%22%3A%2213077117095%22%2C%22utmTreatmentOfferId%22%3Anull%2C%22isUserClick%22%3Afalse%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22d2496070186364b284d18c814ed8c811b736d873ec79ae65239cfafefbf34883%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "7c96e634-eedc-49e2-a7a3-87dfd2ecbb98",
+    "content-encoding": "gzip",
+    "etag": "W/\"e72dbf86ec45e4f5730892e4daf99979\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=187, requestId;desc=\"7c96e634-eedc-49e2-a7a3-87dfd2ecbb98\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "QTxqs6EYWVHR9Gvs8MgqXbPfHAnEy1_XFNqS0PP_zD4yx-FodgnuSQ==",
+    "date": "Thu, 13 Nov 2025 20:26:24 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin, accept-encoding",
+    "x-runtime": "0.186805",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"treatmentTrackerPlacement\": {\"__typename\": \"ContentManagementTreatmentsRefreshRequest\", \"id\": \"0\", \"maxRefreshCount\": 3, \"refreshTimeInterval\": 3000}}}",
+  "body_parsed": {
+    "data": {
+      "treatmentTrackerPlacement": {
+        "__typename": "ContentManagementTreatmentsRefreshRequest",
+        "id": "0",
+        "maxRefreshCount": 3,
+        "refreshTimeInterval": 3000
+      }
+    }
+  }
+}

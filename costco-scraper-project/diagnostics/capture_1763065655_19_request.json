@@ -1,0 +1,16 @@
+{
+  "type": "request",
+  "url": "https://sameday.costco.com/graphql?operationName=HomepagePbiCreateGuestUserWithPostalCodeMutation",
+  "method": "POST",
+  "headers": {
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://sameday.costco.com/",
+    "sec-ch-ua": "\"Chromium\";v=\"141\", \"Not?A_Brand\";v=\"8\"",
+    "sec-ch-ua-mobile": "?0",
+    "x-client-identifier": "web",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "accept": "*/*",
+    "content-type": "application/json"
+  },
+  "post_data": "{\"operationName\":\"HomepagePbiCreateGuestUserWithPostalCodeMutation\",\"variables\":{\"postalCode\":\"60181\"},\"extensions\":{\"persistedQuery\":{\"version\":1,\"sha256Hash\":\"60933aab54d6b3f2add1fec396506dae6ef9b6a1891effbdaf39db129e787446\"}}}"
+}

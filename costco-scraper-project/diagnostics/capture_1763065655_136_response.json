@@ -1,0 +1,258 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=AutosuggestViewLayout&variables=%7B%22retailerId%22%3A%225%22%2C%22retailerType%22%3A%22Club%2FWarehouse%20Store%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%224b32aee85cd15b407bef20ace522529ce71d1bd32b9b3541e86926299e0a3b57%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "1874dee0-f70e-44c6-9be3-bec69279eab0",
+    "content-encoding": "gzip",
+    "etag": "W/\"d24197a49e4bcc619a5bca08f08bdcf3\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=32, requestId;desc=\"1874dee0-f70e-44c6-9be3-bec69279eab0\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "5gFwliTmH3ELIaP-JJvtq5tZLKbpyg32qTIIKLN-7E5hJKx11rLJdw==",
+    "date": "Thu, 13 Nov 2025 20:26:14 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.032435",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"viewLayout\": {\"globalNav\": {\"hints\": {\"searchHintString\": \"Search products, stores, and recipes\", \"__typename\": \"GlobalNavHintsSection\"}, \"__typename\": \"GlobalNavLayout\"}, \"globalSearchBar\": {\"searchBar\": {\"clearSearchOnCartAddVariant\": \"false\", \"askInstacartEnabledVariant\": \"false\", \"hintString\": \"Search products and stores\", \"retailerHintString\": \"Search %{retailer_name}...\", \"orderStatusSearchRetailerString\": \"Search %{retailer_name}\", \"searchAccessibilityString\": \"Search\", \"searchRetailerAccessibilityMobileString\": \"Typing in the search field will populate autocomplete results\", \"searchRetailerAccessibilityString\": \"Explore popular searches with arrow keys or begin typing in the search field, and the app will offer suggestions. Use the arrow keys to navigate to a suggestion and then use the Enter key to select it.\", \"retailerHintAskInstacartStringFormatted\": {\"sections\": [{\"content\": \"Ask or search anything\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"show me gluten-free ideas\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"best veggies to roast\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"dairy-free snacks for kids\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"10 breakfast items\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"what can I use in a stir fry?\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"best meats for a BBQ\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"items for a smoothie\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"fish similar to salmon\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"nutritious greens tastier than kale\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"what herbs do I use on potatoes?\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"what cheese goes with figs?\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"fruits for ice cream toppings\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"what are sauces for grilling?\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"what do I need for baking?\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"low-calorie late night snacks\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"pantry items that keep for a while\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"what sides go with corn bread?\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"good stuff for the freezer\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"low-sugar desserts for a hot day\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"best foods to bring camping\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"what can I add to tacos?\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"what can I pair with pierogis?\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"meat and veggies for a sandwich\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"what can I use instead of milk?\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"easy dinner ideas\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"fruits I can store out of the fridge\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"what's the best seafood for pasta?\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"vegan alternatives to chicken\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"show me crunchy salad toppings\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"show me fresh herbs and spices\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"frozen pizzas and ready meals\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"jollof rice ingredients\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"what do I need for jerk chicken?\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"what do I need for mango lassi?\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"things for Nigerian meat pie\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"ingredients for pork dumplings\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"ingredients for pasta carbonara\\\"\", \"__typename\": \"ViewFormattedStringSection\"}, {\"content\": \"Try \\\"shrimp fried rice ingredients\\\"\", \"__typename\": \"ViewFormattedStringSection\"}], \"__typename\": \"ViewFormattedString\"}, \"__typename\": \"GlobalSearchBarSearchBarSection\"}, \"autosuggestDropdown\": {\"moreSlotsForRecommendedSearchesVariant\": \"variant8\", \"denseBlankStateAutosugguestLayoutVariant\": \"variant6\", \"denserTileBlankStateAutosuggestEnabledVariant\": \"false\", \"entriesString\": \"entries\", \"oftenSearchedNextExperimentVariant\": \"control\", \"oftenSearchedNextHeaderString\": \"Often searched next\", \"popularSearchesHeaderString\": \"Popular searches\", \"recentSearchesHeaderString\": \"Your searches\", \"naturalSearchesHeaderString\": \"People are searching\", \"noResultsFoundString\": \"Show results for %{term}\", \"noResultsFoundStringEnabledVariant\": \"false\", \"noResultsDescriptionString\": \"We couldn't find a match for %{term} in your area.\", \"startTypingInstructionsString\": \"Start typing to show suggestions\", \"sweetsAndTreatsSmartShelfString\": \"Treats for you\", \"startTypingInstructionsDescriptionString\": \"Try searching for products, brands or stores\", \"yourFrequentSearchesEnabledVariant\": \"false\", \"yourSearchesHeaderString\": \"Recommended searches\", \"sectionsInCrossRetailerBlankStateEnabledVariant\": \"true\", \"blankStateSmartShelvesVariant\": \"false\", \"blankStateRetailersEnabledVariant\": \"false\", \"leadWithSearchVariant\": \"false\", \"retailerUnifiedBlankStateEnabledVariant\": \"true\", \"__typename\": \"GlobalSearchBarAutosuggestDropdownSection\"}, \"__typename\": \"GlobalSearchBarLayout\"}, \"__typename\": \"ViewLayouts\"}}, \"extensions\": {\"cacheControl\": {\"version\": 1, \"hints\": [{\"maxAge\": 3600, \"scope\": \"PRIVATE\", \"path\": [\"viewLayout\"]}]}}}",
+  "body_parsed": {
+    "data": {
+      "viewLayout": {
+        "globalNav": {
+          "hints": {
+            "searchHintString": "Search products, stores, and recipes",
+            "__typename": "GlobalNavHintsSection"
+          },
+          "__typename": "GlobalNavLayout"
+        },
+        "globalSearchBar": {
+          "searchBar": {
+            "clearSearchOnCartAddVariant": "false",
+            "askInstacartEnabledVariant": "false",
+            "hintString": "Search products and stores",
+            "retailerHintString": "Search %{retailer_name}...",
+            "orderStatusSearchRetailerString": "Search %{retailer_name}",
+            "searchAccessibilityString": "Search",
+            "searchRetailerAccessibilityMobileString": "Typing in the search field will populate autocomplete results",
+            "searchRetailerAccessibilityString": "Explore popular searches with arrow keys or begin typing in the search field, and the app will offer suggestions. Use the arrow keys to navigate to a suggestion and then use the Enter key to select it.",
+            "retailerHintAskInstacartStringFormatted": {
+              "sections": [
+                {
+                  "content": "Ask or search anything",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"show me gluten-free ideas\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"best veggies to roast\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"dairy-free snacks for kids\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"10 breakfast items\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"what can I use in a stir fry?\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"best meats for a BBQ\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"items for a smoothie\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"fish similar to salmon\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"nutritious greens tastier than kale\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"what herbs do I use on potatoes?\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"what cheese goes with figs?\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"fruits for ice cream toppings\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"what are sauces for grilling?\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"what do I need for baking?\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"low-calorie late night snacks\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"pantry items that keep for a while\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"what sides go with corn bread?\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"good stuff for the freezer\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"low-sugar desserts for a hot day\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"best foods to bring camping\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"what can I add to tacos?\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"what can I pair with pierogis?\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"meat and veggies for a sandwich\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"what can I use instead of milk?\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"easy dinner ideas\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"fruits I can store out of the fridge\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"what's the best seafood for pasta?\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"vegan alternatives to chicken\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"show me crunchy salad toppings\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"show me fresh herbs and spices\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"frozen pizzas and ready meals\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"jollof rice ingredients\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"what do I need for jerk chicken?\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"what do I need for mango lassi?\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"things for Nigerian meat pie\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"ingredients for pork dumplings\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"ingredients for pasta carbonara\"",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "content": "Try \"shrimp fried rice ingredients\"",
+                  "__typename": "ViewFormattedStringSection"
+                }
+              ],
+              "__typename": "ViewFormattedString"
+            },
+            "__typename": "GlobalSearchBarSearchBarSection"
+          },
+          "autosuggestDropdown": {
+            "moreSlotsForRecommendedSearchesVariant": "variant8",
+            "denseBlankStateAutosugguestLayoutVariant": "variant6",
+            "denserTileBlankStateAutosuggestEnabledVariant": "false",
+            "entriesString": "entries",
+            "oftenSearchedNextExperimentVariant": "control",
+            "oftenSearchedNextHeaderString": "Often searched next",
+            "popularSearchesHeaderString": "Popular searches",
+            "recentSearchesHeaderString": "Your searches",
+            "naturalSearchesHeaderString": "People are searching",
+            "noResultsFoundString": "Show results for %{term}",
+            "noResultsFoundStringEnabledVariant": "false",
+            "noResultsDescriptionString": "We couldn't find a match for %{term} in your area.",
+            "startTypingInstructionsString": "Start typing to show suggestions",
+            "sweetsAndTreatsSmartShelfString": "Treats for you",
+            "startTypingInstructionsDescriptionString": "Try searching for products, brands or stores",
+            "yourFrequentSearchesEnabledVariant": "false",
+            "yourSearchesHeaderString": "Recommended searches",
+            "sectionsInCrossRetailerBlankStateEnabledVariant": "true",
+            "blankStateSmartShelvesVariant": "false",
+            "blankStateRetailersEnabledVariant": "false",
+            "leadWithSearchVariant": "false",
+            "retailerUnifiedBlankStateEnabledVariant": "true",
+            "__typename": "GlobalSearchBarAutosuggestDropdownSection"
+          },
+          "__typename": "GlobalSearchBarLayout"
+        },
+        "__typename": "ViewLayouts"
+      }
+    },
+    "extensions": {
+      "cacheControl": {
+        "version": 1,
+        "hints": [
+          {
+            "maxAge": 3600,
+            "scope": "PRIVATE",
+            "path": [
+              "viewLayout"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

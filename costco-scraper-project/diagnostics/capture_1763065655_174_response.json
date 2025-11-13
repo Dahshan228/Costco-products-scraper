@@ -1,0 +1,62 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=LandingProductMeta&variables=%7B%22productId%22%3A%222577194-ferrero-rocher-chocolates-fine-hazelnut-21-2-oz%22%2C%22retailerSlug%22%3A%22costco%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%220adb678fd5eae17020624e19c376b2e2eb18235b3d6c164ed458952cc2f8260c%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "3f40426e-be0c-4261-9165-590a635bd94f",
+    "content-encoding": "gzip",
+    "etag": "W/\"6dd4c0aaa28c17893a9bf603da9b62b7\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=42, requestId;desc=\"3f40426e-be0c-4261-9165-590a635bd94f\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "q3gbWOEAhR2tsA9ZkwPZSE6YTa_NAzHGBSZO5Ksi_66SNb7amMRyWw==",
+    "date": "Thu, 13 Nov 2025 20:26:34 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.041908",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"landingProducts\": [{\"id\": \"2577194\", \"name\": \"Ferrero Rocher 48 Count, Premium Milk Chocolate Hazelnut, Chocolates for Gifting, 21.2 oz\", \"landingParam\": \"2577194-ferrero-rocher-chocolates-fine-hazelnut-21-2-oz\", \"brandName\": \"Ferrero Rocher\", \"size\": \"21.2 oz\", \"productCategoryName\": \"Chocolate Candies\", \"unitCount\": \"1\", \"image\": {\"viewSection\": {\"productImage\": {\"url\": \"https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_0e6c03b9-50d9-4708-a57f-205db655456b.jpg\", \"__typename\": \"Image\"}, \"__typename\": \"LandingResponseBackedProductImageSection\"}, \"__typename\": \"LandingProductImage\"}, \"productInfo\": {\"details\": \"Ferrero Rocher's milk chocolate gift box offers a unique taste experience of contrasting layers, a whole crunchy hazelnut in the center, surrounded by a creamy hazelnut filling, wrapped in smooth milk chocolate with crispy wafers and gently roasted hazelnut pieces. Finished with the iconic golden wrapper, Ferrero Rocher chocolate is even more unique and special. Celebrate the moment with Ferrero Rocher. Since the 1940s, Ferrero has delighted consumers with premium chocolate and one-of-a-kind chocolate treats. What began as a local pasticceria in Italy\\u2019s Piedmont region is now one of the world\\u2019s most popular confectioners, satisfying cravings in over 100 countries worldwide. Perfect as a Valentine\\u2019s Day gift, Mother's Day gift, Easter gift, or even a thoughtful holiday gift, these chocolates for gifting offer an elegant touch. With a commitment to quality, freshness and a unique taste experience, Ferrero continues to delight chocolate lovers all over the world.\", \"description\": \"Ferrero Rocher Fine Hazelnut Chocolates 21.2 oz\", \"seoDescription\": null, \"__typename\": \"LandingProductInfo\"}, \"__typename\": \"LandingLandingProduct\"}]}}",
+  "body_parsed": {
+    "data": {
+      "landingProducts": [
+        {
+          "id": "2577194",
+          "name": "Ferrero Rocher 48 Count, Premium Milk Chocolate Hazelnut, Chocolates for Gifting, 21.2 oz",
+          "landingParam": "2577194-ferrero-rocher-chocolates-fine-hazelnut-21-2-oz",
+          "brandName": "Ferrero Rocher",
+          "size": "21.2 oz",
+          "productCategoryName": "Chocolate Candies",
+          "unitCount": "1",
+          "image": {
+            "viewSection": {
+              "productImage": {
+                "url": "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_0e6c03b9-50d9-4708-a57f-205db655456b.jpg",
+                "__typename": "Image"
+              },
+              "__typename": "LandingResponseBackedProductImageSection"
+            },
+            "__typename": "LandingProductImage"
+          },
+          "productInfo": {
+            "details": "Ferrero Rocher's milk chocolate gift box offers a unique taste experience of contrasting layers, a whole crunchy hazelnut in the center, surrounded by a creamy hazelnut filling, wrapped in smooth milk chocolate with crispy wafers and gently roasted hazelnut pieces. Finished with the iconic golden wrapper, Ferrero Rocher chocolate is even more unique and special. Celebrate the moment with Ferrero Rocher. Since the 1940s, Ferrero has delighted consumers with premium chocolate and one-of-a-kind chocolate treats. What began as a local pasticceria in Italy’s Piedmont region is now one of the world’s most popular confectioners, satisfying cravings in over 100 countries worldwide. Perfect as a Valentine’s Day gift, Mother's Day gift, Easter gift, or even a thoughtful holiday gift, these chocolates for gifting offer an elegant touch. With a commitment to quality, freshness and a unique taste experience, Ferrero continues to delight chocolate lovers all over the world.",
+            "description": "Ferrero Rocher Fine Hazelnut Chocolates 21.2 oz",
+            "seoDescription": null,
+            "__typename": "LandingProductInfo"
+          },
+          "__typename": "LandingLandingProduct"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=StorefrontOverHeaderPlacement&variables=%7B%22debugPlacementId%22%3A%22%22%2C%22retailerInventorySessionToken%22%3A%22v1.8b68605.18522876812429916-60181-04187x18797-1-5-1091-1-0%22%2C%22surface%22%3A%22storefront%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%223fa0ea1eae71724a720189d52928be07b61f8c0f4a2ab4f8f40bee313174c394%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "2807f7b2-28f5-4d75-9110-a7e9d0426043",
+    "content-encoding": "gzip",
+    "etag": "W/\"6a53223ec3741a6a6264532235a4fc1a\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=123, requestId;desc=\"2807f7b2-28f5-4d75-9110-a7e9d0426043\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "ILIa7IKXJ57TovB7idfDhRb4m5hv3PI5_00W3VG6T3ciMfUAsXnhMg==",
+    "date": "Thu, 13 Nov 2025 20:26:13 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.123419",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"storefrontOverHeaderPlacement\": {\"id\": \"390847\", \"title\": \"Announcement Banner Campaign Slot\", \"dataQuery\": {\"slotId\": \"14901275508008796\", \"__typename\": \"ContentManagementDataQueriesSlotCampaignPlacement\"}, \"__typename\": \"ContentManagementCardListsSlot\"}}, \"extensions\": {\"cacheControl\": {\"version\": 1, \"hints\": [{\"maxAge\": 10800, \"scope\": \"PRIVATE\", \"path\": [\"storefrontOverHeaderPlacement\"]}]}}}",
+  "body_parsed": {
+    "data": {
+      "storefrontOverHeaderPlacement": {
+        "id": "390847",
+        "title": "Announcement Banner Campaign Slot",
+        "dataQuery": {
+          "slotId": "14901275508008796",
+          "__typename": "ContentManagementDataQueriesSlotCampaignPlacement"
+        },
+        "__typename": "ContentManagementCardListsSlot"
+      }
+    },
+    "extensions": {
+      "cacheControl": {
+        "version": 1,
+        "hints": [
+          {
+            "maxAge": 10800,
+            "scope": "PRIVATE",
+            "path": [
+              "storefrontOverHeaderPlacement"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

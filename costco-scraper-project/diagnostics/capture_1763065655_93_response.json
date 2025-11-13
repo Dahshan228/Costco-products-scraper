@@ -1,0 +1,308 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=BusinessAccountCreationV2&variables=%7B%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22d9da2827b8d4f08b6fc6ab56a5cfb036382a9d641719a66dee03d580ea47c31c%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "f4b90972-8b59-4246-b4c6-9cec7a354ce6",
+    "content-encoding": "gzip",
+    "etag": "W/\"fac7d32a819af45d6ab083cfd9cf7215\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=102, requestId;desc=\"f4b90972-8b59-4246-b4c6-9cec7a354ce6\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "WAhkuW-N2YFTrvHcrFdCxCzwya8XKGSbT-khGSbiYIrRXQfQ5sG3kA==",
+    "date": "Thu, 13 Nov 2025 20:26:13 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.102344",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"businessAccountCreationV2\": {\"viewSection\": {\"landingPage\": null, \"connectAccountPage\": {\"titleString\": \"Add account\", \"subtitleString\": \"Keep personal and business orders separate with effortless switching between accounts\", \"accountActions\": [{\"actionIcon\": \"append\", \"actionVariant\": \"signupNewAccount\", \"actionTitleString\": \"Create new account\", \"actionSubtitleString\": \"Create a separate personal account that uses a different email and connect it.\", \"__typename\": \"BusinessAccountCreationV2ResponseBackedAccountActionsSection\"}, {\"actionIcon\": \"groupAdd\", \"actionVariant\": \"loginAccount\", \"actionTitleString\": \"Connect existing account\", \"actionSubtitleString\": \"Connect an existing personal account that uses a different email.\", \"__typename\": \"BusinessAccountCreationV2ResponseBackedAccountActionsSection\"}], \"screenLoadTrackingEvent\": {\"name\": \"business_account_creation_v2.load\", \"properties\": {\"element_details\": {\"current_screen\": \"connect\"}}, \"__typename\": \"Tracking\"}, \"screenDisplayTrackingEvent\": {\"name\": \"business_account_creation_v2.display\", \"properties\": {\"element_details\": {\"current_screen\": \"connect\"}}, \"__typename\": \"Tracking\"}, \"connectNewClickTrackingEvent\": {\"name\": \"business_account_creation_v2.engagement\", \"properties\": {\"element_details\": {\"current_screen\": \"connect\", \"screen_to_navigate_to\": \"connect_new\"}}, \"__typename\": \"Tracking\"}, \"connectExistingClickTrackingEvent\": {\"name\": \"business_account_creation_v2.engagement\", \"properties\": {\"element_details\": {\"current_screen\": \"connect\", \"screen_to_navigate_to\": \"connect_existing\"}}, \"__typename\": \"Tracking\"}, \"__typename\": \"BusinessAccountCreationV2ResponseBackedConnectAccountPageSection\"}, \"convertAccountPage\": {\"titleString\": \"Convert to a personal account\", \"subtitleString\": \"Simplify your experience and return to personal use, with adjustments to how your account works.\", \"primaryButtonTitleString\": \"Convert\", \"valueProps\": [{\"id\": \"business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:convert_account_page:value_props:cd79fffe\", \"valuePropIcon\": \"confirm\", \"valuePropImage\": null, \"titleString\": \"Smooth account transition\", \"subtitleString\": \"Your order history, addresses, and payment methods will appear in your business account.\", \"__typename\": \"BusinessAccountCreationV2ResponseBackedValuePropsSection\"}, {\"id\": \"business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:convert_account_page:value_props:62924f2b\", \"valuePropIcon\": \"group\", \"valuePropImage\": null, \"titleString\": \"Family account\", \"subtitleString\": \"You can add up to 5 family members to your account\", \"__typename\": \"BusinessAccountCreationV2ResponseBackedValuePropsSection\"}, {\"id\": \"business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:convert_account_page:value_props:bb11cf01\", \"valuePropIcon\": \"ebt\", \"valuePropImage\": null, \"titleString\": \"SNAP EBT\", \"subtitleString\": \"You'll be able to use EBT SNAP with your personal account.\", \"__typename\": \"BusinessAccountCreationV2ResponseBackedValuePropsSection\"}], \"accessibleValueProps\": null, \"inaccessibleValueProps\": {\"titleString\": \"Benefits you can't access with your personal account\", \"valueProps\": [{\"id\": \"business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:convert_account_page:inaccessible_value_props:value_props:29138b84\", \"valuePropIcon\": \"close\", \"valuePropImage\": null, \"titleString\": \"Team management\", \"subtitleString\": \"Your team members will no longer have access to this business account\", \"__typename\": \"BusinessAccountCreationV2ResponseBackedValuePropsSection\"}, {\"id\": \"business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:convert_account_page:inaccessible_value_props:value_props:a5c6deed\", \"valuePropIcon\": \"close\", \"valuePropImage\": null, \"titleString\": \"Receipt exporting\", \"subtitleString\": \"You can no longer bulk export receipts.\", \"__typename\": \"BusinessAccountCreationV2ResponseBackedValuePropsSection\"}], \"__typename\": \"BusinessAccountCreationV2ResponseBackedConvertAccountPageInaccessibleValuePropsSection\"}, \"warningBanner\": {\"bannerBackgroundColor\": \"systemGrayscale10\", \"bannerLeadingIcon\": \"information\", \"titleString\": \"Account conversion\", \"messageString\": \"You're about to convert your business account to a personal account. You can switch back to a business account at any time.\", \"__typename\": \"BusinessAccountCreationV2ResponseBackedConvertAccountPageWarningBannerSection\"}, \"screenLoadTrackingEvent\": {\"name\": \"business_account_creation_v2.load\", \"properties\": {\"element_details\": {\"current_screen\": \"convert\"}}, \"__typename\": \"Tracking\"}, \"screenDisplayTrackingEvent\": {\"name\": \"business_account_creation_v2.display\", \"properties\": {\"element_details\": {\"current_screen\": \"convert\"}}, \"__typename\": \"Tracking\"}, \"mainCtaClickTrackingEvent\": {\"name\": \"business_account_creation_v2.engagement\", \"properties\": {\"element_details\": {\"current_screen\": \"convert\"}}, \"__typename\": \"Tracking\"}, \"__typename\": \"BusinessAccountCreationV2ResponseBackedConvertAccountPageSection\"}, \"learnMorePage\": {\"titleString\": \"Shop for your business with an Instacart Business account\", \"primaryButtonTitleString\": \"Close\", \"headerImage\": {\"templateUrl\": \"https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/business/business_account_creation_v2/ic_dark_logo_transparent_background-1e514bf08377deafcb95b9f60e68921e24606abedf5aea33448d09bddee1b602.png\", \"altText\": \"\", \"__typename\": \"Image\"}, \"valueProps\": [{\"id\": \"business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:learn_more_page:value_props:edd6d2e2\", \"valuePropIcon\": null, \"valuePropImage\": {\"templateUrl\": \"https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/business/business_account_creation_v2/no_contract_required_icon-2794f7277d851a86dc00ef0b46f961b2fad5d2d988e4ba66b268994635cd1374.png\", \"altText\": \"\", \"__typename\": \"Image\"}, \"titleString\": \"No contract required\", \"subtitleString\": \"Enjoy the benefits of Instacart, plus special business features and tools.\", \"__typename\": \"BusinessAccountCreationV2ResponseBackedValuePropsSection\"}, {\"id\": \"business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:learn_more_page:value_props:7857ce04\", \"valuePropIcon\": null, \"valuePropImage\": {\"templateUrl\": \"https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/business/business_account_creation_v2/smooth_transition_icon-dafceb93a23949328be2e45d76d35d4415b3b94eea79313227f8783fb7d15539.png\", \"altText\": \"\", \"__typename\": \"Image\"}, \"titleString\": \"Smooth account transition\", \"subtitleString\": \"Your order history, addresses, and payment methods will appear in your business account.\", \"__typename\": \"BusinessAccountCreationV2ResponseBackedValuePropsSection\"}, {\"id\": \"business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:learn_more_page:value_props:5ebbb629\", \"valuePropIcon\": null, \"valuePropImage\": {\"templateUrl\": \"https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/business/business_account_creation_v2/team_join_icon-ec9c85a09079882dc2cfd98ebf48e22ea03ebf6e817a821586b9f6c77ef76b0a.png\", \"altText\": \"\", \"__typename\": \"Image\"}, \"titleString\": \"Your team can join too\", \"subtitleString\": \"Give others permission to place orders, view analytics, or manage permissions.\", \"__typename\": \"BusinessAccountCreationV2ResponseBackedValuePropsSection\"}], \"additionalValueProps\": {\"titleString\": \"Additional Instacart Business benefits\", \"valueProps\": [{\"id\": \"business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:learn_more_page:additional_value_props:value_props:d96339df\", \"valuePropIcon\": \"timeFast\", \"valuePropImage\": null, \"titleString\": \"Receipt exporting\", \"subtitleString\": \"Bulk export order receipts for easy expense management.\", \"__typename\": \"BusinessAccountCreationV2ResponseBackedValuePropsSection\"}, {\"id\": \"business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:learn_more_page:additional_value_props:value_props:8a6d5fbe\", \"valuePropIcon\": \"office\", \"valuePropImage\": null, \"titleString\": \"Business-friendly suppliers\", \"subtitleString\": \"Order from your favorite local stores, retailers, and distributors.\", \"__typename\": \"BusinessAccountCreationV2ResponseBackedValuePropsSection\"}, {\"id\": \"business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:learn_more_page:additional_value_props:value_props:e0533f6f\", \"valuePropIcon\": \"dollar\", \"valuePropImage\": null, \"titleString\": \"Tax exemption benefits\", \"subtitleString\": \"Eligible businesses can save on eligible tax-exempt items.\", \"__typename\": \"BusinessAccountCreationV2ResponseBackedValuePropsSection\"}], \"__typename\": \"BusinessAccountCreationV2ResponseBackedLearnMorePageAdditionalValuePropsSection\"}, \"screenLoadTrackingEvent\": {\"name\": \"business_account_creation_v2.load\", \"properties\": {\"element_details\": {\"current_screen\": \"learn_more\"}}, \"__typename\": \"Tracking\"}, \"screenDisplayTrackingEvent\": {\"name\": \"business_account_creation_v2.display\", \"properties\": {\"element_details\": {\"current_screen\": \"learn_more\"}}, \"__typename\": \"Tracking\"}, \"__typename\": \"BusinessAccountCreationV2ResponseBackedLearnMorePageSection\"}, \"postCreationLoadingPage\": {\"backgroundColor\": \"systemGrayscale00\", \"connectLoginAccountString\": \"Connecting your personal account...\", \"connectSignupAccountString\": \"Creating your personal account...\", \"convertAccountString\": \"Converting your account...\", \"foregroundColor\": \"systemGrayscale80\", \"logoImage\": {\"templateUrl\": \"https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/domains/store_configuration/logo/1210/b174eb95-4f0b-49ff-b01a-322c1e0324af.png\", \"altText\": \"\", \"__typename\": \"Image\"}, \"__typename\": \"BusinessAccountCreationV2ResponseBackedPostCreationLoadingPageSection\"}, \"signup\": {\"altTitleString\": \"Sign up for a personal account\", \"__typename\": \"BusinessAccountCreationV2ResponseBackedSignupSection\"}, \"login\": {\"altTitleString\": \"Log in to your personal account\", \"__typename\": \"BusinessAccountCreationV2ResponseBackedLoginSection\"}, \"targetAccountTypeVariant\": \"personal\", \"initialPageDisplay\": null, \"__typename\": \"BusinessAccountCreationV2ResponseBackedCreationLayoutSection\"}, \"__typename\": \"BusinessBusinessAccountCreationV2Response\"}}}",
+  "body_parsed": {
+    "data": {
+      "businessAccountCreationV2": {
+        "viewSection": {
+          "landingPage": null,
+          "connectAccountPage": {
+            "titleString": "Add account",
+            "subtitleString": "Keep personal and business orders separate with effortless switching between accounts",
+            "accountActions": [
+              {
+                "actionIcon": "append",
+                "actionVariant": "signupNewAccount",
+                "actionTitleString": "Create new account",
+                "actionSubtitleString": "Create a separate personal account that uses a different email and connect it.",
+                "__typename": "BusinessAccountCreationV2ResponseBackedAccountActionsSection"
+              },
+              {
+                "actionIcon": "groupAdd",
+                "actionVariant": "loginAccount",
+                "actionTitleString": "Connect existing account",
+                "actionSubtitleString": "Connect an existing personal account that uses a different email.",
+                "__typename": "BusinessAccountCreationV2ResponseBackedAccountActionsSection"
+              }
+            ],
+            "screenLoadTrackingEvent": {
+              "name": "business_account_creation_v2.load",
+              "properties": {
+                "element_details": {
+                  "current_screen": "connect"
+                }
+              },
+              "__typename": "Tracking"
+            },
+            "screenDisplayTrackingEvent": {
+              "name": "business_account_creation_v2.display",
+              "properties": {
+                "element_details": {
+                  "current_screen": "connect"
+                }
+              },
+              "__typename": "Tracking"
+            },
+            "connectNewClickTrackingEvent": {
+              "name": "business_account_creation_v2.engagement",
+              "properties": {
+                "element_details": {
+                  "current_screen": "connect",
+                  "screen_to_navigate_to": "connect_new"
+                }
+              },
+              "__typename": "Tracking"
+            },
+            "connectExistingClickTrackingEvent": {
+              "name": "business_account_creation_v2.engagement",
+              "properties": {
+                "element_details": {
+                  "current_screen": "connect",
+                  "screen_to_navigate_to": "connect_existing"
+                }
+              },
+              "__typename": "Tracking"
+            },
+            "__typename": "BusinessAccountCreationV2ResponseBackedConnectAccountPageSection"
+          },
+          "convertAccountPage": {
+            "titleString": "Convert to a personal account",
+            "subtitleString": "Simplify your experience and return to personal use, with adjustments to how your account works.",
+            "primaryButtonTitleString": "Convert",
+            "valueProps": [
+              {
+                "id": "business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:convert_account_page:value_props:cd79fffe",
+                "valuePropIcon": "confirm",
+                "valuePropImage": null,
+                "titleString": "Smooth account transition",
+                "subtitleString": "Your order history, addresses, and payment methods will appear in your business account.",
+                "__typename": "BusinessAccountCreationV2ResponseBackedValuePropsSection"
+              },
+              {
+                "id": "business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:convert_account_page:value_props:62924f2b",
+                "valuePropIcon": "group",
+                "valuePropImage": null,
+                "titleString": "Family account",
+                "subtitleString": "You can add up to 5 family members to your account",
+                "__typename": "BusinessAccountCreationV2ResponseBackedValuePropsSection"
+              },
+              {
+                "id": "business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:convert_account_page:value_props:bb11cf01",
+                "valuePropIcon": "ebt",
+                "valuePropImage": null,
+                "titleString": "SNAP EBT",
+                "subtitleString": "You'll be able to use EBT SNAP with your personal account.",
+                "__typename": "BusinessAccountCreationV2ResponseBackedValuePropsSection"
+              }
+            ],
+            "accessibleValueProps": null,
+            "inaccessibleValueProps": {
+              "titleString": "Benefits you can't access with your personal account",
+              "valueProps": [
+                {
+                  "id": "business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:convert_account_page:inaccessible_value_props:value_props:29138b84",
+                  "valuePropIcon": "close",
+                  "valuePropImage": null,
+                  "titleString": "Team management",
+                  "subtitleString": "Your team members will no longer have access to this business account",
+                  "__typename": "BusinessAccountCreationV2ResponseBackedValuePropsSection"
+                },
+                {
+                  "id": "business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:convert_account_page:inaccessible_value_props:value_props:a5c6deed",
+                  "valuePropIcon": "close",
+                  "valuePropImage": null,
+                  "titleString": "Receipt exporting",
+                  "subtitleString": "You can no longer bulk export receipts.",
+                  "__typename": "BusinessAccountCreationV2ResponseBackedValuePropsSection"
+                }
+              ],
+              "__typename": "BusinessAccountCreationV2ResponseBackedConvertAccountPageInaccessibleValuePropsSection"
+            },
+            "warningBanner": {
+              "bannerBackgroundColor": "systemGrayscale10",
+              "bannerLeadingIcon": "information",
+              "titleString": "Account conversion",
+              "messageString": "You're about to convert your business account to a personal account. You can switch back to a business account at any time.",
+              "__typename": "BusinessAccountCreationV2ResponseBackedConvertAccountPageWarningBannerSection"
+            },
+            "screenLoadTrackingEvent": {
+              "name": "business_account_creation_v2.load",
+              "properties": {
+                "element_details": {
+                  "current_screen": "convert"
+                }
+              },
+              "__typename": "Tracking"
+            },
+            "screenDisplayTrackingEvent": {
+              "name": "business_account_creation_v2.display",
+              "properties": {
+                "element_details": {
+                  "current_screen": "convert"
+                }
+              },
+              "__typename": "Tracking"
+            },
+            "mainCtaClickTrackingEvent": {
+              "name": "business_account_creation_v2.engagement",
+              "properties": {
+                "element_details": {
+                  "current_screen": "convert"
+                }
+              },
+              "__typename": "Tracking"
+            },
+            "__typename": "BusinessAccountCreationV2ResponseBackedConvertAccountPageSection"
+          },
+          "learnMorePage": {
+            "titleString": "Shop for your business with an Instacart Business account",
+            "primaryButtonTitleString": "Close",
+            "headerImage": {
+              "templateUrl": "https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/business/business_account_creation_v2/ic_dark_logo_transparent_background-1e514bf08377deafcb95b9f60e68921e24606abedf5aea33448d09bddee1b602.png",
+              "altText": "",
+              "__typename": "Image"
+            },
+            "valueProps": [
+              {
+                "id": "business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:learn_more_page:value_props:edd6d2e2",
+                "valuePropIcon": null,
+                "valuePropImage": {
+                  "templateUrl": "https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/business/business_account_creation_v2/no_contract_required_icon-2794f7277d851a86dc00ef0b46f961b2fad5d2d988e4ba66b268994635cd1374.png",
+                  "altText": "",
+                  "__typename": "Image"
+                },
+                "titleString": "No contract required",
+                "subtitleString": "Enjoy the benefits of Instacart, plus special business features and tools.",
+                "__typename": "BusinessAccountCreationV2ResponseBackedValuePropsSection"
+              },
+              {
+                "id": "business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:learn_more_page:value_props:7857ce04",
+                "valuePropIcon": null,
+                "valuePropImage": {
+                  "templateUrl": "https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/business/business_account_creation_v2/smooth_transition_icon-dafceb93a23949328be2e45d76d35d4415b3b94eea79313227f8783fb7d15539.png",
+                  "altText": "",
+                  "__typename": "Image"
+                },
+                "titleString": "Smooth account transition",
+                "subtitleString": "Your order history, addresses, and payment methods will appear in your business account.",
+                "__typename": "BusinessAccountCreationV2ResponseBackedValuePropsSection"
+              },
+              {
+                "id": "business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:learn_more_page:value_props:5ebbb629",
+                "valuePropIcon": null,
+                "valuePropImage": {
+                  "templateUrl": "https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/business/business_account_creation_v2/team_join_icon-ec9c85a09079882dc2cfd98ebf48e22ea03ebf6e817a821586b9f6c77ef76b0a.png",
+                  "altText": "",
+                  "__typename": "Image"
+                },
+                "titleString": "Your team can join too",
+                "subtitleString": "Give others permission to place orders, view analytics, or manage permissions.",
+                "__typename": "BusinessAccountCreationV2ResponseBackedValuePropsSection"
+              }
+            ],
+            "additionalValueProps": {
+              "titleString": "Additional Instacart Business benefits",
+              "valueProps": [
+                {
+                  "id": "business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:learn_more_page:additional_value_props:value_props:d96339df",
+                  "valuePropIcon": "timeFast",
+                  "valuePropImage": null,
+                  "titleString": "Receipt exporting",
+                  "subtitleString": "Bulk export order receipts for easy expense management.",
+                  "__typename": "BusinessAccountCreationV2ResponseBackedValuePropsSection"
+                },
+                {
+                  "id": "business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:learn_more_page:additional_value_props:value_props:8a6d5fbe",
+                  "valuePropIcon": "office",
+                  "valuePropImage": null,
+                  "titleString": "Business-friendly suppliers",
+                  "subtitleString": "Order from your favorite local stores, retailers, and distributors.",
+                  "__typename": "BusinessAccountCreationV2ResponseBackedValuePropsSection"
+                },
+                {
+                  "id": "business_account_creation_v2_response_backed:5fea3287:creation_layout:0e49b718:learn_more_page:additional_value_props:value_props:e0533f6f",
+                  "valuePropIcon": "dollar",
+                  "valuePropImage": null,
+                  "titleString": "Tax exemption benefits",
+                  "subtitleString": "Eligible businesses can save on eligible tax-exempt items.",
+                  "__typename": "BusinessAccountCreationV2ResponseBackedValuePropsSection"
+                }
+              ],
+              "__typename": "BusinessAccountCreationV2ResponseBackedLearnMorePageAdditionalValuePropsSection"
+            },
+            "screenLoadTrackingEvent": {
+              "name": "business_account_creation_v2.load",
+              "properties": {
+                "element_details": {
+                  "current_screen": "learn_more"
+                }
+              },
+              "__typename": "Tracking"
+            },
+            "screenDisplayTrackingEvent": {
+              "name": "business_account_creation_v2.display",
+              "properties": {
+                "element_details": {
+                  "current_screen": "learn_more"
+                }
+              },
+              "__typename": "Tracking"
+            },
+            "__typename": "BusinessAccountCreationV2ResponseBackedLearnMorePageSection"
+          },
+          "postCreationLoadingPage": {
+            "backgroundColor": "systemGrayscale00",
+            "connectLoginAccountString": "Connecting your personal account...",
+            "connectSignupAccountString": "Creating your personal account...",
+            "convertAccountString": "Converting your account...",
+            "foregroundColor": "systemGrayscale80",
+            "logoImage": {
+              "templateUrl": "https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/domains/store_configuration/logo/1210/b174eb95-4f0b-49ff-b01a-322c1e0324af.png",
+              "altText": "",
+              "__typename": "Image"
+            },
+            "__typename": "BusinessAccountCreationV2ResponseBackedPostCreationLoadingPageSection"
+          },
+          "signup": {
+            "altTitleString": "Sign up for a personal account",
+            "__typename": "BusinessAccountCreationV2ResponseBackedSignupSection"
+          },
+          "login": {
+            "altTitleString": "Log in to your personal account",
+            "__typename": "BusinessAccountCreationV2ResponseBackedLoginSection"
+          },
+          "targetAccountTypeVariant": "personal",
+          "initialPageDisplay": null,
+          "__typename": "BusinessAccountCreationV2ResponseBackedCreationLayoutSection"
+        },
+        "__typename": "BusinessBusinessAccountCreationV2Response"
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=FeesDisclosureLayout&variables=%7B%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%2216e92aaab6983257f6803c6f25d4e6904725099c31f5610729f29635fa6177aa%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "a6ac807b-b5bd-4cf0-a57f-4d4c6f13af01",
+    "content-encoding": "gzip",
+    "etag": "W/\"b0feb44cbb051aff3b73cd943beac841\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=26, requestId;desc=\"a6ac807b-b5bd-4cf0-a57f-4d4c6f13af01\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "bbKTGZw5d813fEuTbkp0Ob1IZWHJc87xIkVUCIgA--0cTF48tdFhVQ==",
+    "date": "Thu, 13 Nov 2025 20:26:13 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.026153",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"viewLayout\": {\"storeHeader\": {\"feesDisclosure\": {\"viewPricingPolicyString\": \"View Pricing Policy\", \"__typename\": \"StoreHeaderFeesDisclosureSection\"}, \"__typename\": \"StoreHeaderLayout\"}, \"__typename\": \"ViewLayouts\"}}, \"extensions\": {\"cacheControl\": {\"version\": 1, \"hints\": [{\"maxAge\": 3600, \"scope\": \"PRIVATE\", \"path\": [\"viewLayout\"]}]}}}",
+  "body_parsed": {
+    "data": {
+      "viewLayout": {
+        "storeHeader": {
+          "feesDisclosure": {
+            "viewPricingPolicyString": "View Pricing Policy",
+            "__typename": "StoreHeaderFeesDisclosureSection"
+          },
+          "__typename": "StoreHeaderLayout"
+        },
+        "__typename": "ViewLayouts"
+      }
+    },
+    "extensions": {
+      "cacheControl": {
+        "version": 1,
+        "hints": [
+          {
+            "maxAge": 3600,
+            "scope": "PRIVATE",
+            "path": [
+              "viewLayout"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

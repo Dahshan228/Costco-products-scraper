@@ -1,0 +1,63 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=LandingAppDownloadBannerQuery&variables=%7B%22retailerId%22%3A%225%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%226df06f748bc1832650e01fba3bd8123207b840214c9d3c9442b805ecfc3c7ad0%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "88db73bf-dec4-4524-bed0-54da61795e9d",
+    "content-encoding": "gzip",
+    "etag": "W/\"13adaf42ffcaecca062a77d6d3b50df4\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=21, requestId;desc=\"88db73bf-dec4-4524-bed0-54da61795e9d\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "aSENqmju88SeOIYZ6IwHYOEsHTvroBvuzIurS0HwqdkYoVKSH2yLuA==",
+    "date": "Thu, 13 Nov 2025 20:25:59 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.021218",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"viewLayout\": {\"landing\": {\"appDownloadBanner\": {\"sfxContinueInBrowserString\": \"Continue in browser\", \"sfxCtaTextString\": \"Continue\", \"sfxTitleString\": \"Speed up your shopping in the app\", \"showBannerSfxVariant\": \"false\", \"sfxAppDownloadUrlString\": null, \"sfxLogoImage\": null, \"__typename\": \"LandingAppDownloadBannerSection\"}, \"__typename\": \"LandingLayout\"}, \"__typename\": \"ViewLayouts\"}}, \"extensions\": {\"cacheControl\": {\"version\": 1, \"hints\": [{\"maxAge\": 3600, \"scope\": \"PRIVATE\", \"path\": [\"viewLayout\"]}]}}}",
+  "body_parsed": {
+    "data": {
+      "viewLayout": {
+        "landing": {
+          "appDownloadBanner": {
+            "sfxContinueInBrowserString": "Continue in browser",
+            "sfxCtaTextString": "Continue",
+            "sfxTitleString": "Speed up your shopping in the app",
+            "showBannerSfxVariant": "false",
+            "sfxAppDownloadUrlString": null,
+            "sfxLogoImage": null,
+            "__typename": "LandingAppDownloadBannerSection"
+          },
+          "__typename": "LandingLayout"
+        },
+        "__typename": "ViewLayouts"
+      }
+    },
+    "extensions": {
+      "cacheControl": {
+        "version": 1,
+        "hints": [
+          {
+            "maxAge": 3600,
+            "scope": "PRIVATE",
+            "path": [
+              "viewLayout"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

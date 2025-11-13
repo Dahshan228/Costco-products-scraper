@@ -1,0 +1,275 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=ItemDetailViewLayout&variables=%7B%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22a86d26ba6f573fe12cf9ea6e191cb6e48ee4c3caba8ed62aaead62f328d011ac%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "b05eacd9-afd2-4e5c-adb4-12650be52e74",
+    "content-encoding": "gzip",
+    "etag": "W/\"07e666ae51a482e70bd8e9cbcad42ae5\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=44, requestId;desc=\"b05eacd9-afd2-4e5c-adb4-12650be52e74\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "7vFQNrg7N5C7K22ZUn9UKByW37rK1iCEsTBBo-XClC6s62Olnofjzg==",
+    "date": "Thu, 13 Nov 2025 20:26:34 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.044636",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"viewLayout\": {\"itemDetail\": {\"id\": \"item_detail:57011109\", \"itemDetailsV4\": {\"showBadgesInItemDetailsVariant\": \"false\", \"itemDetailsRedesignV3Variant\": \"false\", \"eligibleForString\": \"Eligible for:\", \"nutritionBreakdownVariant\": \"control\", \"__typename\": \"ItemDetailItemDetailsV4Section\"}, \"itemInteraction\": {\"id\": \"item_detail:57011109:item_interaction\", \"addToCartString\": \"Add to cart\", \"chooseAsReplacementString\": \"Choose as replacement\", \"customAmountString\": \"Custom Amount\", \"removeFromCartString\": \"Remove from cart\", \"updateQuantityString\": \"Update quantity\", \"selectQuantityAriaLabelString\": \"quantity to add to cart\", \"outOfStockString\": \"Out of stock\", \"updateLabelString\": \"Edit\", \"updateReplacementString\": \"Replacements or shopper notes\", \"listString\": \"list\", \"addToInStoreListString\": \"Add to List\", \"numOnInStoreListString\": \"{count} on List\", \"onInStoreListString\": \"On List\", \"removeFromListString\": \"Remove from list\", \"updateNotesString\": \"Shopper notes\", \"decrementQuantityString\": \"Decrement quantity\", \"incrementQuantityString\": \"Increment quantity\", \"quantityString\": \"Quantity\", \"__typename\": \"ItemDetailItemInteractionSection\"}, \"itemPreferences\": {\"id\": \"item_detail:57011109:item_preferences\", \"approveLabelString\": \"Approve\", \"changeLabelString\": \"Change...\", \"chooseAReplacementLabelString\": \"Choose a replacement\", \"headerString\": \"Your preferences\", \"instructionsPlaceHolderString\": \"I would like my shopper to...\", \"otherOptionsLabelString\": \"Other options...\", \"replacementHeaderString\": \"If out of stock, replace with...\", \"specialInstructionHeaderString\": \"Special instructions\", \"cancelCtaString\": \"Cancel\", \"saveInstructionsCtaString\": \"Save\", \"refundItemString\": \"Refund the original item\", \"outOfStockString\": \"If it's out of stock\", \"hideShopperNotesVariant\": \"false\", \"__typename\": \"ItemDetailItemPreferencesSection\"}, \"detailSection\": {\"detailDisclaimerString\": \"Product information or packaging displayed may not be current or complete. Always refer to the physical product for the most accurate information and warnings. For additional information, contact the retailer or manufacturer. *Actual weight may vary based on seasonality and other factors. Estimated price is approximate and provided only for reference. Individuals who need the Nutrition Information in an accessible format should contact support@costco.com.\", \"detailDisclaimerFormattedAttributesString\": {\"id\": \"d3db6920\", \"sections\": [{\"id\": \"407ce72c\", \"name\": null, \"text\": \"Product information or packaging displayed may not be current or complete. Always refer to the physical product for the most accurate information and warnings. For additional information, contact the retailer or manufacturer. \", \"styles\": {\"id\": \"1c2ba797\", \"backgroundColor\": null, \"color\": \"systemGrayscale60\", \"colorHex\": null, \"italic\": null, \"typography\": \"bodyRegular\", \"underline\": null, \"highlight\": null, \"__typename\": \"ViewFormattedAttributesStringStyles\"}, \"navigation\": null, \"__typename\": \"ViewFormattedAttributesStringSection\"}, {\"id\": \"4ca8f7a7\", \"name\": null, \"text\": \"Learn more\", \"styles\": {\"id\": \"1e864cfa\", \"backgroundColor\": null, \"color\": \"systemGrayscale60\", \"colorHex\": null, \"italic\": null, \"typography\": \"bodyLink\", \"underline\": null, \"highlight\": null, \"__typename\": \"ViewFormattedAttributesStringStyles\"}, \"navigation\": {\"id\": \"c1f97efd\", \"navigate\": {\"id\": \"97948f1d\", \"url\": \"/help/section/4524023334676/15304624268436\", \"openInNewTab\": true, \"__typename\": \"ViewFormattedAttributesStringNavigateToUrl\"}, \"__typename\": \"ViewFormattedAttributesStringNavigation\"}, \"__typename\": \"ViewFormattedAttributesStringSection\"}, {\"id\": \"14aea34a\", \"name\": null, \"text\": \"\\n*Actual weight may vary based on seasonality and other factors. Estimated price is approximate and provided only for reference. Individuals who need the Nutrition Information in an accessible format should contact \", \"styles\": {\"id\": \"b128de5d\", \"backgroundColor\": null, \"color\": \"systemGrayscale60\", \"colorHex\": null, \"italic\": null, \"typography\": \"bodyRegular\", \"underline\": null, \"highlight\": null, \"__typename\": \"ViewFormattedAttributesStringStyles\"}, \"navigation\": null, \"__typename\": \"ViewFormattedAttributesStringSection\"}, {\"id\": \"c9bf30e7\", \"name\": null, \"text\": \"support@costco.com\", \"styles\": {\"id\": \"f882bbe9\", \"backgroundColor\": null, \"color\": \"systemGrayscale60\", \"colorHex\": null, \"italic\": null, \"typography\": \"bodyLink\", \"underline\": null, \"highlight\": null, \"__typename\": \"ViewFormattedAttributesStringStyles\"}, \"navigation\": {\"id\": \"0adcbbdc\", \"navigate\": {\"id\": \"e40aeffa\", \"url\": \"mailto:support@costco.com\", \"openInNewTab\": false, \"__typename\": \"ViewFormattedAttributesStringNavigateToUrl\"}, \"__typename\": \"ViewFormattedAttributesStringNavigation\"}, \"__typename\": \"ViewFormattedAttributesStringSection\"}, {\"id\": \"1607fb5e\", \"name\": null, \"text\": \"\", \"styles\": {\"id\": \"d69b254d\", \"backgroundColor\": null, \"color\": \"systemGrayscale60\", \"colorHex\": null, \"italic\": null, \"typography\": \"bodyRegular\", \"underline\": null, \"highlight\": null, \"__typename\": \"ViewFormattedAttributesStringStyles\"}, \"navigation\": null, \"__typename\": \"ViewFormattedAttributesStringSection\"}], \"__typename\": \"ViewFormattedAttributesString\"}, \"readMoreString\": \"Read more\", \"headerString\": \"Product information\", \"nutritionHeaderString\": \"Nutrition\", \"seeLessString\": \"See less\", \"shopAllString\": \"Shop all\", \"charactersRemainingString\": \"%{characters} characters remaining\", \"__typename\": \"ItemDetailDetailSectionSection\"}, \"headerSection\": {\"id\": \"item_detail:57011109:header_section\", \"backButtonLabelString\": \"Back\", \"__typename\": \"ItemDetailHeaderSectionSection\"}, \"trackingProperties\": {\"api_version\": \"4\", \"page_type\": \"item_details\"}, \"tracking\": {\"loadTrackingEventName\": \"item_details.load\", \"engagementTrackingEventName\": \"item_details.engagement\", \"displayTrackingEventName\": \"item_details.display\", \"__typename\": \"ItemDetailTrackingSection\"}, \"emptyState\": {\"descriptionString\": \"Sorry, the item is not available in current retailer or current location.\", \"titleString\": \"Item Unavailable\", \"__typename\": \"ItemDetailEmptyStateSection\"}, \"multiRetailerItem\": {\"showAllStoresString\": \"Show all %<retailer_count> available stores\", \"showFewerStoresString\": \"Show fewer stores\", \"__typename\": \"ItemDetailMultiRetailerItemSection\"}, \"__typename\": \"ItemDetailLayout\"}, \"productNutritionalInfo\": {\"id\": \"product_nutritional_info:90349239\", \"nutrition\": {\"amountPerServingString\": \"Amount Per Serving\", \"calorieInfoDisclaimerString\": \"The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.\", \"calorieInfoHeaderString\": \"Calorie Information\", \"caloriesString\": \"Calories\", \"headerString\": \"Nutrition Facts\", \"percentDailyValueString\": \"% Daily Value\", \"percentDailyValueNewString\": \"% Daily Value*\", \"servingSizeString\": \"Serving Size\", \"servingsPerContainerString\": \"Servings Per Container\", \"newNutritionLabelVariant\": \"variant\", \"asteriskString\": \"*\", \"__typename\": \"ProductNutritionalInfoNutritionSection\"}, \"__typename\": \"ProductNutritionalInfoLayout\"}, \"productReviews\": {\"review\": {\"showEmptyReviewsVariant\": \"false\", \"__typename\": \"ProductReviewsReviewSection\"}, \"__typename\": \"ProductReviewLayout\"}, \"__typename\": \"ViewLayouts\"}}, \"extensions\": {\"cacheControl\": {\"version\": 1, \"hints\": [{\"maxAge\": 3600, \"scope\": \"PRIVATE\", \"path\": [\"viewLayout\"]}]}}}",
+  "body_parsed": {
+    "data": {
+      "viewLayout": {
+        "itemDetail": {
+          "id": "item_detail:57011109",
+          "itemDetailsV4": {
+            "showBadgesInItemDetailsVariant": "false",
+            "itemDetailsRedesignV3Variant": "false",
+            "eligibleForString": "Eligible for:",
+            "nutritionBreakdownVariant": "control",
+            "__typename": "ItemDetailItemDetailsV4Section"
+          },
+          "itemInteraction": {
+            "id": "item_detail:57011109:item_interaction",
+            "addToCartString": "Add to cart",
+            "chooseAsReplacementString": "Choose as replacement",
+            "customAmountString": "Custom Amount",
+            "removeFromCartString": "Remove from cart",
+            "updateQuantityString": "Update quantity",
+            "selectQuantityAriaLabelString": "quantity to add to cart",
+            "outOfStockString": "Out of stock",
+            "updateLabelString": "Edit",
+            "updateReplacementString": "Replacements or shopper notes",
+            "listString": "list",
+            "addToInStoreListString": "Add to List",
+            "numOnInStoreListString": "{count} on List",
+            "onInStoreListString": "On List",
+            "removeFromListString": "Remove from list",
+            "updateNotesString": "Shopper notes",
+            "decrementQuantityString": "Decrement quantity",
+            "incrementQuantityString": "Increment quantity",
+            "quantityString": "Quantity",
+            "__typename": "ItemDetailItemInteractionSection"
+          },
+          "itemPreferences": {
+            "id": "item_detail:57011109:item_preferences",
+            "approveLabelString": "Approve",
+            "changeLabelString": "Change...",
+            "chooseAReplacementLabelString": "Choose a replacement",
+            "headerString": "Your preferences",
+            "instructionsPlaceHolderString": "I would like my shopper to...",
+            "otherOptionsLabelString": "Other options...",
+            "replacementHeaderString": "If out of stock, replace with...",
+            "specialInstructionHeaderString": "Special instructions",
+            "cancelCtaString": "Cancel",
+            "saveInstructionsCtaString": "Save",
+            "refundItemString": "Refund the original item",
+            "outOfStockString": "If it's out of stock",
+            "hideShopperNotesVariant": "false",
+            "__typename": "ItemDetailItemPreferencesSection"
+          },
+          "detailSection": {
+            "detailDisclaimerString": "Product information or packaging displayed may not be current or complete. Always refer to the physical product for the most accurate information and warnings. For additional information, contact the retailer or manufacturer. *Actual weight may vary based on seasonality and other factors. Estimated price is approximate and provided only for reference. Individuals who need the Nutrition Information in an accessible format should contact support@costco.com.",
+            "detailDisclaimerFormattedAttributesString": {
+              "id": "d3db6920",
+              "sections": [
+                {
+                  "id": "407ce72c",
+                  "name": null,
+                  "text": "Product information or packaging displayed may not be current or complete. Always refer to the physical product for the most accurate information and warnings. For additional information, contact the retailer or manufacturer. ",
+                  "styles": {
+                    "id": "1c2ba797",
+                    "backgroundColor": null,
+                    "color": "systemGrayscale60",
+                    "colorHex": null,
+                    "italic": null,
+                    "typography": "bodyRegular",
+                    "underline": null,
+                    "highlight": null,
+                    "__typename": "ViewFormattedAttributesStringStyles"
+                  },
+                  "navigation": null,
+                  "__typename": "ViewFormattedAttributesStringSection"
+                },
+                {
+                  "id": "4ca8f7a7",
+                  "name": null,
+                  "text": "Learn more",
+                  "styles": {
+                    "id": "1e864cfa",
+                    "backgroundColor": null,
+                    "color": "systemGrayscale60",
+                    "colorHex": null,
+                    "italic": null,
+                    "typography": "bodyLink",
+                    "underline": null,
+                    "highlight": null,
+                    "__typename": "ViewFormattedAttributesStringStyles"
+                  },
+                  "navigation": {
+                    "id": "c1f97efd",
+                    "navigate": {
+                      "id": "97948f1d",
+                      "url": "/help/section/4524023334676/15304624268436",
+                      "openInNewTab": true,
+                      "__typename": "ViewFormattedAttributesStringNavigateToUrl"
+                    },
+                    "__typename": "ViewFormattedAttributesStringNavigation"
+                  },
+                  "__typename": "ViewFormattedAttributesStringSection"
+                },
+                {
+                  "id": "14aea34a",
+                  "name": null,
+                  "text": "\n*Actual weight may vary based on seasonality and other factors. Estimated price is approximate and provided only for reference. Individuals who need the Nutrition Information in an accessible format should contact ",
+                  "styles": {
+                    "id": "b128de5d",
+                    "backgroundColor": null,
+                    "color": "systemGrayscale60",
+                    "colorHex": null,
+                    "italic": null,
+                    "typography": "bodyRegular",
+                    "underline": null,
+                    "highlight": null,
+                    "__typename": "ViewFormattedAttributesStringStyles"
+                  },
+                  "navigation": null,
+                  "__typename": "ViewFormattedAttributesStringSection"
+                },
+                {
+                  "id": "c9bf30e7",
+                  "name": null,
+                  "text": "support@costco.com",
+                  "styles": {
+                    "id": "f882bbe9",
+                    "backgroundColor": null,
+                    "color": "systemGrayscale60",
+                    "colorHex": null,
+                    "italic": null,
+                    "typography": "bodyLink",
+                    "underline": null,
+                    "highlight": null,
+                    "__typename": "ViewFormattedAttributesStringStyles"
+                  },
+                  "navigation": {
+                    "id": "0adcbbdc",
+                    "navigate": {
+                      "id": "e40aeffa",
+                      "url": "mailto:support@costco.com",
+                      "openInNewTab": false,
+                      "__typename": "ViewFormattedAttributesStringNavigateToUrl"
+                    },
+                    "__typename": "ViewFormattedAttributesStringNavigation"
+                  },
+                  "__typename": "ViewFormattedAttributesStringSection"
+                },
+                {
+                  "id": "1607fb5e",
+                  "name": null,
+                  "text": "",
+                  "styles": {
+                    "id": "d69b254d",
+                    "backgroundColor": null,
+                    "color": "systemGrayscale60",
+                    "colorHex": null,
+                    "italic": null,
+                    "typography": "bodyRegular",
+                    "underline": null,
+                    "highlight": null,
+                    "__typename": "ViewFormattedAttributesStringStyles"
+                  },
+                  "navigation": null,
+                  "__typename": "ViewFormattedAttributesStringSection"
+                }
+              ],
+              "__typename": "ViewFormattedAttributesString"
+            },
+            "readMoreString": "Read more",
+            "headerString": "Product information",
+            "nutritionHeaderString": "Nutrition",
+            "seeLessString": "See less",
+            "shopAllString": "Shop all",
+            "charactersRemainingString": "%{characters} characters remaining",
+            "__typename": "ItemDetailDetailSectionSection"
+          },
+          "headerSection": {
+            "id": "item_detail:57011109:header_section",
+            "backButtonLabelString": "Back",
+            "__typename": "ItemDetailHeaderSectionSection"
+          },
+          "trackingProperties": {
+            "api_version": "4",
+            "page_type": "item_details"
+          },
+          "tracking": {
+            "loadTrackingEventName": "item_details.load",
+            "engagementTrackingEventName": "item_details.engagement",
+            "displayTrackingEventName": "item_details.display",
+            "__typename": "ItemDetailTrackingSection"
+          },
+          "emptyState": {
+            "descriptionString": "Sorry, the item is not available in current retailer or current location.",
+            "titleString": "Item Unavailable",
+            "__typename": "ItemDetailEmptyStateSection"
+          },
+          "multiRetailerItem": {
+            "showAllStoresString": "Show all %<retailer_count> available stores",
+            "showFewerStoresString": "Show fewer stores",
+            "__typename": "ItemDetailMultiRetailerItemSection"
+          },
+          "__typename": "ItemDetailLayout"
+        },
+        "productNutritionalInfo": {
+          "id": "product_nutritional_info:90349239",
+          "nutrition": {
+            "amountPerServingString": "Amount Per Serving",
+            "calorieInfoDisclaimerString": "The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.",
+            "calorieInfoHeaderString": "Calorie Information",
+            "caloriesString": "Calories",
+            "headerString": "Nutrition Facts",
+            "percentDailyValueString": "% Daily Value",
+            "percentDailyValueNewString": "% Daily Value*",
+            "servingSizeString": "Serving Size",
+            "servingsPerContainerString": "Servings Per Container",
+            "newNutritionLabelVariant": "variant",
+            "asteriskString": "*",
+            "__typename": "ProductNutritionalInfoNutritionSection"
+          },
+          "__typename": "ProductNutritionalInfoLayout"
+        },
+        "productReviews": {
+          "review": {
+            "showEmptyReviewsVariant": "false",
+            "__typename": "ProductReviewsReviewSection"
+          },
+          "__typename": "ProductReviewLayout"
+        },
+        "__typename": "ViewLayouts"
+      }
+    },
+    "extensions": {
+      "cacheControl": {
+        "version": 1,
+        "hints": [
+          {
+            "maxAge": 3600,
+            "scope": "PRIVATE",
+            "path": [
+              "viewLayout"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

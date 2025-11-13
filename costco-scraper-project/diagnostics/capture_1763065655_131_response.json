@@ -1,0 +1,793 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=AuthenticateLayout&variables=%7B%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22fc6f362a66992c89fcd4842c9adfba059951e979c9b19c23d12f1fa5b9c66f37%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "6e7e8701-4dcf-4f8e-9bbe-df8e8a1d0616",
+    "content-encoding": "gzip",
+    "etag": "W/\"0a4bca86490b2175d206a198026fa4f5\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=180, requestId;desc=\"6e7e8701-4dcf-4f8e-9bbe-df8e8a1d0616\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "EgKkOO9oNkVcdOm0-idPg3BTzf1sl_APUyIpkLKGZ0aeHNJJKqXE-w==",
+    "date": "Thu, 13 Nov 2025 20:26:13 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.180569",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"viewLayout\": {\"authenticate\": {\"scanAndPayLogin\": {\"scanAndPayVariant\": \"marketplace\", \"__typename\": \"AuthenticateScanAndPayLoginSection\"}, \"navigation\": {\"cancelString\": \"Cancel\", \"loginButtonLabelString\": \"Log in\", \"signupButtonLabelString\": \"Sign up\", \"__typename\": \"AuthenticateNavigationSection\"}, \"legal\": {\"signupDisclaimerStringFormatted\": {\"sections\": [{\"name\": null, \"content\": \"By signing up, you agree to Instacart\\u2019s \", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": \"tos_link\", \"content\": \"Terms of Service\", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": null, \"content\": \" and \", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": \"pp_link\", \"content\": \"Privacy Policy\", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": null, \"content\": \". You agree that your contact information and order information will be shared with {retailer} for marketing purposes.\", \"__typename\": \"ViewFormattedStringSection\"}], \"__typename\": \"ViewFormattedString\"}, \"signupDisclaimerWithHealthStringFormatted\": {\"sections\": [{\"name\": null, \"content\": \"By signing up, you agree to Instacart\\u2019s \", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": \"tos_link\", \"content\": \"Terms of Service\", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": null, \"content\": \" and \", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": \"pp_link\", \"content\": \"Privacy Policy\", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": null, \"content\": \" and \", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": \"hpp_link\", \"content\": \"Health Data Notice\", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": null, \"content\": \". You agree that your contact information and order information will be shared with {retailer} for marketing purposes.\", \"__typename\": \"ViewFormattedStringSection\"}], \"__typename\": \"ViewFormattedString\"}, \"loginDisclaimerStringFormatted\": null, \"smsLegalString\": \"We will send a text with a verification code. Message and data rates may apply.\", \"marketingConsentTextString\": null, \"__typename\": \"AuthenticateLegalSection\"}, \"forgotPasswordComplete\": {\"buttonLabelString\": \"Go back to log in\", \"subtextString\": \"If that email matches an account, you\\u2019ll get a link to reset your password within a few minutes.\", \"titleString\": \"Check your inbox\", \"__typename\": \"AuthenticateForgotPasswordCompleteSection\"}, \"forgotPassword\": {\"buttonLabelString\": \"Reset password\", \"subtextString\": \"We\\u2019ll send you a link to reset your password.\", \"titleString\": \"Forgot password?\", \"__typename\": \"AuthenticateForgotPasswordSection\"}, \"login\": {\"buttonLabelString\": \"Log in\", \"footerButtonLabelString\": \"Sign up\", \"footerTextString\": \"Don\\u2019t have an account?\", \"passwordPlaceholderString\": \"Password\", \"loginWithEmailTitleString\": \"Log in with email\", \"emailPlaceholderString\": \"Email\", \"loginWithPhoneTitleString\": \"Log in with phone number\", \"titleString\": \"Log in\", \"subtitleString\": null, \"titleKeepShoppingString\": \"Have an account? Log in to keep shopping\", \"phoneButtonLabelString\": \"Continue\", \"continueWithPhoneString\": \"Continue with phone\", \"continueWithEmailString\": \"Continue with email\", \"continueWithCodeString\": \"Continue\", \"phonePlaceholderString\": \"Phone number\", \"previousMethodTitleString\": \"Last used login\", \"otherOptionsString\": \"Other options\", \"lastUsedAuthMethodPreviewVariant\": \"false\", \"forgotPasswordActionStringFormatted\": {\"sections\": [{\"name\": null, \"content\": \"Forgot password? \", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": \"forgot_password\", \"content\": \"Reset it\", \"__typename\": \"ViewFormattedStringSection\"}], \"__typename\": \"ViewFormattedString\"}, \"logInWithACodeActionStringFormatted\": {\"sections\": [{\"name\": null, \"content\": \"Forgot password? \", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": \"forgot_password\", \"content\": \"Get a login code\", \"__typename\": \"ViewFormattedStringSection\"}], \"__typename\": \"ViewFormattedString\"}, \"emailLoginVerificationM0Variant\": \"noPasswordFallback\", \"allowSignUpVariant\": \"false\", \"customersEmailOtpLoginVariant\": \"false\", \"__typename\": \"AuthenticateLoginSection\"}, \"existingUser\": {\"headerString\": \"Welcome back\", \"existingMethodSubtextString\": \"Hey {email}, looks like you already have an Costco Same-Day account. To continue, log in below.\", \"__typename\": \"AuthenticateExistingUserSection\"}, \"membership\": null, \"password\": {\"buttonLabelString\": \"Continue\", \"passwordPlaceholderString\": \"Enter a password\", \"subtextString\": \"Enter at least 8 characters.\", \"titleString\": \"Create a password\", \"loginTitleString\": \"Enter your password\", \"loginButtonLabelString\": \"Log in\", \"emailVerificationVariant\": \"true\", \"__typename\": \"AuthenticatePasswordSection\"}, \"webauthn\": {\"activationWebauthnLoginVariant\": \"false\", \"activationWebauthnSignupVariant\": \"false\", \"buttonLabelString\": \"Continue with a passkey\", \"__typename\": \"AuthenticateWebauthnSection\"}, \"signup\": {\"buttonLabelString\": \"Continue\", \"footerButtonLabelString\": \"Log in\", \"footerTextString\": \"Already have an account?\", \"subtextString\": \"Welcome to {retailer}! Enter your email to get started.\", \"subtextShortString\": \"Enter your email to get started.\", \"firstNameString\": \"First Name\", \"lastNameString\": \"Last Name\", \"titleString\": \"Sign up\", \"titleBuyNowString\": \"Sign up to place order\", \"titleKeepShoppingString\": \"Sign up for free to keep shopping\", \"titleCheckOutString\": \"Sign up to check out\", \"phoneString\": \"Phone\", \"phoneButtonLabelString\": \"Continue\", \"continueWithPhoneString\": \"Continue with phone\", \"continueWithEmailString\": \"Continue with email\", \"emailTabString\": \"Email\", \"phonePlaceholderString\": \"Phone number\", \"phoneSubtextString\": \"Welcome to {retailer}! Enter your phone number to get started.\", \"signupRemovePasswordVariant\": \"true\", \"signupRedesignPreviewVariant\": \"false\", \"signupRedesignTitlesPreviewVariant\": \"false\", \"loxSignupFlowIncentivesPreviewVariant\": \"false\", \"loxPhoneOnlySignupVariant\": \"false\", \"loxPhoneOnlySignupMpVariant\": \"false\", \"buyNowIncentiveLabelString\": \"Finish your order: Sign up for $0 delivery!\", \"threeFreeDeliveryLabelString\": \"$0 delivery fee on your first 3 orders\", \"threeFreeDeliveryFormattedAttributesString\": {\"id\": \"38d148a3\", \"sections\": [{\"id\": \"6798cea9\", \"name\": null, \"text\": \"$0 delivery fee\", \"styles\": {\"id\": \"071d8e99\", \"backgroundColor\": null, \"color\": \"systemGrayscale80\", \"colorHex\": null, \"italic\": null, \"typography\": \"subtitle\", \"underline\": null, \"highlight\": true, \"__typename\": \"ViewFormattedAttributesStringStyles\"}, \"navigation\": null, \"__typename\": \"ViewFormattedAttributesStringSection\"}, {\"id\": \"24663bbc\", \"name\": null, \"text\": \" on your first 3 orders\", \"styles\": {\"id\": \"587fb2e6\", \"backgroundColor\": null, \"color\": \"systemGrayscale80\", \"colorHex\": null, \"italic\": null, \"typography\": \"subtitle\", \"underline\": null, \"highlight\": null, \"__typename\": \"ViewFormattedAttributesStringStyles\"}, \"navigation\": null, \"__typename\": \"ViewFormattedAttributesStringSection\"}], \"__typename\": \"ViewFormattedAttributesString\"}, \"threeFreeDeliveryTermsString\": \"Service fees and terms apply\", \"threeFreeDeliveryTermsUrlCtaAction\": {\"url\": \"help/section/639415266/3275122625\", \"openInNewTab\": true, \"__typename\": \"ViewCtaActionNavigateToUrl\"}, \"accountTypeTabBusinessString\": \"Business\", \"accountTypeTabPersonalString\": \"Personal\", \"accountTypeTabsAriaLabelString\": \"Select account type\", \"accountTypeTabsVariant\": \"false\", \"displayNamesVariant\": \"false\", \"titleFormattedAttributesString\": {\"id\": \"b7ca4105\", \"sections\": [{\"id\": \"67dd3c40\", \"name\": null, \"text\": \"Sign up\", \"styles\": {\"id\": \"b966fbac\", \"backgroundColor\": null, \"color\": \"systemGrayscale80\", \"colorHex\": null, \"italic\": null, \"typography\": \"title\", \"underline\": null, \"highlight\": null, \"__typename\": \"ViewFormattedAttributesStringStyles\"}, \"navigation\": null, \"__typename\": \"ViewFormattedAttributesStringSection\"}], \"__typename\": \"ViewFormattedAttributesString\"}, \"hggEmployeeFlowVariant\": \"false\", \"employeePromptString\": \"Are you a Costco Same-Day team member?\", \"badgeIdString\": \"Badge ID\", \"badgeIdConfirmationString\": \"Badge ID Confirmation\", \"badgeIdRegexString\": \"^(41092|41093)\\\\d{6}$\", \"membershipNumberString\": \"Membership Number\", \"dateOfBirthString\": \"Date of Birth\", \"additionalSignupFields\": null, \"accountTypeTabsLocationVariant\": \"default\", \"businessHeaderFormattedAttributesString\": {\"id\": \"52c31c81\", \"sections\": [{\"id\": \"97c85f55\", \"name\": null, \"text\": \"Signup for more \", \"styles\": {\"id\": \"3a9c5f60\", \"backgroundColor\": null, \"color\": \"systemGrayscale80\", \"colorHex\": null, \"italic\": null, \"typography\": \"title\", \"underline\": null, \"highlight\": null, \"__typename\": \"ViewFormattedAttributesStringStyles\"}, \"navigation\": null, \"__typename\": \"ViewFormattedAttributesStringSection\"}, {\"id\": \"75a558fe\", \"name\": null, \"text\": \"free\", \"styles\": {\"id\": \"456b47c8\", \"backgroundColor\": null, \"color\": \"systemGrayscale80\", \"colorHex\": null, \"italic\": null, \"typography\": \"title\", \"underline\": null, \"highlight\": true, \"__typename\": \"ViewFormattedAttributesStringStyles\"}, \"navigation\": null, \"__typename\": \"ViewFormattedAttributesStringSection\"}, {\"id\": \"3d58c771\", \"name\": null, \"text\": \" perks, tailored for your business.\", \"styles\": {\"id\": \"c641cb14\", \"backgroundColor\": null, \"color\": \"systemGrayscale80\", \"colorHex\": null, \"italic\": null, \"typography\": \"title\", \"underline\": null, \"highlight\": null, \"__typename\": \"ViewFormattedAttributesStringStyles\"}, \"navigation\": null, \"__typename\": \"ViewFormattedAttributesStringSection\"}], \"__typename\": \"ViewFormattedAttributesString\"}, \"showBusinessHeaderVariant\": \"false\", \"showFreeThreeDeliveryTermsVariant\": \"true\", \"signupButtonColor\": \"brandPrimaryRegular\", \"__typename\": \"AuthenticateSignupSection\"}, \"infoBox\": null, \"social\": {\"continueWithGoogleString\": \"Continue with Google\", \"continueWithFacebookString\": \"Continue with Facebook\", \"continueWithRetailerString\": \"Continue with {retailer}\", \"continueWithAppleString\": \"Continue with Apple\", \"orContinueWithString\": \"Or continue with\", \"facebookString\": \"Facebook\", \"googleString\": \"Google\", \"appleString\": \"Apple\", \"googleSsoTokenModelPreviewVariant\": \"false\", \"__typename\": \"AuthenticateSocialSection\"}, \"common\": {\"dividerLabelString\": \"or\", \"emailPlaceholderString\": \"Email\", \"phoneAuthEnabledVariant\": \"false\", \"marketplacePhoneAuthEnabledVariant\": \"true\", \"activationSsoAboveInputsVariant\": \"false\", \"membershipInvitationLabelString\": \"Join\", \"membershipInvitationTextString\": \"Not a Costco Same-Day member?\", \"membershipInvitationUrlString\": null, \"__typename\": \"AuthenticateCommonSection\"}, \"captureEmail\": {\"titleString\": \"Add your email\", \"subtextString\": \"Add a layer of security to your account and never miss an order update.\", \"buttonLabelString\": \"Continue\", \"__typename\": \"AuthenticateCaptureEmailSection\"}, \"requestLoginVerificationCode\": {\"titleString\": \"Get a login code\", \"subtextEmailString\": \"Enter your email to get a one-time login code.\", \"buttonLabelString\": \"Send code\", \"__typename\": \"AuthenticateRequestLoginVerificationCodeSection\"}, \"oneTimeCode\": {\"titleString\": \"Enter verification code\", \"emailTitleString\": \"Check your email\", \"subtextEmailStringFormatted\": {\"sections\": [{\"name\": null, \"content\": \"We sent a 6-digit code to \", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": \"email\", \"content\": \"{email}\", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": null, \"content\": \".\", \"__typename\": \"ViewFormattedStringSection\"}], \"__typename\": \"ViewFormattedString\"}, \"subtextPhoneStringFormatted\": {\"sections\": [{\"name\": null, \"content\": \"Enter the 6-digit code we sent over SMS to \", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": \"phonenumber\", \"content\": \"{phoneNumber}\", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": null, \"content\": \".\", \"__typename\": \"ViewFormattedStringSection\"}], \"__typename\": \"ViewFormattedString\"}, \"subtextEmailLine2String\": \"It expires soon \\u2014 check your inbox (and spam)\", \"codePlaceholderString\": \"Enter code\", \"resendCodeString\": \"Request a new code\", \"resendCodeStringFormatted\": {\"sections\": [{\"name\": null, \"content\": \"Request a new code\", \"__typename\": \"ViewFormattedStringSection\"}], \"__typename\": \"ViewFormattedString\"}, \"resendCodeButtonLabelString\": \"Request a new code in {seconds} seconds\", \"didntReceiveCodeString\": \"Didn't receive a text?\", \"usePasswordString\": \"Login with password instead\", \"__typename\": \"AuthenticateOneTimeCodeSection\"}, \"phoneVerification\": {\"recaptchaEnabledVariant\": \"false\", \"__typename\": \"AuthenticatePhoneVerificationSection\"}, \"submitSecurityVerificationCode\": {\"titleString\": \"Enter verification code\", \"codePlaceholderString\": \"Enter code\", \"checkSpamString\": \"Don\\u2019t see the email in your Inbox? Check your spam folder.\", \"resendCodeString\": \"Request a new code\", \"resendCodeButtonLabelString\": \"Request a new code in {seconds} seconds\", \"cantAccessString\": \"Can\\u2019t access this email?\", \"subtextEmailStringFormatted\": {\"sections\": [{\"name\": null, \"content\": \"We want to make sure your account is secure. Enter the 6-digit verification code we sent to \", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": \"email\", \"content\": \"{email}\", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": null, \"content\": \".\", \"__typename\": \"ViewFormattedStringSection\"}], \"__typename\": \"ViewFormattedString\"}, \"subtextPreviousEmailStringFormatted\": {\"sections\": [{\"name\": null, \"content\": \"We want to make sure your account is secure. Enter the 6-digit verification code we sent to your previous email: \", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": \"email\", \"content\": \"{email}\", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": null, \"content\": \".\", \"__typename\": \"ViewFormattedStringSection\"}], \"__typename\": \"ViewFormattedString\"}, \"logOutFormattedAttributesString\": {\"id\": \"dfe68d83\", \"sections\": [{\"id\": \"90335aba\", \"name\": null, \"text\": \"Note: You \", \"styles\": {\"id\": \"abdc2c8a\", \"backgroundColor\": null, \"color\": \"systemGrayscale80\", \"colorHex\": null, \"italic\": null, \"typography\": \"bodyMedium2\", \"underline\": null, \"highlight\": null, \"__typename\": \"ViewFormattedAttributesStringStyles\"}, \"navigation\": null, \"__typename\": \"ViewFormattedAttributesStringSection\"}, {\"id\": \"83744308\", \"name\": null, \"text\": \"will be logged out\", \"styles\": {\"id\": \"34922fb0\", \"backgroundColor\": null, \"color\": \"systemGrayscale80\", \"colorHex\": null, \"italic\": null, \"typography\": \"bodyMedium1\", \"underline\": null, \"highlight\": null, \"__typename\": \"ViewFormattedAttributesStringStyles\"}, \"navigation\": null, \"__typename\": \"ViewFormattedAttributesStringSection\"}, {\"id\": \"8a327c83\", \"name\": null, \"text\": \" after successfully changing your email.\", \"styles\": {\"id\": \"cde997d0\", \"backgroundColor\": null, \"color\": \"systemGrayscale80\", \"colorHex\": null, \"italic\": null, \"typography\": \"bodyMedium2\", \"underline\": null, \"highlight\": null, \"__typename\": \"ViewFormattedAttributesStringStyles\"}, \"navigation\": null, \"__typename\": \"ViewFormattedAttributesStringSection\"}], \"__typename\": \"ViewFormattedAttributesString\"}, \"__typename\": \"AuthenticateSubmitSecurityVerificationCodeSection\"}, \"requestLoginLink\": {\"titleString\": \"Get a login link\", \"subtextEmailString\": \"Enter your email to get a one-time login link.\", \"buttonLabelString\": \"Send link\", \"__typename\": \"AuthenticateRequestLoginLinkSection\"}, \"requestLoginLinkComplete\": {\"subtextStringFormatted\": {\"sections\": [{\"name\": null, \"content\": \"We sent a login link to \", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": \"email\", \"content\": \"{email}\", \"__typename\": \"ViewFormattedStringSection\"}, {\"name\": null, \"content\": \".\", \"__typename\": \"ViewFormattedStringSection\"}], \"__typename\": \"ViewFormattedString\"}, \"__typename\": \"AuthenticateRequestLoginLinkCompleteSection\"}, \"valueProps\": [{\"logoImage\": {\"templateUrl\": \"https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/activation/value_groceries_illus@2x-4c3263a781415a8926616b736705a4fda10f458d81266ff3f2b8950412c06119.png\", \"altText\": \"save time image\", \"__typename\": \"Image\"}, \"headerString\": \"Tap a button,\\nget your groceries\", \"subheaderString\": \"Get your groceries delivered or ready for pickup\\u2014and spend time on what matters.\", \"__typename\": \"AuthenticateValuePropsSection\"}, {\"logoImage\": {\"templateUrl\": \"https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/activation/value_quality_illus@2x-a8a238171c2d52d0deb3ad7a1501b0be74a821252a60632390f9de81ea221549.png\", \"altText\": \"quality items image\", \"__typename\": \"Image\"}, \"headerString\": \"Get quality groceries\\npicked with care\", \"subheaderString\": \"Shoppers pick the highest quality items. That\\u2019s our 100% quality promise.\", \"__typename\": \"AuthenticateValuePropsSection\"}, {\"logoImage\": {\"templateUrl\": \"https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/activation/value_deals_illus@2x-b376f594c397debdaaf3e3a86ebc9a613fa357795a6a8f3999b07b2abe6ef266.png\", \"altText\": \"save money image\", \"__typename\": \"Image\"}, \"headerString\": \"Shop more deals,\\nsave more with us\", \"subheaderString\": \"Save with exclusive deals, coupons, and more\\u2014with no membership required!\", \"__typename\": \"AuthenticateValuePropsSection\"}], \"valuePropsModal\": null, \"homeFooter\": {\"businessSignUpVariant\": \"false\", \"businessLogoImage\": {\"templateUrl\": \"https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/business/ic_logo_transparent_background@3x-13eb4f6b0ec4e5ff030c3625e44ea1726316e8ca9521eb6262b2c9391f231329.png\", \"altText\": \"Costco Same-Day Business logo\", \"__typename\": \"Image\"}, \"businessSignUpMessageString\": \"Need delivery for your business?\", \"businessSignUpCtaString\": \"Sign up for Costco Same-Day Business\", \"__typename\": \"AuthenticateHomeFooterSection\"}, \"__typename\": \"AuthenticateLayout\"}, \"authenticationShared\": {\"validationErrors\": {\"accountLockedString\": \"Your account is locked. Check your email for unlock instructions.\", \"accountMaintenanceString\": \"We experienced an error processing your request. Please try again.\", \"accountAlreadyExistsString\": \"This email already has an account \\u2014 log in to continue.\", \"accountsRequiresPasswordResetString\": \"Maintaining your account security is our top priority. It appears your email address and password may have been compromised on another site. As a precautionary measure, please check your email to reset your password.\", \"adminLoginString\": \"We were unable to process your request.  Please utilize the Google sign in option to proceed.\", \"facebookEmailNeededString\": \"We weren\\u2019t permitted to read your email address from Facebook which is required to created an account. You may need to go to Facebook to revoke access before you can try again.\", \"forbiddenString\": \"We couldn\\u2019t validate the security of this request. Sorry!\", \"emailTakenString\": \"Email has already been taken.\", \"generalString\": \"We experienced an error processing your request. Please try again.\", \"invalidCredentialsManyTriesString\": \"Invalid password. We sent an email to help you reset your password.\", \"invalidCredentialsPhoneLoginString\": \"Code didn't match. Try again or request a new code.\", \"invalidCredentialsSkippedPasswordString\": \"You\\u2019ll need to finish account setup to log in \\u2014 check your email for instructions.\", \"invalidCredentialsMultipleFailedAttemptsString\": \"It looks like you\\u2019re having trouble with your password. Try logging in with a code instead.\", \"invalidCredentialsSkippedPasswordExistingUserString\": \"You need to set a new password to log in - we have emailed you a password reset link.\", \"invalidCredentialsPasswordWipedString\": \"You need to set a new password. We\\u2019ll email you a login code.\", \"invalidCredentialsNoPasswordTrySendCodeString\": \"Looks like no password was created. We\\u2019ll email you a login code.\", \"invalidCredentialsString\": \"Invalid email or password.\", \"invalidEmailString\": \"Enter a valid email address.\", \"invalidEmailFormatString\": \"Enter an email with the format 'username@example.com'.\", \"invalidEmailContainsSpacesString\": \"Remove any spaces to continue.\", \"invalidEmailContainsInvalidCharactersString\": \"Remove special characters (ex. ^, &, =) to continue.\", \"invalidEmailIsBlankString\": \"Enter a valid email to continue.\", \"invalidPhoneString\": \"Please enter a valid phone number\", \"membershipNotFoundString\": \"No active Costco Same-Day Member account found with this number\", \"notLinkingBusinessOnlyAccountString\": \"Please login to a business account that isn't connected to a personal account already.\", \"linkingAlreadyConnectedBusinessAccountString\": \"You are trying to login to a business account that is already connected to a personal account. Please try connecting a separate business account.\", \"linkingAlreadyConnectedPersonalAccountString\": \"You are trying to login to a personal account that is already connected to a business account. Please try connecting a separate personal account.\", \"linkingCurrentlyLoggedInAccountString\": \"You are already logged in to this account. Please go back to the account menu and convert this to a business account instead.\", \"linkingNonBusinessAccountString\": \"You are trying to login to a non-business account. Please try converting that account to a business account first before connecting.\", \"linkingNonPersonalAccountString\": \"You are trying to login to a non-personal account. Please try converting that account to a personal account first before connecting.\", \"passwordTooShortString\": \"The password you entered is too short. Please choose a password that is at least 8 characters.\", \"passwordTooLongString\": \"The password you entered is too long.\", \"passwordTooCommonString\": \"The password you entered is not secure. Please choose a password that is not a common word or phrase.\", \"phoneUserNotFoundString\": \"Phone login isn\\u2019t set up for that number. Try one of these other ways to log in.\", \"phoneTokenExpiredString\": \"That code is expired, resend to try again\", \"emailUserNotFoundString\": \"No account exists with this email address.\", \"generalGoogleString\": \"Google experienced an error while processing your request. Please try another method to log in.\", \"googleCookieString\": \"Google login is unavailable because 3rd party cookies are currently disabled in your browser settings.\", \"rateLimitString\": \"We were unable to process your request due to too many recent attempts.  Please wait a bit before trying again.\", \"invalidBadgeIdString\": \"Please enter a valid 11 digit Card Number\", \"badgeIdMismatchString\": \"Card Number did not match. Please re-enter.\", \"missingBadgeIdConfirmationString\": \"Please enter confirm card number\", \"__typename\": \"AuthenticationSharedValidationErrorsSection\"}, \"__typename\": \"AuthenticationSharedLayout\"}, \"__typename\": \"ViewLayouts\"}, \"authConfiguration\": {\"siteName\": \"Costco Same-Day\", \"siteLogoImageUrl\": \"https://www.instacart.com/assets/domains/store_configuration/logo/1210/b174eb95-4f0b-49ff-b01a-322c1e0324af.png\", \"businessTermsUrl\": \"https://sameday.costco.com/terms-business\", \"businessUrl\": \"https://sameday.costco.com/business\", \"businessSiteLogoDarkImageUrl\": \"https://www.instacart.com/assets/domains/store_configuration/logo/1210/b174eb95-4f0b-49ff-b01a-322c1e0324af.png\", \"businessLogoDisplayVariant\": \"hide\", \"recapatchaEnterpriseAuthV4InvisibleKey\": \"6LeN0vMZAAAAAIKVl68OAJQy3zl8mZ0ESbkeEk1m\", \"googleClientIdKey\": \"1000514720461-1pt802o9ufav0ufsnqkolocc8h9v0pja.apps.googleusercontent.com\", \"fbClientIdKey\": \"FACEBOOK_SDK_DO_NOT_LOAD_DUMMY\", \"appleClientConfig\": null, \"termsUrl\": \"https://sameday.costco.com/terms\", \"privacyUrl\": \"https://sameday.costco.com/privacy\", \"pbiPrivacyUrl\": null, \"newsletterOptInUrl\": null, \"signInMethods\": [\"costco\"], \"userType\": \"guestUser\", \"ssoConfigs\": [{\"signInMethodEnum\": \"costco\", \"providerName\": \"Costco\", \"loginPath\": \"/rest/sso/auth/costco/init\", \"singleSignOnAuthPopup\": false, \"__typename\": \"UsersSsoConfig\"}], \"postAuthPaths\": {\"login\": \"/store\", \"signup\": \"/store\", \"__typename\": \"UsersPostAuthPaths\"}, \"signupLoginFallback\": false, \"membershipSignupUrl\": null, \"viewSection\": {\"orderedSignInMethods\": [{\"signInMethodVariant\": \"costco\", \"__typename\": \"UsersResponseBackedOrderedSignInMethodSection\"}], \"__typename\": \"UsersResponseBackedAuthConfigurationSection\"}, \"authConfigurationToken\": \"act.GxhjEavXf5FaiTosnHKB7WXvokDS1rktX2pQm9JtXE813rIlBS1sp4BCOWzsIJpaCsYt61g0oxA5kkt-WpNu8A\", \"__typename\": \"UsersAuthConfiguration\"}, \"marketplaceStoreConfiguration\": {\"signInMethods\": [\"password\", \"facebook\", \"google\", \"apple\"], \"__typename\": \"RetailersStoreConfiguration\"}}, \"extensions\": {\"cacheControl\": {\"version\": 1, \"hints\": [{\"maxAge\": 3600, \"scope\": \"PRIVATE\", \"path\": [\"viewLayout\"]}]}}}",
+  "body_parsed": {
+    "data": {
+      "viewLayout": {
+        "authenticate": {
+          "scanAndPayLogin": {
+            "scanAndPayVariant": "marketplace",
+            "__typename": "AuthenticateScanAndPayLoginSection"
+          },
+          "navigation": {
+            "cancelString": "Cancel",
+            "loginButtonLabelString": "Log in",
+            "signupButtonLabelString": "Sign up",
+            "__typename": "AuthenticateNavigationSection"
+          },
+          "legal": {
+            "signupDisclaimerStringFormatted": {
+              "sections": [
+                {
+                  "name": null,
+                  "content": "By signing up, you agree to Instacart’s ",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": "tos_link",
+                  "content": "Terms of Service",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": null,
+                  "content": " and ",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": "pp_link",
+                  "content": "Privacy Policy",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": null,
+                  "content": ". You agree that your contact information and order information will be shared with {retailer} for marketing purposes.",
+                  "__typename": "ViewFormattedStringSection"
+                }
+              ],
+              "__typename": "ViewFormattedString"
+            },
+            "signupDisclaimerWithHealthStringFormatted": {
+              "sections": [
+                {
+                  "name": null,
+                  "content": "By signing up, you agree to Instacart’s ",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": "tos_link",
+                  "content": "Terms of Service",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": null,
+                  "content": " and ",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": "pp_link",
+                  "content": "Privacy Policy",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": null,
+                  "content": " and ",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": "hpp_link",
+                  "content": "Health Data Notice",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": null,
+                  "content": ". You agree that your contact information and order information will be shared with {retailer} for marketing purposes.",
+                  "__typename": "ViewFormattedStringSection"
+                }
+              ],
+              "__typename": "ViewFormattedString"
+            },
+            "loginDisclaimerStringFormatted": null,
+            "smsLegalString": "We will send a text with a verification code. Message and data rates may apply.",
+            "marketingConsentTextString": null,
+            "__typename": "AuthenticateLegalSection"
+          },
+          "forgotPasswordComplete": {
+            "buttonLabelString": "Go back to log in",
+            "subtextString": "If that email matches an account, you’ll get a link to reset your password within a few minutes.",
+            "titleString": "Check your inbox",
+            "__typename": "AuthenticateForgotPasswordCompleteSection"
+          },
+          "forgotPassword": {
+            "buttonLabelString": "Reset password",
+            "subtextString": "We’ll send you a link to reset your password.",
+            "titleString": "Forgot password?",
+            "__typename": "AuthenticateForgotPasswordSection"
+          },
+          "login": {
+            "buttonLabelString": "Log in",
+            "footerButtonLabelString": "Sign up",
+            "footerTextString": "Don’t have an account?",
+            "passwordPlaceholderString": "Password",
+            "loginWithEmailTitleString": "Log in with email",
+            "emailPlaceholderString": "Email",
+            "loginWithPhoneTitleString": "Log in with phone number",
+            "titleString": "Log in",
+            "subtitleString": null,
+            "titleKeepShoppingString": "Have an account? Log in to keep shopping",
+            "phoneButtonLabelString": "Continue",
+            "continueWithPhoneString": "Continue with phone",
+            "continueWithEmailString": "Continue with email",
+            "continueWithCodeString": "Continue",
+            "phonePlaceholderString": "Phone number",
+            "previousMethodTitleString": "Last used login",
+            "otherOptionsString": "Other options",
+            "lastUsedAuthMethodPreviewVariant": "false",
+            "forgotPasswordActionStringFormatted": {
+              "sections": [
+                {
+                  "name": null,
+                  "content": "Forgot password? ",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": "forgot_password",
+                  "content": "Reset it",
+                  "__typename": "ViewFormattedStringSection"
+                }
+              ],
+              "__typename": "ViewFormattedString"
+            },
+            "logInWithACodeActionStringFormatted": {
+              "sections": [
+                {
+                  "name": null,
+                  "content": "Forgot password? ",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": "forgot_password",
+                  "content": "Get a login code",
+                  "__typename": "ViewFormattedStringSection"
+                }
+              ],
+              "__typename": "ViewFormattedString"
+            },
+            "emailLoginVerificationM0Variant": "noPasswordFallback",
+            "allowSignUpVariant": "false",
+            "customersEmailOtpLoginVariant": "false",
+            "__typename": "AuthenticateLoginSection"
+          },
+          "existingUser": {
+            "headerString": "Welcome back",
+            "existingMethodSubtextString": "Hey {email}, looks like you already have an Costco Same-Day account. To continue, log in below.",
+            "__typename": "AuthenticateExistingUserSection"
+          },
+          "membership": null,
+          "password": {
+            "buttonLabelString": "Continue",
+            "passwordPlaceholderString": "Enter a password",
+            "subtextString": "Enter at least 8 characters.",
+            "titleString": "Create a password",
+            "loginTitleString": "Enter your password",
+            "loginButtonLabelString": "Log in",
+            "emailVerificationVariant": "true",
+            "__typename": "AuthenticatePasswordSection"
+          },
+          "webauthn": {
+            "activationWebauthnLoginVariant": "false",
+            "activationWebauthnSignupVariant": "false",
+            "buttonLabelString": "Continue with a passkey",
+            "__typename": "AuthenticateWebauthnSection"
+          },
+          "signup": {
+            "buttonLabelString": "Continue",
+            "footerButtonLabelString": "Log in",
+            "footerTextString": "Already have an account?",
+            "subtextString": "Welcome to {retailer}! Enter your email to get started.",
+            "subtextShortString": "Enter your email to get started.",
+            "firstNameString": "First Name",
+            "lastNameString": "Last Name",
+            "titleString": "Sign up",
+            "titleBuyNowString": "Sign up to place order",
+            "titleKeepShoppingString": "Sign up for free to keep shopping",
+            "titleCheckOutString": "Sign up to check out",
+            "phoneString": "Phone",
+            "phoneButtonLabelString": "Continue",
+            "continueWithPhoneString": "Continue with phone",
+            "continueWithEmailString": "Continue with email",
+            "emailTabString": "Email",
+            "phonePlaceholderString": "Phone number",
+            "phoneSubtextString": "Welcome to {retailer}! Enter your phone number to get started.",
+            "signupRemovePasswordVariant": "true",
+            "signupRedesignPreviewVariant": "false",
+            "signupRedesignTitlesPreviewVariant": "false",
+            "loxSignupFlowIncentivesPreviewVariant": "false",
+            "loxPhoneOnlySignupVariant": "false",
+            "loxPhoneOnlySignupMpVariant": "false",
+            "buyNowIncentiveLabelString": "Finish your order: Sign up for $0 delivery!",
+            "threeFreeDeliveryLabelString": "$0 delivery fee on your first 3 orders",
+            "threeFreeDeliveryFormattedAttributesString": {
+              "id": "38d148a3",
+              "sections": [
+                {
+                  "id": "6798cea9",
+                  "name": null,
+                  "text": "$0 delivery fee",
+                  "styles": {
+                    "id": "071d8e99",
+                    "backgroundColor": null,
+                    "color": "systemGrayscale80",
+                    "colorHex": null,
+                    "italic": null,
+                    "typography": "subtitle",
+                    "underline": null,
+                    "highlight": true,
+                    "__typename": "ViewFormattedAttributesStringStyles"
+                  },
+                  "navigation": null,
+                  "__typename": "ViewFormattedAttributesStringSection"
+                },
+                {
+                  "id": "24663bbc",
+                  "name": null,
+                  "text": " on your first 3 orders",
+                  "styles": {
+                    "id": "587fb2e6",
+                    "backgroundColor": null,
+                    "color": "systemGrayscale80",
+                    "colorHex": null,
+                    "italic": null,
+                    "typography": "subtitle",
+                    "underline": null,
+                    "highlight": null,
+                    "__typename": "ViewFormattedAttributesStringStyles"
+                  },
+                  "navigation": null,
+                  "__typename": "ViewFormattedAttributesStringSection"
+                }
+              ],
+              "__typename": "ViewFormattedAttributesString"
+            },
+            "threeFreeDeliveryTermsString": "Service fees and terms apply",
+            "threeFreeDeliveryTermsUrlCtaAction": {
+              "url": "help/section/639415266/3275122625",
+              "openInNewTab": true,
+              "__typename": "ViewCtaActionNavigateToUrl"
+            },
+            "accountTypeTabBusinessString": "Business",
+            "accountTypeTabPersonalString": "Personal",
+            "accountTypeTabsAriaLabelString": "Select account type",
+            "accountTypeTabsVariant": "false",
+            "displayNamesVariant": "false",
+            "titleFormattedAttributesString": {
+              "id": "b7ca4105",
+              "sections": [
+                {
+                  "id": "67dd3c40",
+                  "name": null,
+                  "text": "Sign up",
+                  "styles": {
+                    "id": "b966fbac",
+                    "backgroundColor": null,
+                    "color": "systemGrayscale80",
+                    "colorHex": null,
+                    "italic": null,
+                    "typography": "title",
+                    "underline": null,
+                    "highlight": null,
+                    "__typename": "ViewFormattedAttributesStringStyles"
+                  },
+                  "navigation": null,
+                  "__typename": "ViewFormattedAttributesStringSection"
+                }
+              ],
+              "__typename": "ViewFormattedAttributesString"
+            },
+            "hggEmployeeFlowVariant": "false",
+            "employeePromptString": "Are you a Costco Same-Day team member?",
+            "badgeIdString": "Badge ID",
+            "badgeIdConfirmationString": "Badge ID Confirmation",
+            "badgeIdRegexString": "^(41092|41093)\\d{6}$",
+            "membershipNumberString": "Membership Number",
+            "dateOfBirthString": "Date of Birth",
+            "additionalSignupFields": null,
+            "accountTypeTabsLocationVariant": "default",
+            "businessHeaderFormattedAttributesString": {
+              "id": "52c31c81",
+              "sections": [
+                {
+                  "id": "97c85f55",
+                  "name": null,
+                  "text": "Signup for more ",
+                  "styles": {
+                    "id": "3a9c5f60",
+                    "backgroundColor": null,
+                    "color": "systemGrayscale80",
+                    "colorHex": null,
+                    "italic": null,
+                    "typography": "title",
+                    "underline": null,
+                    "highlight": null,
+                    "__typename": "ViewFormattedAttributesStringStyles"
+                  },
+                  "navigation": null,
+                  "__typename": "ViewFormattedAttributesStringSection"
+                },
+                {
+                  "id": "75a558fe",
+                  "name": null,
+                  "text": "free",
+                  "styles": {
+                    "id": "456b47c8",
+                    "backgroundColor": null,
+                    "color": "systemGrayscale80",
+                    "colorHex": null,
+                    "italic": null,
+                    "typography": "title",
+                    "underline": null,
+                    "highlight": true,
+                    "__typename": "ViewFormattedAttributesStringStyles"
+                  },
+                  "navigation": null,
+                  "__typename": "ViewFormattedAttributesStringSection"
+                },
+                {
+                  "id": "3d58c771",
+                  "name": null,
+                  "text": " perks, tailored for your business.",
+                  "styles": {
+                    "id": "c641cb14",
+                    "backgroundColor": null,
+                    "color": "systemGrayscale80",
+                    "colorHex": null,
+                    "italic": null,
+                    "typography": "title",
+                    "underline": null,
+                    "highlight": null,
+                    "__typename": "ViewFormattedAttributesStringStyles"
+                  },
+                  "navigation": null,
+                  "__typename": "ViewFormattedAttributesStringSection"
+                }
+              ],
+              "__typename": "ViewFormattedAttributesString"
+            },
+            "showBusinessHeaderVariant": "false",
+            "showFreeThreeDeliveryTermsVariant": "true",
+            "signupButtonColor": "brandPrimaryRegular",
+            "__typename": "AuthenticateSignupSection"
+          },
+          "infoBox": null,
+          "social": {
+            "continueWithGoogleString": "Continue with Google",
+            "continueWithFacebookString": "Continue with Facebook",
+            "continueWithRetailerString": "Continue with {retailer}",
+            "continueWithAppleString": "Continue with Apple",
+            "orContinueWithString": "Or continue with",
+            "facebookString": "Facebook",
+            "googleString": "Google",
+            "appleString": "Apple",
+            "googleSsoTokenModelPreviewVariant": "false",
+            "__typename": "AuthenticateSocialSection"
+          },
+          "common": {
+            "dividerLabelString": "or",
+            "emailPlaceholderString": "Email",
+            "phoneAuthEnabledVariant": "false",
+            "marketplacePhoneAuthEnabledVariant": "true",
+            "activationSsoAboveInputsVariant": "false",
+            "membershipInvitationLabelString": "Join",
+            "membershipInvitationTextString": "Not a Costco Same-Day member?",
+            "membershipInvitationUrlString": null,
+            "__typename": "AuthenticateCommonSection"
+          },
+          "captureEmail": {
+            "titleString": "Add your email",
+            "subtextString": "Add a layer of security to your account and never miss an order update.",
+            "buttonLabelString": "Continue",
+            "__typename": "AuthenticateCaptureEmailSection"
+          },
+          "requestLoginVerificationCode": {
+            "titleString": "Get a login code",
+            "subtextEmailString": "Enter your email to get a one-time login code.",
+            "buttonLabelString": "Send code",
+            "__typename": "AuthenticateRequestLoginVerificationCodeSection"
+          },
+          "oneTimeCode": {
+            "titleString": "Enter verification code",
+            "emailTitleString": "Check your email",
+            "subtextEmailStringFormatted": {
+              "sections": [
+                {
+                  "name": null,
+                  "content": "We sent a 6-digit code to ",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": "email",
+                  "content": "{email}",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": null,
+                  "content": ".",
+                  "__typename": "ViewFormattedStringSection"
+                }
+              ],
+              "__typename": "ViewFormattedString"
+            },
+            "subtextPhoneStringFormatted": {
+              "sections": [
+                {
+                  "name": null,
+                  "content": "Enter the 6-digit code we sent over SMS to ",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": "phonenumber",
+                  "content": "{phoneNumber}",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": null,
+                  "content": ".",
+                  "__typename": "ViewFormattedStringSection"
+                }
+              ],
+              "__typename": "ViewFormattedString"
+            },
+            "subtextEmailLine2String": "It expires soon — check your inbox (and spam)",
+            "codePlaceholderString": "Enter code",
+            "resendCodeString": "Request a new code",
+            "resendCodeStringFormatted": {
+              "sections": [
+                {
+                  "name": null,
+                  "content": "Request a new code",
+                  "__typename": "ViewFormattedStringSection"
+                }
+              ],
+              "__typename": "ViewFormattedString"
+            },
+            "resendCodeButtonLabelString": "Request a new code in {seconds} seconds",
+            "didntReceiveCodeString": "Didn't receive a text?",
+            "usePasswordString": "Login with password instead",
+            "__typename": "AuthenticateOneTimeCodeSection"
+          },
+          "phoneVerification": {
+            "recaptchaEnabledVariant": "false",
+            "__typename": "AuthenticatePhoneVerificationSection"
+          },
+          "submitSecurityVerificationCode": {
+            "titleString": "Enter verification code",
+            "codePlaceholderString": "Enter code",
+            "checkSpamString": "Don’t see the email in your Inbox? Check your spam folder.",
+            "resendCodeString": "Request a new code",
+            "resendCodeButtonLabelString": "Request a new code in {seconds} seconds",
+            "cantAccessString": "Can’t access this email?",
+            "subtextEmailStringFormatted": {
+              "sections": [
+                {
+                  "name": null,
+                  "content": "We want to make sure your account is secure. Enter the 6-digit verification code we sent to ",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": "email",
+                  "content": "{email}",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": null,
+                  "content": ".",
+                  "__typename": "ViewFormattedStringSection"
+                }
+              ],
+              "__typename": "ViewFormattedString"
+            },
+            "subtextPreviousEmailStringFormatted": {
+              "sections": [
+                {
+                  "name": null,
+                  "content": "We want to make sure your account is secure. Enter the 6-digit verification code we sent to your previous email: ",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": "email",
+                  "content": "{email}",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": null,
+                  "content": ".",
+                  "__typename": "ViewFormattedStringSection"
+                }
+              ],
+              "__typename": "ViewFormattedString"
+            },
+            "logOutFormattedAttributesString": {
+              "id": "dfe68d83",
+              "sections": [
+                {
+                  "id": "90335aba",
+                  "name": null,
+                  "text": "Note: You ",
+                  "styles": {
+                    "id": "abdc2c8a",
+                    "backgroundColor": null,
+                    "color": "systemGrayscale80",
+                    "colorHex": null,
+                    "italic": null,
+                    "typography": "bodyMedium2",
+                    "underline": null,
+                    "highlight": null,
+                    "__typename": "ViewFormattedAttributesStringStyles"
+                  },
+                  "navigation": null,
+                  "__typename": "ViewFormattedAttributesStringSection"
+                },
+                {
+                  "id": "83744308",
+                  "name": null,
+                  "text": "will be logged out",
+                  "styles": {
+                    "id": "34922fb0",
+                    "backgroundColor": null,
+                    "color": "systemGrayscale80",
+                    "colorHex": null,
+                    "italic": null,
+                    "typography": "bodyMedium1",
+                    "underline": null,
+                    "highlight": null,
+                    "__typename": "ViewFormattedAttributesStringStyles"
+                  },
+                  "navigation": null,
+                  "__typename": "ViewFormattedAttributesStringSection"
+                },
+                {
+                  "id": "8a327c83",
+                  "name": null,
+                  "text": " after successfully changing your email.",
+                  "styles": {
+                    "id": "cde997d0",
+                    "backgroundColor": null,
+                    "color": "systemGrayscale80",
+                    "colorHex": null,
+                    "italic": null,
+                    "typography": "bodyMedium2",
+                    "underline": null,
+                    "highlight": null,
+                    "__typename": "ViewFormattedAttributesStringStyles"
+                  },
+                  "navigation": null,
+                  "__typename": "ViewFormattedAttributesStringSection"
+                }
+              ],
+              "__typename": "ViewFormattedAttributesString"
+            },
+            "__typename": "AuthenticateSubmitSecurityVerificationCodeSection"
+          },
+          "requestLoginLink": {
+            "titleString": "Get a login link",
+            "subtextEmailString": "Enter your email to get a one-time login link.",
+            "buttonLabelString": "Send link",
+            "__typename": "AuthenticateRequestLoginLinkSection"
+          },
+          "requestLoginLinkComplete": {
+            "subtextStringFormatted": {
+              "sections": [
+                {
+                  "name": null,
+                  "content": "We sent a login link to ",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": "email",
+                  "content": "{email}",
+                  "__typename": "ViewFormattedStringSection"
+                },
+                {
+                  "name": null,
+                  "content": ".",
+                  "__typename": "ViewFormattedStringSection"
+                }
+              ],
+              "__typename": "ViewFormattedString"
+            },
+            "__typename": "AuthenticateRequestLoginLinkCompleteSection"
+          },
+          "valueProps": [
+            {
+              "logoImage": {
+                "templateUrl": "https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/activation/value_groceries_illus@2x-4c3263a781415a8926616b736705a4fda10f458d81266ff3f2b8950412c06119.png",
+                "altText": "save time image",
+                "__typename": "Image"
+              },
+              "headerString": "Tap a button,\nget your groceries",
+              "subheaderString": "Get your groceries delivered or ready for pickup—and spend time on what matters.",
+              "__typename": "AuthenticateValuePropsSection"
+            },
+            {
+              "logoImage": {
+                "templateUrl": "https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/activation/value_quality_illus@2x-a8a238171c2d52d0deb3ad7a1501b0be74a821252a60632390f9de81ea221549.png",
+                "altText": "quality items image",
+                "__typename": "Image"
+              },
+              "headerString": "Get quality groceries\npicked with care",
+              "subheaderString": "Shoppers pick the highest quality items. That’s our 100% quality promise.",
+              "__typename": "AuthenticateValuePropsSection"
+            },
+            {
+              "logoImage": {
+                "templateUrl": "https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/activation/value_deals_illus@2x-b376f594c397debdaaf3e3a86ebc9a613fa357795a6a8f3999b07b2abe6ef266.png",
+                "altText": "save money image",
+                "__typename": "Image"
+              },
+              "headerString": "Shop more deals,\nsave more with us",
+              "subheaderString": "Save with exclusive deals, coupons, and more—with no membership required!",
+              "__typename": "AuthenticateValuePropsSection"
+            }
+          ],
+          "valuePropsModal": null,
+          "homeFooter": {
+            "businessSignUpVariant": "false",
+            "businessLogoImage": {
+              "templateUrl": "https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/business/ic_logo_transparent_background@3x-13eb4f6b0ec4e5ff030c3625e44ea1726316e8ca9521eb6262b2c9391f231329.png",
+              "altText": "Costco Same-Day Business logo",
+              "__typename": "Image"
+            },
+            "businessSignUpMessageString": "Need delivery for your business?",
+            "businessSignUpCtaString": "Sign up for Costco Same-Day Business",
+            "__typename": "AuthenticateHomeFooterSection"
+          },
+          "__typename": "AuthenticateLayout"
+        },
+        "authenticationShared": {
+          "validationErrors": {
+            "accountLockedString": "Your account is locked. Check your email for unlock instructions.",
+            "accountMaintenanceString": "We experienced an error processing your request. Please try again.",
+            "accountAlreadyExistsString": "This email already has an account — log in to continue.",
+            "accountsRequiresPasswordResetString": "Maintaining your account security is our top priority. It appears your email address and password may have been compromised on another site. As a precautionary measure, please check your email to reset your password.",
+            "adminLoginString": "We were unable to process your request.  Please utilize the Google sign in option to proceed.",
+            "facebookEmailNeededString": "We weren’t permitted to read your email address from Facebook which is required to created an account. You may need to go to Facebook to revoke access before you can try again.",
+            "forbiddenString": "We couldn’t validate the security of this request. Sorry!",
+            "emailTakenString": "Email has already been taken.",
+            "generalString": "We experienced an error processing your request. Please try again.",
+            "invalidCredentialsManyTriesString": "Invalid password. We sent an email to help you reset your password.",
+            "invalidCredentialsPhoneLoginString": "Code didn't match. Try again or request a new code.",
+            "invalidCredentialsSkippedPasswordString": "You’ll need to finish account setup to log in — check your email for instructions.",
+            "invalidCredentialsMultipleFailedAttemptsString": "It looks like you’re having trouble with your password. Try logging in with a code instead.",
+            "invalidCredentialsSkippedPasswordExistingUserString": "You need to set a new password to log in - we have emailed you a password reset link.",
+            "invalidCredentialsPasswordWipedString": "You need to set a new password. We’ll email you a login code.",
+            "invalidCredentialsNoPasswordTrySendCodeString": "Looks like no password was created. We’ll email you a login code.",
+            "invalidCredentialsString": "Invalid email or password.",
+            "invalidEmailString": "Enter a valid email address.",
+            "invalidEmailFormatString": "Enter an email with the format 'username@example.com'.",
+            "invalidEmailContainsSpacesString": "Remove any spaces to continue.",
+            "invalidEmailContainsInvalidCharactersString": "Remove special characters (ex. ^, &, =) to continue.",
+            "invalidEmailIsBlankString": "Enter a valid email to continue.",
+            "invalidPhoneString": "Please enter a valid phone number",
+            "membershipNotFoundString": "No active Costco Same-Day Member account found with this number",
+            "notLinkingBusinessOnlyAccountString": "Please login to a business account that isn't connected to a personal account already.",
+            "linkingAlreadyConnectedBusinessAccountString": "You are trying to login to a business account that is already connected to a personal account. Please try connecting a separate business account.",
+            "linkingAlreadyConnectedPersonalAccountString": "You are trying to login to a personal account that is already connected to a business account. Please try connecting a separate personal account.",
+            "linkingCurrentlyLoggedInAccountString": "You are already logged in to this account. Please go back to the account menu and convert this to a business account instead.",
+            "linkingNonBusinessAccountString": "You are trying to login to a non-business account. Please try converting that account to a business account first before connecting.",
+            "linkingNonPersonalAccountString": "You are trying to login to a non-personal account. Please try converting that account to a personal account first before connecting.",
+            "passwordTooShortString": "The password you entered is too short. Please choose a password that is at least 8 characters.",
+            "passwordTooLongString": "The password you entered is too long.",
+            "passwordTooCommonString": "The password you entered is not secure. Please choose a password that is not a common word or phrase.",
+            "phoneUserNotFoundString": "Phone login isn’t set up for that number. Try one of these other ways to log in.",
+            "phoneTokenExpiredString": "That code is expired, resend to try again",
+            "emailUserNotFoundString": "No account exists with this email address.",
+            "generalGoogleString": "Google experienced an error while processing your request. Please try another method to log in.",
+            "googleCookieString": "Google login is unavailable because 3rd party cookies are currently disabled in your browser settings.",
+            "rateLimitString": "We were unable to process your request due to too many recent attempts.  Please wait a bit before trying again.",
+            "invalidBadgeIdString": "Please enter a valid 11 digit Card Number",
+            "badgeIdMismatchString": "Card Number did not match. Please re-enter.",
+            "missingBadgeIdConfirmationString": "Please enter confirm card number",
+            "__typename": "AuthenticationSharedValidationErrorsSection"
+          },
+          "__typename": "AuthenticationSharedLayout"
+        },
+        "__typename": "ViewLayouts"
+      },
+      "authConfiguration": {
+        "siteName": "Costco Same-Day",
+        "siteLogoImageUrl": "https://www.instacart.com/assets/domains/store_configuration/logo/1210/b174eb95-4f0b-49ff-b01a-322c1e0324af.png",
+        "businessTermsUrl": "https://sameday.costco.com/terms-business",
+        "businessUrl": "https://sameday.costco.com/business",
+        "businessSiteLogoDarkImageUrl": "https://www.instacart.com/assets/domains/store_configuration/logo/1210/b174eb95-4f0b-49ff-b01a-322c1e0324af.png",
+        "businessLogoDisplayVariant": "hide",
+        "recapatchaEnterpriseAuthV4InvisibleKey": "6LeN0vMZAAAAAIKVl68OAJQy3zl8mZ0ESbkeEk1m",
+        "googleClientIdKey": "1000514720461-1pt802o9ufav0ufsnqkolocc8h9v0pja.apps.googleusercontent.com",
+        "fbClientIdKey": "FACEBOOK_SDK_DO_NOT_LOAD_DUMMY",
+        "appleClientConfig": null,
+        "termsUrl": "https://sameday.costco.com/terms",
+        "privacyUrl": "https://sameday.costco.com/privacy",
+        "pbiPrivacyUrl": null,
+        "newsletterOptInUrl": null,
+        "signInMethods": [
+          "costco"
+        ],
+        "userType": "guestUser",
+        "ssoConfigs": [
+          {
+            "signInMethodEnum": "costco",
+            "providerName": "Costco",
+            "loginPath": "/rest/sso/auth/costco/init",
+            "singleSignOnAuthPopup": false,
+            "__typename": "UsersSsoConfig"
+          }
+        ],
+        "postAuthPaths": {
+          "login": "/store",
+          "signup": "/store",
+          "__typename": "UsersPostAuthPaths"
+        },
+        "signupLoginFallback": false,
+        "membershipSignupUrl": null,
+        "viewSection": {
+          "orderedSignInMethods": [
+            {
+              "signInMethodVariant": "costco",
+              "__typename": "UsersResponseBackedOrderedSignInMethodSection"
+            }
+          ],
+          "__typename": "UsersResponseBackedAuthConfigurationSection"
+        },
+        "authConfigurationToken": "act.GxhjEavXf5FaiTosnHKB7WXvokDS1rktX2pQm9JtXE813rIlBS1sp4BCOWzsIJpaCsYt61g0oxA5kkt-WpNu8A",
+        "__typename": "UsersAuthConfiguration"
+      },
+      "marketplaceStoreConfiguration": {
+        "signInMethods": [
+          "password",
+          "facebook",
+          "google",
+          "apple"
+        ],
+        "__typename": "RetailersStoreConfiguration"
+      }
+    },
+    "extensions": {
+      "cacheControl": {
+        "version": 1,
+        "hints": [
+          {
+            "maxAge": 3600,
+            "scope": "PRIVATE",
+            "path": [
+              "viewLayout"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

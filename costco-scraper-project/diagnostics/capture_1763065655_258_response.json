@@ -1,0 +1,62 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=GetProductRatings&variables=%7B%22id%22%3A%2217641990%22%2C%22retailerId%22%3A%225%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22e0ce69452493f19ece52d62a48a60693831b6ded4fd599633d01ab1d4f88f0b6%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "d0b9ed68-02ce-4d87-bfeb-20a5dd0fd648",
+    "content-encoding": "gzip",
+    "etag": "W/\"e259d5ad62d4acc7af2321579e802c72\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=38, requestId;desc=\"d0b9ed68-02ce-4d87-bfeb-20a5dd0fd648\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "39eQdIloaBZ66vaCd1k8uhzEvumzeZ_scipBnduv60FEB7rSpvBVtw==",
+    "date": "Thu, 13 Nov 2025 20:26:56 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.038219",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"productRatings\": {\"productRating\": {\"value\": 0, \"amount\": 0, \"viewSection\": {\"valueString\": \"0.0\", \"__typename\": \"ReviewsResponseBackedRatingSection\"}, \"__typename\": \"ReviewsRating\"}, \"productUnitRatings\": [], \"productUserRating\": null, \"__typename\": \"ReviewsProductRatings\"}}, \"extensions\": {\"cacheControl\": {\"version\": 1, \"hints\": [{\"maxAge\": 3600, \"scope\": \"PRIVATE\", \"path\": [\"productRatings\"]}]}}}",
+  "body_parsed": {
+    "data": {
+      "productRatings": {
+        "productRating": {
+          "value": 0,
+          "amount": 0,
+          "viewSection": {
+            "valueString": "0.0",
+            "__typename": "ReviewsResponseBackedRatingSection"
+          },
+          "__typename": "ReviewsRating"
+        },
+        "productUnitRatings": [],
+        "productUserRating": null,
+        "__typename": "ReviewsProductRatings"
+      }
+    },
+    "extensions": {
+      "cacheControl": {
+        "version": 1,
+        "hints": [
+          {
+            "maxAge": 3600,
+            "scope": "PRIVATE",
+            "path": [
+              "productRatings"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

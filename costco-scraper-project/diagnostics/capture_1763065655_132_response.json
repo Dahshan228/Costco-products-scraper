@@ -1,0 +1,184 @@
+{
+  "type": "response",
+  "url": "https://sameday.costco.com/graphql?operationName=AvailableRetailerServices&variables=%7B%22postalCode%22%3A%2260181%22%2C%22orderBy%22%3A%22UNSORTED%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%224520049dcd07cf94194ab992612fd4bfd40a3fee5dada86593fb4eb3fc495b01%22%7D%7D",
+  "status": 200,
+  "headers": {
+    "x-request-id": "a9e6ea9f-508d-4efe-a464-78d09257190f",
+    "content-encoding": "gzip",
+    "etag": "W/\"7cb7b1f867e20af39c7238b50065f209\"",
+    "x-permitted-cross-domain-policies": "none",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "runtime;desc=\"Application Runtime\";dur=192, requestId;desc=\"a9e6ea9f-508d-4efe-a464-78d09257190f\";dur=0",
+    "x-cache": "Miss from cloudfront",
+    "x-amz-cf-id": "abkEdCTdgBuiYBkoouQZSW54mgBC0LEzby9PptqSCuYAGsGp3_sgfw==",
+    "date": "Thu, 13 Nov 2025 20:26:13 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept, Origin",
+    "x-runtime": "0.192413",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-download-options": "noopen",
+    "via": "1.1 d16bc652f24481330d51cba5ea572ca2.cloudfront.net (CloudFront)",
+    "x-xss-protection": "1; mode=block",
+    "x-amz-cf-pop": "ORD56-P9",
+    "server": "nginx"
+  },
+  "body": "{\"data\": {\"availableRetailerServices\": [{\"viewSection\": {\"id\": \"retailers_response_backed:900f2720:available_retailer:18be68c5\", \"alwaysOpenString\": null, \"pickupString\": null, \"deliveryString\": \"Delivery\", \"seeAllString\": null, \"badge\": null, \"lastOrderedAtAgoString\": null, \"lastVisitedAtAgoString\": null, \"attrPriceParityString\": null, \"deliveryEta\": {\"id\": \"retailers_response_backed:900f2720:available_retailer:18be68c5:delivery_eta\", \"etaTemplateString\": \"{eta_string}\", \"etaString\": \"Delivery by 3:15pm\", \"etaVariant\": \"faster\", \"iconVariant\": \"speed\", \"textColor\": \"brandPrimaryRegular\", \"condensedEtaString\": \"By 3:15pm\", \"__typename\": \"RetailersResponseBackedDeliveryEtaSection\"}, \"pickupOnlyString\": null, \"storeAttributes\": [], \"pickupStoreAttributes\": [], \"addressWithMorePickupLocationsString\": null, \"enableInlineBadgeVariant\": \"false\", \"showCategoryDescriptorVariant\": \"true\", \"storeCategories\": [{\"id\": \"retailers_response_backed:900f2720:available_retailer:18be68c5:store_categories:3e06a202\", \"categoryString\": \"Groceries\", \"__typename\": \"RetailersResponseBackedStoreCategoriesSection\"}, {\"id\": \"retailers_response_backed:900f2720:available_retailer:18be68c5:store_categories:6d4a688f\", \"categoryString\": \"Wholesale\", \"__typename\": \"RetailersResponseBackedStoreCategoriesSection\"}], \"orderMinimumString\": null, \"__typename\": \"RetailersResponseBackedAvailableRetailerSection\"}, \"pickupEta\": null, \"alwaysOpen\": false, \"alcoholAllowed\": true, \"retailerId\": \"5\", \"retailer\": {\"id\": \"5\", \"name\": \"Costco\", \"categories\": [\"grocery\", \"club\", \"readymeals\", \"gifts\", \"wholesale\"], \"homeCategories\": [\"club\"], \"slug\": \"costco\", \"retailerType\": \"Club/Warehouse Store\", \"logoBackgroundColorHex\": \"#ffffff\", \"viewSection\": {\"id\": \"retailers_response_backed:59a9b7f3:retailer:5\", \"logoImage\": {\"id\": \"59ac4c72\", \"url\": \"https://www.instacart.com/assets/domains/warehouse/logo/5/65f2304b-908e-4cd0-981d-0d4e4effa8de.png\", \"templateUrl\": \"https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/domains/warehouse/logo/5/65f2304b-908e-4cd0-981d-0d4e4effa8de.png\", \"__typename\": \"Image\"}, \"storeMenu\": {\"id\": \"retailers_response_backed:59a9b7f3:retailer:5:store_menu\", \"storeMenuMeals\": null, \"__typename\": \"RetailersResponseBackedStoreMenuSection\"}, \"navigationReferences\": [], \"storeBuyItAgainVariant\": \"visible\", \"marketplaceVariant\": \"standard\", \"backgroundColorHex\": \"#0060a9\", \"backgroundImage\": {\"id\": \"d5b9c808\", \"url\": \"https://www.instacart.com/assets/domains/warehouse/background_image/5/076f6dc7-ca28-4972-b7bc-ff64d69e5959.jpg\", \"templateUrl\": \"https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/domains/warehouse/background_image/5/076f6dc7-ca28-4972-b7bc-ff64d69e5959.jpg\", \"__typename\": \"Image\"}, \"retailerTypeImage\": {\"id\": \"c87af548\", \"url\": \"https://www.instacart.com/assets/retailer_types/default-854879c76a6a4e043c0bfe1b21459eae3f782e269522355e5027b3f140547ee6.jpg\", \"templateUrl\": \"https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/retailer_types/default-854879c76a6a4e043c0bfe1b21459eae3f782e269522355e5027b3f140547ee6.jpg\", \"__typename\": \"Image\"}, \"__typename\": \"RetailersResponseBackedRetailerSection\"}, \"__typename\": \"RetailersRetailer\"}, \"moduleRetailerRankings\": {\"id\": \"5\", \"retailerOrdersRank\": null, \"newStoresRank\": null, \"storesOpenLateRank\": null, \"boostedRetailersRank\": null, \"__typename\": \"RetailersModuleRetailerRankings\"}, \"lastVisitedAt\": \"2025-11-13T20:26:13Z\", \"lastOrderedAt\": null, \"lastServiceType\": \"delivery\", \"promoted\": false, \"services\": [\"delivery\"], \"pickupDistance\": null, \"smartServiceAreaType\": \"postalCode\", \"deliveryEta\": 2926, \"deliveryRetailerLocationId\": null, \"__typename\": \"RetailerServices\"}]}, \"extensions\": {\"cacheControl\": {\"version\": 1, \"hints\": [{\"maxAge\": 900, \"scope\": \"PRIVATE\", \"path\": [\"availableRetailerServices\"]}, {\"maxAge\": 1, \"scope\": \"PRIVATE\", \"path\": [\"availableRetailerServices\", 0, \"lastVisitedAt\"]}, {\"maxAge\": 1, \"scope\": \"PRIVATE\", \"path\": [\"availableRetailerServices\", 0, \"lastOrderedAt\"]}]}}}",
+  "body_parsed": {
+    "data": {
+      "availableRetailerServices": [
+        {
+          "viewSection": {
+            "id": "retailers_response_backed:900f2720:available_retailer:18be68c5",
+            "alwaysOpenString": null,
+            "pickupString": null,
+            "deliveryString": "Delivery",
+            "seeAllString": null,
+            "badge": null,
+            "lastOrderedAtAgoString": null,
+            "lastVisitedAtAgoString": null,
+            "attrPriceParityString": null,
+            "deliveryEta": {
+              "id": "retailers_response_backed:900f2720:available_retailer:18be68c5:delivery_eta",
+              "etaTemplateString": "{eta_string}",
+              "etaString": "Delivery by 3:15pm",
+              "etaVariant": "faster",
+              "iconVariant": "speed",
+              "textColor": "brandPrimaryRegular",
+              "condensedEtaString": "By 3:15pm",
+              "__typename": "RetailersResponseBackedDeliveryEtaSection"
+            },
+            "pickupOnlyString": null,
+            "storeAttributes": [],
+            "pickupStoreAttributes": [],
+            "addressWithMorePickupLocationsString": null,
+            "enableInlineBadgeVariant": "false",
+            "showCategoryDescriptorVariant": "true",
+            "storeCategories": [
+              {
+                "id": "retailers_response_backed:900f2720:available_retailer:18be68c5:store_categories:3e06a202",
+                "categoryString": "Groceries",
+                "__typename": "RetailersResponseBackedStoreCategoriesSection"
+              },
+              {
+                "id": "retailers_response_backed:900f2720:available_retailer:18be68c5:store_categories:6d4a688f",
+                "categoryString": "Wholesale",
+                "__typename": "RetailersResponseBackedStoreCategoriesSection"
+              }
+            ],
+            "orderMinimumString": null,
+            "__typename": "RetailersResponseBackedAvailableRetailerSection"
+          },
+          "pickupEta": null,
+          "alwaysOpen": false,
+          "alcoholAllowed": true,
+          "retailerId": "5",
+          "retailer": {
+            "id": "5",
+            "name": "Costco",
+            "categories": [
+              "grocery",
+              "club",
+              "readymeals",
+              "gifts",
+              "wholesale"
+            ],
+            "homeCategories": [
+              "club"
+            ],
+            "slug": "costco",
+            "retailerType": "Club/Warehouse Store",
+            "logoBackgroundColorHex": "#ffffff",
+            "viewSection": {
+              "id": "retailers_response_backed:59a9b7f3:retailer:5",
+              "logoImage": {
+                "id": "59ac4c72",
+                "url": "https://www.instacart.com/assets/domains/warehouse/logo/5/65f2304b-908e-4cd0-981d-0d4e4effa8de.png",
+                "templateUrl": "https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/domains/warehouse/logo/5/65f2304b-908e-4cd0-981d-0d4e4effa8de.png",
+                "__typename": "Image"
+              },
+              "storeMenu": {
+                "id": "retailers_response_backed:59a9b7f3:retailer:5:store_menu",
+                "storeMenuMeals": null,
+                "__typename": "RetailersResponseBackedStoreMenuSection"
+              },
+              "navigationReferences": [],
+              "storeBuyItAgainVariant": "visible",
+              "marketplaceVariant": "standard",
+              "backgroundColorHex": "#0060a9",
+              "backgroundImage": {
+                "id": "d5b9c808",
+                "url": "https://www.instacart.com/assets/domains/warehouse/background_image/5/076f6dc7-ca28-4972-b7bc-ff64d69e5959.jpg",
+                "templateUrl": "https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/domains/warehouse/background_image/5/076f6dc7-ca28-4972-b7bc-ff64d69e5959.jpg",
+                "__typename": "Image"
+              },
+              "retailerTypeImage": {
+                "id": "c87af548",
+                "url": "https://www.instacart.com/assets/retailer_types/default-854879c76a6a4e043c0bfe1b21459eae3f782e269522355e5027b3f140547ee6.jpg",
+                "templateUrl": "https://www.instacart.com/image-server/{width=}x{height=}/www.instacart.com/assets/retailer_types/default-854879c76a6a4e043c0bfe1b21459eae3f782e269522355e5027b3f140547ee6.jpg",
+                "__typename": "Image"
+              },
+              "__typename": "RetailersResponseBackedRetailerSection"
+            },
+            "__typename": "RetailersRetailer"
+          },
+          "moduleRetailerRankings": {
+            "id": "5",
+            "retailerOrdersRank": null,
+            "newStoresRank": null,
+            "storesOpenLateRank": null,
+            "boostedRetailersRank": null,
+            "__typename": "RetailersModuleRetailerRankings"
+          },
+          "lastVisitedAt": "2025-11-13T20:26:13Z",
+          "lastOrderedAt": null,
+          "lastServiceType": "delivery",
+          "promoted": false,
+          "services": [
+            "delivery"
+          ],
+          "pickupDistance": null,
+          "smartServiceAreaType": "postalCode",
+          "deliveryEta": 2926,
+          "deliveryRetailerLocationId": null,
+          "__typename": "RetailerServices"
+        }
+      ]
+    },
+    "extensions": {
+      "cacheControl": {
+        "version": 1,
+        "hints": [
+          {
+            "maxAge": 900,
+            "scope": "PRIVATE",
+            "path": [
+              "availableRetailerServices"
+            ]
+          },
+          {
+            "maxAge": 1,
+            "scope": "PRIVATE",
+            "path": [
+              "availableRetailerServices",
+              0,
+              "lastVisitedAt"
+            ]
+          },
+          {
+            "maxAge": 1,
+            "scope": "PRIVATE",
+            "path": [
+              "availableRetailerServices",
+              0,
+              "lastOrderedAt"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
