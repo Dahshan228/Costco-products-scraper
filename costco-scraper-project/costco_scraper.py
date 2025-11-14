@@ -1,22 +1,35 @@
+#!/usr/bin/env python3
+# costco_scraper_strict_order_channel.py
 # Requires:
-#   pip install playwright requests pandas
+#   pip install playwright requests pandas tenacity
 #   playwright install
 #
+# Purpose:
+# - Paginate Costco search API (uses saved cookies or opens Playwright to refresh)
+# - Enrich rows by calling ecom GraphQL (passes warehouseNumber extracted from SEARCH_API_URL)
+# - Force price to None when deliveryStatus is missing/empty
+# - Add order_channel values: online_only | warehouse_only | both | any
+# - Uses strict matching (only explicit "online only" / "warehouse only" attributes or fulfillmentData)
+# - GraphQL batch size set to 100
 #
-# Notes:
-# - Edit SEARCH_API_URL if you ever need to change the exact query.
-# - The script will open a visible Chromium window for you to sign in when cookies need refreshing.
+# Edit SEARCH_API_URL, X_API_KEY, COOKIES_FILE, COOKIE_STRING as needed.
 
-import asyncio, json, csv, pathlib, time, logging, sys
+import asyncio
+import json
+import pathlib
+import time
+import logging
+import re
 from urllib.parse import urlparse, parse_qsl, urlencode, urlunparse
 import requests
 import pandas as pd
 from datetime import datetime
 from playwright.async_api import async_playwright
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 
-# ========= CONFIG =========
+# ===== CONFIG =====
 SEARCH_API_URL = (
     "https://search.costco.com/api/apps/www_costco_com/query/www_costco_com_navigation"
     "?expoption=lw&q=*%3A*&locale=en-US&start=0&expand=false&userLocation=IL"
@@ -33,62 +46,72 @@ RAW_DIR = pathlib.Path("raw_responses")
 OUT_CSV = pathlib.Path("grocery_all_products.csv")
 PREV_CSV = pathlib.Path("grocery_all_products.prev.csv")
 PAGE_ROWS = 100
-TIMEOUT = 30
-X_API_KEY = "273db6be-f015-4de7-b0d6-dd4746ccd5c3"  # keep if you captured it previously; remove if not required
-# ===========================
+TIMEOUT = 5
+X_API_KEY = "273db6be-f015-4de7-b0d6-dd4746ccd5c3"  # optional; remove if not needed
+
+ECOM_GRAPHQL = "https://ecom-api.costco.com/ebusiness/product/v1/products/graphql"
+ECOM_HEADERS = {
+    "Accept": "*/*",
+    "Content-Type": "application/json",
+    "Origin": "https://www.costco.com",
+    "Referer": "https://www.costco.com/",
+    "User-Agent": "Mozilla/5.0",
+    "client-identifier": "4900eb1f-0c10-4bd9-99c3-c59e6c1ecebf",
+    "costco.env": "ecom",
+    "costco.service": "restProduct",
+}
+COOKIE_STRING = ""  # optional cookie string for GraphQL if required
+
+# derive warehouse number from SEARCH_API_URL (e.g., whloc=388-wh -> 388)
+def extract_warehouse_number_from_search_url(url):
+    parsed = urlparse(url)
+    qs = dict(parse_qsl(parsed.query, keep_blank_values=True))
+    candidates = [qs.get("whloc"), qs.get("wh"), qs.get("warehouse"), qs.get("whlocs")]
+    for c in candidates:
+        if not c:
+            continue
+        for part in re.split(r"[,\s;]+", str(c)):
+            m = re.match(r"(\d+)", part)
+            if m:
+                return m.group(1)
+    return None
+
+WAREHOUSE_NUMBER = extract_warehouse_number_from_search_url(SEARCH_API_URL) or "847"
+GRAPHQL_BATCH = 100
+GRAPHQL_BATCH_SLEEP = 0.5  # pause between batches to reduce throttling
 
 CSV_FIELDS = [
     "id","item_number","name","price","listPrice","product_pic","product_description",
-    "deliveryStatus","availability","review_count","review_ratings","categoryPath"
+    "deliveryStatus","availability","review_count","review_ratings","categoryPath",
+    "order_channel"
 ]
+# ==================
 
+# ---------------- helpers ----------------
 def load_cookies():
     if not COOKIES_FILE.exists():
         return None
     try:
         return json.loads(COOKIES_FILE.read_text(encoding="utf-8"))
-    except Exception as e:
-        logging.exception("Failed to read cookies file: %s", e)
+    except Exception:
         return None
 
 def save_cookies(cookies):
     try:
         COOKIES_FILE.write_text(json.dumps(cookies, indent=2))
-        logging.info("Wrote cookies to %s", COOKIES_FILE)
-    except Exception as e:
-        logging.exception("Failed to write cookies: %s", e)
+    except Exception:
+        pass
 
 def cookie_header_from_list(cookies):
     return "; ".join(f"{c['name']}={c['value']}" for c in cookies if 'name' in c and 'value' in c)
 
-def normalize_doc(d):
-    return {
-        "id": d.get("id",""),
-        "item_number": d.get("item_number", d.get("item_location_itemNumber","")),
-        "name": d.get("item_product_name") or d.get("name",""),
-        "price": d.get("item_location_pricing_salePrice", d.get("minSalePrice","")),
-        "listPrice": d.get("item_location_pricing_listPrice",""),
-        "product_pic": d.get("item_collateral_primaryimage") or d.get("image") or (d.get("images")[0].get("item_collateral_primaryimage") if isinstance(d.get("images"), list) and d.get("images") else ""),
-        "product_description": d.get("description") or d.get("item_short_description") or d.get("item_product_short_description") or "",
-        "deliveryStatus": d.get("deliveryStatus",""),
-        "availability": d.get("item_location_availability",""),
-        "review_count": d.get("item_product_review_count", d.get("item_review_count","")),
-        "review_ratings": d.get("item_product_review_ratings", d.get("item_review_ratings", d.get("item_ratings",""))),
-        "categoryPath": "|".join(d.get("categoryPath_ss", []))
-    }
+def listify(x):
+    if x is None:
+        return []
+    return x if isinstance(x, list) else [x]
 
-def write_snapshot_csv(docs, out_path=OUT_CSV):
-    rows = [normalize_doc(d) for d in docs]
-    df = pd.DataFrame(rows, columns=CSV_FIELDS)
-    # write previous
-    if out_path.exists():
-        out_path.rename(PREV_CSV)
-    df.to_csv(out_path, index=False)
-    logging.info("Wrote snapshot %s (%d rows)", out_path, len(df))
-    return df
-
+# ---------------- pagination / cookie refresh ----------------
 def probe_api_with_cookies(cookie_header):
-    # quick probe start=0 rows=1 to detect 401
     parsed = urlparse(SEARCH_API_URL)
     qs = dict(parse_qsl(parsed.query, keep_blank_values=True))
     qs["start"] = "0"
@@ -121,15 +144,12 @@ async def refresh_cookies_interactive():
         try:
             await page.goto("https://www.costco.com/grocery-household.html", timeout=60000)
         except Exception as e:
-            logging.warning("Navigation may have failed initially: %s. Continue to sign in/refresh the page in the opened browser.", e)
-        # wait for user to sign in and site to make API calls
+            logging.warning("Initial navigation issue: %s", e)
         logging.info("Please sign in (if needed) and refresh the grocery page in the opened browser. Waiting up to 120s...")
         start = time.time()
         while time.time() - start < 120:
-            # check cookies periodically
             cookies = await context.cookies()
             if cookies:
-                # heuristic: presence of session cookies like 'bm_s' or '_abck' likely sufficient
                 names = {c['name'] for c in cookies}
                 if any(k in names for k in ("bm_s","bm_sz","bm_sc","_abck","ak_bmsc")):
                     logging.info("Detected security/auth cookies: %s", ", ".join(sorted(names)))
@@ -184,6 +204,221 @@ def save_raw_response(obj):
     logging.info("Saved raw response to %s", p)
     return p
 
+# ---------------- GraphQL enrichment ----------------
+def determine_order_channel_from_catalog_payload(payload):
+    """
+    Strict detection:
+    - scan catalogData.attributes and childData.catalogData.attributes for explicit phrases:
+        'online only' -> online_only
+        'warehouse only' -> warehouse_only
+    - detect warehouse availability from fulfillmentData (warehouseNumber present)
+    - return 'both' if explicit online-only AND warehouse fulfillment present
+    - otherwise 'any'
+    """
+    online_attr = False
+    warehouse_attr = False
+    warehouse_fulfill = False
+
+    def scan_attrs(attrs):
+        nonlocal online_attr, warehouse_attr
+        for a in listify(attrs):
+            try:
+                key = str(a.get("key") or "").strip().lower()
+                val = str(a.get("value") or "").strip().lower()
+            except Exception:
+                continue
+            if "online only" in key or "online only" in val:
+                online_attr = True
+            if "warehouse only" in key or "warehouse only" in val:
+                warehouse_attr = True
+
+    # catalogData
+    catalog_list = payload.get("catalogData") or []
+    for cat in listify(catalog_list):
+        scan_attrs(cat.get("attributes") or [])
+
+    # childData.catalogData
+    child = payload.get("childData") or {}
+    child_catalog = child.get("catalogData") or []
+    for cc in listify(child_catalog):
+        scan_attrs(cc.get("attributes") or [])
+
+    # fulfillmentData -> warehouse presence
+    fulldata = payload.get("fulfillmentData") or []
+    for f in listify(fulldata):
+        if f.get("warehouseNumber"):
+            warehouse_fulfill = True
+        ch = str(f.get("channel") or "").strip().lower()
+        if "warehouse" in ch or "store" in ch or "instore" in ch:
+            warehouse_fulfill = True
+
+    if online_attr and (warehouse_attr or warehouse_fulfill):
+        return "both"
+    if online_attr and not (warehouse_attr or warehouse_fulfill):
+        return "online_only"
+    if (warehouse_attr or warehouse_fulfill) and not online_attr:
+        return "warehouse_only"
+    return "any"
+
+@retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=1, max=8),
+       retry=retry_if_exception_type(requests.exceptions.RequestException))
+def fetch_products_graphql(item_numbers, warehouse_number):
+    """
+    item_numbers: list[str]; warehouse_number: required string (e.g., "388")
+    Returns dict itemNumber->products_payload
+    """
+    headers = ECOM_HEADERS.copy()
+    headers["Content-Type"] = "application/json"
+    if COOKIE_STRING:
+        headers["Cookie"] = COOKIE_STRING
+
+    vars_payload = {
+        "itemNumbers": item_numbers,
+        "clientId": ECOM_HEADERS.get("client-identifier") or "4900eb1f-0c10-4bd9-99c3-c59e6c1ecebf",
+        "locale": ["en-us"],
+        "warehouseNumber": str(warehouse_number)
+    }
+
+    query = """
+    query ($itemNumbers: [String!], $clientId: String, $locale: [String], $warehouseNumber: String) {
+        products(itemNumbers: $itemNumbers, clientId: $clientId, locale: $locale, warehouseNumber: $warehouseNumber) {
+            catalogData {
+                itemNumber itemId published locale buyable programTypes
+                priceData { price listPrice }
+                attributes { key value type pills identifier }
+                description { shortDescription longDescription }
+                additionalFieldData { rating numberOfRating }
+                fieldData { imageName }
+            }
+            fulfillmentData { itemNumber warehouseNumber clientId channel currency price listPrice }
+            childData {
+                catalogData { itemNumber buyable published parentId programTypes priceData { price listPrice } attributes { key value } }
+                fulfillmentData { itemNumber warehouseNumber channel price }
+            }
+        }
+    }
+    """
+
+    payload = {"query": query, "variables": vars_payload}
+    r = requests.post(ECOM_GRAPHQL, json=payload, headers=headers, timeout=60)
+
+    if r.status_code != 200:
+        logging.error("GraphQL fetch failed: status=%s body=%s", r.status_code, r.text[:2000])
+        r.raise_for_status()
+
+    j = r.json()
+    if "errors" in j:
+        logging.error("GraphQL returned errors: %s", j.get("errors"))
+        return {}
+
+    out = {}
+    products = j.get("data", {}).get("products") or {}
+    top_catalog = products.get("catalogData") or []
+    for cat in listify(top_catalog):
+        itemnum = str(cat.get("itemNumber") or "")
+        if itemnum:
+            out[itemnum] = products
+    child = products.get("childData") or {}
+    child_catalog = child.get("catalogData") or []
+    for cc in listify(child_catalog):
+        itemnum = str(cc.get("itemNumber") or "")
+        if itemnum and itemnum not in out:
+            out[itemnum] = products
+    fulldata = products.get("fulfillmentData") or []
+    for f in listify(fulldata):
+        itemnum = str(f.get("itemNumber") or "")
+        if itemnum and itemnum not in out:
+            out[itemnum] = products
+    return out
+
+# ---------------- normalize + enrichment ----------------
+def normalize_doc_with_enrichment(d, product_graph_map):
+    item_number = d.get("item_number") or d.get("item_location_itemNumber") or d.get("itemNumber") or ""
+    name = d.get("item_product_name") or d.get("name") or ""
+    description = ""
+    if isinstance(d.get("description"), dict):
+        description = d["description"].get("shortDescription", "")
+    else:
+        description = d.get("description") or d.get("item_short_description") or d.get("item_product_short_description", "")
+
+    product_pic = d.get("item_collateral_primaryimage") or d.get("image") or ""
+    if not product_pic and isinstance(d.get("images"), list) and d.get("images"):
+        first = d["images"][0]
+        if isinstance(first, dict):
+            product_pic = first.get("item_collateral_primaryimage") or first.get("image") or ""
+
+    price_val = d.get("item_location_pricing_salePrice", d.get("minSalePrice", None))
+    if price_val == "":
+        price_val = None
+
+    row = {
+        "id": d.get("id", ""),
+        "item_number": item_number,
+        "name": name,
+        "price": price_val,
+        "listPrice": d.get("item_location_pricing_listPrice", ""),
+        "product_pic": product_pic,
+        "product_description": description,
+        "deliveryStatus": d.get("deliveryStatus", ""),
+        "availability": d.get("item_location_availability", ""),
+        "review_count": d.get("item_product_review_count", d.get("item_review_count", "")),
+        "review_ratings": d.get("item_product_review_ratings", d.get("item_review_ratings", d.get("item_ratings", ""))),
+        "categoryPath": "|".join(d.get("categoryPath_ss", [])) if isinstance(d.get("categoryPath_ss"), list) else (d.get("categoryPath_ss", "") or "")
+    }
+
+    ds = row.get("deliveryStatus")
+    if ds is None or (isinstance(ds, str) and ds.strip() == ""):
+        row["price"] = None
+
+    order_channel = "any"
+    if item_number and item_number in product_graph_map:
+        payload = product_graph_map[item_number]
+        try:
+            order_channel = determine_order_channel_from_catalog_payload(payload)
+        except Exception:
+            order_channel = "any"
+    else:
+        ds_low = (row.get("deliveryStatus") or "").lower()
+        if "online only" in ds_low:
+            order_channel = "online_only"
+        elif "warehouse only" in ds_low:
+            order_channel = "warehouse_only"
+        else:
+            order_channel = "any"
+
+    row["order_channel"] = order_channel
+    return row
+
+def write_snapshot_csv_enriched(docs):
+    item_numbers = []
+    for d in docs:
+        n = d.get("item_number") or d.get("item_location_itemNumber") or d.get("itemNumber") or ""
+        if n:
+            item_numbers.append(str(n))
+    unique_item_numbers = sorted(set(item_numbers))
+    logging.info("Unique item numbers to enrich: %d", len(unique_item_numbers))
+
+    product_graph_map = {}
+    BATCH = GRAPHQL_BATCH
+    for i in range(0, len(unique_item_numbers), BATCH):
+        batch = unique_item_numbers[i:i+BATCH]
+        try:
+            mapping = fetch_products_graphql(batch, warehouse_number=WAREHOUSE_NUMBER)
+            product_graph_map.update(mapping)
+            logging.info("Fetched %d products from GraphQL", len(mapping))
+        except Exception as e:
+            logging.exception("Product GraphQL fetch failed for batch: %s", e)
+        time.sleep(GRAPHQL_BATCH_SLEEP)
+
+    rows = [normalize_doc_with_enrichment(d, product_graph_map) for d in docs]
+    df = pd.DataFrame(rows, columns=CSV_FIELDS)
+    if OUT_CSV.exists():
+        OUT_CSV.rename(PREV_CSV)
+    df.to_csv(OUT_CSV, index=False)
+    logging.info("Wrote enriched snapshot %s (%d rows)", OUT_CSV, len(df))
+    return df
+
+# ---------------- deltas ----------------
 def compute_deltas(new_df, prev_path=PREV_CSV):
     added_path = pathlib.Path("added.csv")
     removed_path = pathlib.Path("removed.csv")
@@ -196,7 +431,6 @@ def compute_deltas(new_df, prev_path=PREV_CSV):
         new_df.to_csv(OUT_CSV, index=False)
         return added_path, removed_path, changed_path
     prev_df = pd.read_csv(prev_path, dtype=str).fillna("")
-    # index by id
     prev_df.set_index("id", inplace=True)
     new_df = new_df.fillna("")
     new_df.set_index("id", inplace=True)
@@ -218,7 +452,6 @@ def compute_deltas(new_df, prev_path=PREV_CSV):
         if diffs:
             entry = {"id": pid, "diffs": json.dumps(diffs), "name": new_row.get("name","")}
             changed_rows.append(entry)
-    # write CSVs
     if added_ids:
         pd.DataFrame([new_df.loc[i].to_dict() for i in added_ids]).to_csv(added_path, index=False)
     else:
@@ -232,29 +465,25 @@ def compute_deltas(new_df, prev_path=PREV_CSV):
     else:
         if changed_path.exists(): changed_path.unlink()
     logging.info("Delta results: added=%d removed=%d changed=%d", len(added_ids), len(removed_ids), len(changed_rows))
-    # restore CSVs: new snapshot already saved by caller
     return added_path, removed_path, changed_path
 
+# ---------------- main flow ----------------
 def run_sync():
-    # 1) check cookies and probe
     cookies = load_cookies()
     cookie_header = cookie_header_from_list(cookies) if cookies else None
     status, resp = probe_api_with_cookies(cookie_header)
     if status != 200:
         logging.info("Probe failed or unauthorized (status=%s). Will refresh cookies interactively.", status)
-        # refresh via Playwright
         try:
             cookies = asyncio.run(refresh_cookies_interactive())
             cookie_header = cookie_header_from_list(cookies) if cookies else None
         except Exception as e:
             logging.exception("Interactive cookie refresh failed: %s", e)
             raise SystemExit("Cookie refresh failed; cannot proceed.")
-        # probe again
         status, resp = probe_api_with_cookies(cookie_header)
         if status != 200:
             logging.error("Probe still failed after cookie refresh. Status=%s", status)
             raise SystemExit("Authorization failed after refresh; manual inspection required.")
-    # 2) fetch full pages
     headers = {
         "Accept":"application/json",
         "User-Agent":"Mozilla/5.0",
@@ -267,22 +496,18 @@ def run_sync():
         headers["Cookie"] = cookie_header
     sess = requests.Session()
     sess.headers.update({"User-Agent": headers.get("User-Agent")})
-    # save raw first response if we have it from probe
     if resp is not None:
         try:
             obj = resp.json()
             save_raw_response(obj)
         except Exception:
             pass
-    # paginate
     try:
         docs = paginate_api(sess, SEARCH_API_URL, headers, page_rows=PAGE_ROWS)
     except RuntimeError as e:
         logging.exception("Runtime error during pagination: %s", e)
         raise
-    # write snapshot CSV
-    new_df = write_snapshot_csv(docs, out_path=OUT_CSV)
-    # compute deltas
+    new_df = write_snapshot_csv_enriched(docs)
     compute_deltas(new_df, prev_path=PREV_CSV)
 
 if __name__ == "__main__":
