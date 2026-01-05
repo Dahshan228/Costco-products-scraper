@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+# costco_scraper.py
+# Modular Costco Warehouse Scraper
+# Integrates warehouse selection with robust API scraping (Search + GraphQL).
+
 import json
 import re
 import requests
@@ -483,9 +488,59 @@ def enrich_and_save(docs, warehouse_info):
 
 
 # --- Main Logic ---
-def main():
+# --- Core Logic ---
+def scrape_warehouse(target, session=None):
     global COOKIE_STRING
 
+    print(f"Starting scrape for: {target['name']} (ID: {target['id']})")
+
+    # 1. Cookies
+    cookies = load_cookies()
+    if not cookies:
+        print("No cookies found. Launching browser to capture cookies (Playwright)...")
+        try:
+            cookies = asyncio.run(refresh_cookies_interactive())
+        except Exception as e:
+            print(f"Failed to capture cookies: {e}")
+            return
+
+    COOKIE_STRING = cookie_header_from_list(cookies)
+
+    # 2. Setup Session
+    if session is None:
+        session = requests.Session()
+    
+    headers = {**ECOM_HEADERS, "Cookie": COOKIE_STRING}
+    if X_API_KEY: headers["x-api-key"] = X_API_KEY
+
+    search_url = build_search_url(target['id'], target['state'])
+
+    # 3. Scrape
+    docs = paginate_api(session, search_url, headers)
+
+    if not docs:
+        print("No items found. Cookie might be expired or warehouse has no query matches.")
+        # Attempt refresh if running interactively or handle externally? 
+        # For simplicity in GUI, we might just try one refresh automatically if we can,
+        # but the original logic asked user. We will try ONE auto-refresh here.
+        print("Attempting automatic cookie refresh...")
+        try:
+            cookies = asyncio.run(refresh_cookies_interactive())
+            COOKIE_STRING = cookie_header_from_list(cookies)
+            headers["Cookie"] = COOKIE_STRING
+            docs = paginate_api(session, search_url, headers)
+        except Exception as e:
+            print(f"Cookie refresh failed: {e}")
+
+    if docs:
+        enrich_and_save(docs, target)
+        print("Scrape completed successfully.")
+    else:
+        print("Scrape finished with 0 results.")
+
+
+# --- CLI Entry Point ---
+def main():
     # 1. Load Warehouses
     warehouses = get_warehouses()
     print(f"Loaded {len(warehouses)} warehouses.")
@@ -510,43 +565,8 @@ def main():
         print("Invalid selection.")
         return
 
-    print(f"\nSelected: {target['name']} (ID: {target['id']})")
-
-    # 3. Cookies Strategy
-    cookies = load_cookies()
-    if not cookies:
-        print("\nNo cookies found. Launching browser to capture cookies (Playwright)...")
-        try:
-            cookies = asyncio.run(refresh_cookies_interactive())
-        except Exception as e:
-            print(f"Failed to capture cookies: {e}")
-            return
-
-    COOKIE_STRING = cookie_header_from_list(cookies)
-
-    # 4. Probe API
-    sess = requests.Session()
-    headers = {**ECOM_HEADERS, "Cookie": COOKIE_STRING}
-    if X_API_KEY: headers["x-api-key"] = X_API_KEY
-
-    search_url = build_search_url(target['id'], target['state'])
-
-    # 5. Scrape
-    docs = paginate_api(sess, search_url, headers)
-
-    if not docs:
-        print("No items found. Cookie might be expired or warehouse has no query matches.")
-        retry = input("Try refreshing cookies? (y/n): ").lower()
-        if retry == 'y':
-            cookies = asyncio.run(refresh_cookies_interactive())
-            COOKIE_STRING = cookie_header_from_list(cookies)
-            headers["Cookie"] = COOKIE_STRING
-            docs = paginate_api(sess, search_url, headers)
-
-    if docs:
-        enrich_and_save(docs, target)
-    else:
-        print("Scrape finished with 0 results.")
+    # 3. Run Scrape
+    scrape_warehouse(target)
 
 
 if __name__ == "__main__":
