@@ -1,8 +1,3 @@
-#!/usr/bin/env python3
-# costco_scraper.py
-# Modular Costco Warehouse Scraper
-# Integrates warehouse selection with robust API scraping (Search + GraphQL).
-
 import json
 import re
 import requests
