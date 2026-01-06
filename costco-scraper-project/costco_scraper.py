@@ -254,7 +254,7 @@ def paginate_api(session, search_url, headers):
                 break
 
             start += int(qs.get("rows", PAGE_ROWS))
-            time.sleep(0.5)
+            time.sleep(0.1)
 
         except Exception as e:
             logging.error(f"Error during pagination: {e}")
@@ -472,7 +472,7 @@ def enrich_and_save(docs, warehouse_info):
             print(f"Enriched {len(product_graph_map)} items...", end='\r')
         except Exception as e:
             logging.error(f"GraphQL batch failed: {e}")
-        time.sleep(0.5)
+        time.sleep(0.1)
     print()
 
     rows = [normalize_doc(d, product_graph_map, warehouse_name, warehouse_id) for d in docs]
