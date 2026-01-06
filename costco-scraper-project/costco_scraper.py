@@ -34,7 +34,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 # --- Configuration ---
 COOKIES_FILE = pathlib.Path("costco_cookies.json")
 RAW_DIR = pathlib.Path("raw_responses")
-PAGE_ROWS = 48  # Number of items per page in search API
+PAGE_ROWS = 200  # Number of items per page in search API
 TIMEOUT = 10
 X_API_KEY = "273db6be-f015-4de7-b0d6-dd4746ccd5c3"
 
@@ -203,8 +203,8 @@ def build_search_url(warehouse_id, state):
         "loc": loc_str,
         "whloc": f"{warehouse_id}-wh",
         "rows": str(PAGE_ROWS),
-        "url": "/grocery-household.html",
-        "fq": '{!tag=item_program_eligibility}item_program_eligibility:("ShipIt")',
+        # "url": "/grocery-household.html",      # Removed to include Health, Electronics, etc.
+        # "fq": '{!tag=item_program_eligibility}item_program_eligibility:("ShipIt")', # Removed to include Warehouse Only non-ShipIt items
         "chdcategory": "true",
         "chdheader": "true"
     }
@@ -463,7 +463,7 @@ def enrich_and_save(docs, warehouse_info):
     product_graph_map = {}
 
     # Batch GraphQL requests
-    BATCH_SIZE = 50
+    BATCH_SIZE = 400
     for i in range(0, len(unique_items), BATCH_SIZE):
         batch = unique_items[i:i + BATCH_SIZE]
         try:
@@ -509,7 +509,7 @@ def scrape_warehouse(target, session=None):
     # 2. Setup Session
     if session is None:
         session = requests.Session()
-    
+
     headers = {**ECOM_HEADERS, "Cookie": COOKIE_STRING}
     if X_API_KEY: headers["x-api-key"] = X_API_KEY
 
