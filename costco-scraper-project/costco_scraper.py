@@ -315,7 +315,6 @@ def fetch_products_graphql(item_numbers, warehouse_number):
 
 
 def determine_order_channel(payload, requested_warehouse=None):
-    # Stricter Logic as requested
     warehouse_attr = False
     online_attr = False
 
@@ -391,13 +390,12 @@ def normalize_doc(d, product_graph_map, warehouse_name, warehouse_id):
     # Basic data
     row = {
         "warehouse_id": warehouse_id,
-        "warehouse_name": warehouse_name,  # Added field
+        "warehouse_name": warehouse_name, 
         "item_number": item_number,
         "name": d.get("item_product_name") or d.get("name") or "",
         "price": d.get("item_location_pricing_salePrice", d.get("minSalePrice", "")),
         "product_pic": d.get("item_collateral_primaryimage") or d.get("image") or "",
         "availability": d.get("item_location_availability", ""),
-        # Removed review cols
     }
 
     # Enrichment
@@ -426,10 +424,7 @@ def normalize_doc(d, product_graph_map, warehouse_name, warehouse_id):
                     break
 
         row["order_channel"] = determine_order_channel(payload, warehouse_id)
-
-        # Override with Search Doc signals if GraphQL was "any" but Search Doc is explicit?
-        # User asked for "Stricter logic", usually meaning "Trust the explicit tags".
-        # If payload said "any" (no tags found), but search doc has "Online Only", we should probably respect that.
+        
         if row["order_channel"] == "any":
             if sd_warehouse:
                 row["order_channel"] = "warehouse_only"
@@ -520,9 +515,6 @@ def scrape_warehouse(target, session=None):
 
     if not docs:
         print("No items found. Cookie might be expired or warehouse has no query matches.")
-        # Attempt refresh if running interactively or handle externally? 
-        # For simplicity in GUI, we might just try one refresh automatically if we can,
-        # but the original logic asked user. We will try ONE auto-refresh here.
         print("Attempting automatic cookie refresh...")
         try:
             cookies = asyncio.run(refresh_cookies_interactive())
