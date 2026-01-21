@@ -66,7 +66,7 @@ class CostcoScraperGUI:
         self.search_entry.pack(side="left", fill="x", expand=True, padx=10)
 
         # 3. Listbox with Scrollbar (Multi-Select)
-        list_frame = ttk.Labelframe(main_frame, text="Select Warehouses (Multi-select enabled)", padding=10)
+        list_frame = ttk.Labelframe(main_frame, text="Select Warehouses (Multi-select enabled, ctl + leftclick)", padding=10)
         list_frame.pack(fill="both", expand=True, pady=(0, 10))
 
         # Using Tkinter Listbox because ttkbootstrap table is overkill/complex for simple multi-select
