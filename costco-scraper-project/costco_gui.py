@@ -69,8 +69,6 @@ class CostcoScraperGUI:
         list_frame = ttk.Labelframe(main_frame, text="Select Warehouses (Multi-select enabled, ctl + leftclick)", padding=10)
         list_frame.pack(fill="both", expand=True, pady=(0, 10))
 
-        # Using Tkinter Listbox because ttkbootstrap table is overkill/complex for simple multi-select
-        # We can style it manually or wrap it
         self.listbox = tk.Listbox(
             list_frame, 
             height=15, 
@@ -152,11 +150,6 @@ class CostcoScraperGUI:
             generated_files = []
             for i, warehouse in enumerate(warehouses):
                 print(f"\n--- Batch {i+1}/{len(warehouses)}: {warehouse['name']} ---")
-                # We need to capture the filename. 
-                # Ideally, scrape_warehouse should return the filename, but we can infer it or modify scraper.
-                # For now, let's just run it. The user sees the log.
-                
-                # To get the filename, we can replicate the naming logic:
                 safe_name = "".join([c if c.isalnum() else "_" for c in warehouse['name']])
                 filename = f"costco_scrape_{warehouse['id']}_{safe_name}_products.csv"
                 generated_files.append(filename)
@@ -164,10 +157,7 @@ class CostcoScraperGUI:
                 costco_scraper.scrape_warehouse(warehouse)
             
             messagebox.showinfo("Batch Complete", f"Successfully scraped {len(warehouses)} warehouses.")
-            
-            # Auto-open the Last Created CSV or the Folder?
-            # Let's open the first one to show proof, or open the folder.
-            # Opening folder is safer since there are multiple.
+
             subprocess.run(["open", "."]) 
 
         except Exception as e:
