@@ -143,3 +143,4 @@ cython_debug/
 # IDEA
 .idea/
 costco_cookies.json
+costco_scrape_348_Glenview_products.csv
