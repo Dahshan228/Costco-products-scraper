@@ -142,3 +142,4 @@ cython_debug/
 
 # IDEA
 .idea/
+costco_cookies.json
