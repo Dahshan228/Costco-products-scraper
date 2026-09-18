@@ -144,3 +144,13 @@ cython_debug/
 .idea/
 costco_cookies.json
 costco_scrape_348_Glenview_products.csv
+
+# Project outputs
+costco_scrape_*_products.csv
+raw_responses/
+
+# Local config and secrets
+.env.*
+
+# Tool caches
+.ruff_cache/

@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "costco-products-scraper"
+version = "1.0.0"
+description = "Costco warehouse product scraper with CLI and GUI interfaces"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Dahshan228" }
+]
+dependencies = [
+  "pandas>=2.0.0",
+  "playwright>=1.40.0",
+  "requests>=2.31.0",
+  "tenacity>=8.2.0",
+  "ttkbootstrap>=1.10.1"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+  "pytest-mock>=3.14.0",
+  "ruff>=0.6.0"
+]
+
+[project.scripts]
+costco-scraper = "costco_scraper:main"
+costco-scraper-gui = "costco_gui:main"
+
+[tool.setuptools]
+py-modules = ["costco_scraper", "costco_gui"]
+
+[tool.setuptools.package-dir]
+"" = "costco-scraper-project"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

@@ -1,13 +1,16 @@
-#!/bin/bash
-# run_gui.sh
-# Helper script to launch Costco Scraper GUI using the configured virtual environment.
+#!/usr/bin/env bash
+set -euo pipefail
 
 cd "$(dirname "$0")"
 
-if [ ! -d "venv" ]; then
-    echo "Virtual environment not found. Please run the setup steps."
-    exit 1
+if [[ -x "./venv/bin/python" ]]; then
+  PYTHON_BIN="./venv/bin/python"
+elif command -v python3 >/dev/null 2>&1; then
+  PYTHON_BIN="python3"
+else
+  echo "Python 3 is required but was not found." >&2
+  exit 1
 fi
 
 echo "Launching Costco GUI..."
-./venv/bin/python costco_gui.py
+"$PYTHON_BIN" costco_gui.py
