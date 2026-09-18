@@ -6,9 +6,8 @@ import tkinter as tk
 from pathlib import Path
 from tkinter import filedialog, messagebox, scrolledtext
 
-import ttkbootstrap as ttk
-
 import costco_scraper
+import ttkbootstrap as ttk
 
 
 class TextRedirector:
@@ -72,10 +71,20 @@ class CostcoScraperGUI:
         self.output_dir_var = ttk.StringVar(value=str(self.default_config.output_dir))
         self.output_dir_entry = ttk.Entry(output_frame, textvariable=self.output_dir_var)
         self.output_dir_entry.pack(side="left", fill="x", expand=True, padx=10)
-        ttk.Button(output_frame, text="Browse", command=self.choose_output_dir, bootstyle="secondary-outline").pack(side="left")
+        ttk.Button(
+            output_frame,
+            text="Browse",
+            command=self.choose_output_dir,
+            bootstyle="secondary-outline",
+        ).pack(side="left")
 
         self.open_folder_var = ttk.BooleanVar(value=True)
-        ttk.Checkbutton(output_frame, text="Open folder when done", variable=self.open_folder_var, bootstyle="round-toggle").pack(
+        ttk.Checkbutton(
+            output_frame,
+            text="Open folder when done",
+            variable=self.open_folder_var,
+            bootstyle="round-toggle",
+        ).pack(
             side="left", padx=(10, 0)
         )
 

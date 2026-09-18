@@ -11,7 +11,6 @@ import os
 import pathlib
 import re
 import string
-import sys
 import time
 import unicodedata
 from dataclasses import dataclass, field
@@ -44,7 +43,11 @@ DEFAULT_HEADERS = {
     "Content-Type": "application/json",
     "Origin": "https://www.costco.com",
     "Referer": "https://www.costco.com/",
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/120.0.0.0 Safari/537.36"
+    ),
     "client-identifier": "4900eb1f-0c10-4bd9-99c3-c59e6c1ecebf",
     "costco.env": "ecom",
     "costco.service": "restProduct",
@@ -105,11 +108,19 @@ class ScraperConfig:
         *,
         output_dir: str | os.PathLike[str] | None = None,
         log_level: str | None = None,
-    ) -> "ScraperConfig":
-        chosen_output = pathlib.Path(output_dir) if output_dir else pathlib.Path(os.getenv("COSTCO_OUTPUT_DIR", SCRIPT_DIR))
+    ) -> ScraperConfig:
+        chosen_output = (
+            pathlib.Path(output_dir)
+            if output_dir
+            else pathlib.Path(os.getenv("COSTCO_OUTPUT_DIR", SCRIPT_DIR))
+        )
         chosen_output = chosen_output.expanduser().resolve()
         cookies_file_env = os.getenv("COSTCO_COOKIES_FILE")
-        cookies_file = pathlib.Path(cookies_file_env).expanduser().resolve() if cookies_file_env else chosen_output / "costco_cookies.json"
+        cookies_file = (
+            pathlib.Path(cookies_file_env).expanduser().resolve()
+            if cookies_file_env
+            else chosen_output / "costco_cookies.json"
+        )
 
         headers = DEFAULT_HEADERS.copy()
         client_identifier = os.getenv("COSTCO_CLIENT_IDENTIFIER")
@@ -117,7 +128,10 @@ class ScraperConfig:
             headers["client-identifier"] = client_identifier
 
         configured_log = (log_level or os.getenv("COSTCO_LOG_LEVEL", "INFO")).upper()
-        logging.basicConfig(level=getattr(logging, configured_log, logging.INFO), format="%(asctime)s %(levelname)s %(message)s")
+        logging.basicConfig(
+            level=getattr(logging, configured_log, logging.INFO),
+            format="%(asctime)s %(levelname)s %(message)s",
+        )
 
         return cls(
             page_rows=_env_int("COSTCO_PAGE_ROWS", 200),
@@ -223,7 +237,11 @@ def save_cookies(cookies_file: pathlib.Path, cookies: list[dict[str, Any]]) -> N
 
 
 def cookie_header_from_list(cookies: list[dict[str, Any]]) -> str:
-    return "; ".join(f"{cookie['name']}={cookie['value']}" for cookie in cookies if "name" in cookie and "value" in cookie)
+    return "; ".join(
+        f"{cookie['name']}={cookie['value']}"
+        for cookie in cookies
+        if "name" in cookie and "value" in cookie
+    )
 
 
 async def refresh_cookies_interactive(config: ScraperConfig) -> list[dict[str, Any]]:
@@ -319,7 +337,12 @@ def _backoff_sleep(config: ScraperConfig, attempt: int) -> None:
     time.sleep(config.retry_backoff_base * (2 ** max(0, attempt - 1)))
 
 
-def _request_json_get_with_retry(session: requests.Session, url: str, headers: dict[str, str], config: ScraperConfig) -> dict[str, Any]:
+def _request_json_get_with_retry(
+    session: requests.Session,
+    url: str,
+    headers: dict[str, str],
+    config: ScraperConfig,
+) -> dict[str, Any]:
     last_error: Exception | None = None
     for attempt in range(1, config.max_retries + 1):
         try:
@@ -463,7 +486,12 @@ def normalize_doc(
     warehouse_name: str,
     warehouse_id: str,
 ) -> dict[str, Any]:
-    item_number = search_doc.get("item_number") or search_doc.get("item_location_itemNumber") or search_doc.get("itemNumber") or ""
+    item_number = (
+        search_doc.get("item_number")
+        or search_doc.get("item_location_itemNumber")
+        or search_doc.get("itemNumber")
+        or ""
+    )
 
     row = {
         "warehouse_id": warehouse_id,
@@ -720,7 +748,12 @@ def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Scrape Costco warehouse inventory and pricing.")
     parser.add_argument("--search", help="Warehouse name or ID search query.")
     parser.add_argument("--warehouse-id", help="Direct warehouse ID selection.")
-    parser.add_argument("--list-limit", type=int, default=20, help="Maximum number of matches to show in interactive selection.")
+    parser.add_argument(
+        "--list-limit",
+        type=int,
+        default=20,
+        help="Maximum number of matches to show in interactive selection.",
+    )
     parser.add_argument("--output-dir", help="Directory to save output CSV files.")
     parser.add_argument("--no-cookie-refresh", action="store_true", help="Disable opening browser to refresh cookies.")
     parser.add_argument("--log-level", default=None, help="Logging level (DEBUG, INFO, WARNING, ERROR).")
