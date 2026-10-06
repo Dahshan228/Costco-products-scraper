@@ -8,6 +8,14 @@ import costco_scraper
 import os
 import subprocess
 
+def open_folder(path):
+    if sys.platform.startswith("win"):
+        os.startfile(path)
+    elif sys.platform == "darwin":
+        subprocess.run(["open", path])
+    else:
+        subprocess.run(["xdg-open", path])
+
 class TextRedirector(object):
     def __init__(self, widget, tag="stdout"):
         self.widget = widget
@@ -150,15 +158,18 @@ class CostcoScraperGUI:
             generated_files = []
             for i, warehouse in enumerate(warehouses):
                 print(f"\n--- Batch {i+1}/{len(warehouses)}: {warehouse['name']} ---")
-                safe_name = "".join([c if c.isalnum() else "_" for c in warehouse['name']])
-                filename = f"costco_scrape_{warehouse['id']}_{safe_name}_products.csv"
-                generated_files.append(filename)
-                
-                costco_scraper.scrape_warehouse(warehouse)
-            
-            messagebox.showinfo("Batch Complete", f"Successfully scraped {len(warehouses)} warehouses.")
+                filename = costco_scraper.scrape_warehouse(warehouse)
+                if filename:
+                    generated_files.append(filename)
 
-            subprocess.run(["open", "."]) 
+            failed = len(warehouses) - len(generated_files)
+            summary = f"Scraped {len(generated_files)} of {len(warehouses)} warehouses."
+            if failed:
+                summary += f"\n{failed} failed; see the log."
+            messagebox.showinfo("Batch Complete", summary)
+
+            if generated_files:
+                open_folder(".")
 
         except Exception as e:
             print(f"Error during scraping: {e}", file=sys.stderr)
